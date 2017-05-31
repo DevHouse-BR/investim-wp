@@ -1,0 +1,11 @@
+{
+	"blogname": "WPCasa Madrid",
+	"blogdescription": "WordPress Real Estate Theme for WPCasa",
+	"show_on_front": "page",
+	"permalink_structure": "/%postname%/",
+	"page_on_front": "191",
+	"page_for_posts": "193",
+	"locations": {
+		"primary": "menu"
+	}
+}

@@ -1,0 +1,158 @@
+.wpsight-demo-import-notice.notice {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 20px 0 30px;
+	max-width: 887px;
+	padding: 15px 30px;
+}
+
+.wpsight-demo-import-notice.notice .notice-dismiss {
+	right: 13px;
+	top: 14px;
+}
+
+.wpsight-demo-import-notice.notice-info {
+	margin-bottom: 10px;
+}
+
+.wpsight-demo-import-wrapper .button-hero {
+	margin: 20px 0 30px;
+}
+
+.wpsight-demo-import-steps,
+.wpsight-demo-import-notice.complete {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+    margin: 0px;
+    max-width: 887px;
+    padding: 0px;
+    position: relative;
+}
+
+.wpsight-demo-import-step {
+    background-color: #fff;
+	border-left: 4px solid #fff;
+	-webkit-box-shadow: 0 1px 1px 0 rgba( 0, 0, 0, 0.1 );
+	box-shadow: 0 1px 1px 0 rgba( 0, 0, 0, 0.1 );
+    margin: 0px 0px 20px;
+	position: relative;
+	padding: 30px;
+}
+
+.processing.wpsight-demo-import-step {
+    -webkit-animation: pulsestep 1s ease-in-out 2s infinite;
+	animation: pulsestep 1s ease-in-out 2s infinite;
+}
+
+@-webkit-keyframes pulsestep
+{
+	0%   {
+		border-left-color: #fff;
+	}
+	
+	50%  {
+		border-left-color: #ededed;
+	}
+	
+	100% {
+		border-left-color: #fff;
+	}
+}
+
+@keyframes pulsestep
+{
+	0%   {
+		border-left-color: #fff;
+	}
+	
+	50%  {
+		border-left-color: #cdcdcd;
+	}
+	
+	100% {
+		border-left-color: #fff;
+	}
+}
+
+.completed.wpsight-demo-import-step {
+	border-left-color: #46b450;
+}
+
+.wpsight-demo-import-step-inner {
+	display: table-row;
+}
+
+.wpsight-demo-import-step-content {
+    display: table-cell;
+}
+
+.wpsight-demo-import-step-counter {
+    color: #ededed;
+    display: table-cell;
+    font-size: 48px;
+    font-weight: 600;
+	padding-right: 20px;
+	position: relative;
+	text-align: center;
+    vertical-align: middle;
+    width: 60px;
+    z-index: 10;
+}
+
+.processing .wpsight-demo-import-step-counter {
+    -webkit-animation: pulsecounter 1s ease-in-out 2s infinite;
+	animation: pulsecounter 1s ease-in-out 2s infinite;
+}
+
+@-webkit-keyframes pulsecounter
+{
+	0%   {
+		color: #ededed;
+	}
+	
+	50%  {
+		color: #cdcdcd;
+	}
+	
+	100% {
+		color: #ededed;
+	}
+}
+
+@keyframes pulsecounter
+{
+	0%   {
+		color: #ededed;
+	}
+	
+	50%  {
+		color: #cdcdcd;
+	}
+	
+	100% {
+		color: #ededed;
+	}
+}
+
+.completed .wpsight-demo-import-step-counter {
+	color: #46b450;
+}
+
+.wpsight-demo-import-step-title {
+    font-size: 18px;
+}
+
+.wpsight-demo-import-step-description {
+    color: #777;
+    margin-top: 10px;
+}
+
+.wpsight-demo-import-missing-plugins-content {
+    display: table-cell;
+}
+
+.wpsight-demo-import-missing-plugins-list li {
+    display: inline-block;
+}

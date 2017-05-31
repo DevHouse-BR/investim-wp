@@ -1,0 +1,2736 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WPCasa London\n"
+"POT-Creation-Date: 2016-06-26 13:54+0200\n"
+"PO-Revision-Date: 2016-06-26 13:58+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.8\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: comments.php:30
+#, php-format
+msgctxt "comments title"
+msgid "One Thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s Thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Un comentario sobre &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s comentarios sobre &ldquo;%2$s&rdquo;"
+
+#: comments.php:38 comments.php:60
+msgid "Comment navigation"
+msgstr "Navegación de comentarios"
+
+#: comments.php:39 comments.php:61
+msgid "&larr; Older Comments"
+msgstr "&larr; Comentarios anteriores"
+
+#: comments.php:40 comments.php:62
+msgid "Newer Comments &rarr;"
+msgstr "Comentarios más recientes &rarr;"
+
+#: comments.php:73
+msgid "Comments are closed."
+msgstr "Los comentarios están cerrados."
+
+#: comments.php:94
+msgid "Name"
+msgstr "Nombre"
+
+#: comments.php:101
+msgid "Email"
+msgstr "Email"
+
+#: comments.php:108
+msgid "Website"
+msgstr "Sitio web"
+
+#: comments.php:116
+msgid "Comment"
+msgstr "Comentario"
+
+#: comments.php:122
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "Debe estar <a href=\"%s\">conectado</a> para dejar un comentario."
+
+#: comments.php:126
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+"Conectado como <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Cerrar "
+"sesión\">Cerrar sesión?</a>"
+
+#: comments.php:130
+msgid "Leave a Comment"
+msgstr "Deja un comentario"
+
+#: comments.php:131
+msgid "Your email address will not be published."
+msgstr "Su correo electrónico no será publicado."
+
+#: comments.php:133
+msgid "Cancel reply"
+msgstr "Cancelar"
+
+#: comments.php:136
+msgid "Post Comment"
+msgstr "Publicar comentario"
+
+#: footer.php:40 includes/theme-customizer.php:407
+#, php-format
+msgid ""
+"Copyright &copy; <span itemprop=\"copyrightYear\">%s</span> &middot; <a href="
+"\"%s\" rel=\"home\" itemprop=\"copyrightHolder\">%s</a>"
+msgstr ""
+"Copyright &copy; <span itemprop=\"copyrightYear\">%s</span> &middot; <a href="
+"\"%s\" rel=\"home\" itemprop=\"copyrightHolder\">%s</a>"
+
+#: footer.php:41 includes/theme-customizer.php:423
+msgid ""
+"Built on <a href=\"http://wordpress.org\">WordPress</a> &amp; <a href="
+"\"https://wpcasa.com\">WPCasa</a>"
+msgstr ""
+"Gestionado con <a href=\"http://wordpress.org\">WordPress</a> &amp; <a href="
+"\"https://wpcasa.com\">WPCasa</a>"
+
+#: includes/addon-support.php:170
+msgid "Map Toggle"
+msgstr "Activar mapa"
+
+#: includes/addon-support.php:171
+msgid "Show toggle link under header"
+msgstr "Mostrar enlace debajo de cabecera"
+
+#: includes/addon-support.php:172
+msgid ""
+"Will show a link right under the header (before main content) and the map "
+"below when clicked."
+msgstr ""
+"Mostrará un enlace justo debajo de la cabecera (antes del contenido "
+"principal) y el mapa debajo cuando se hace clic."
+
+#: includes/addon-support.php:177 includes/widgets/call-to-action.php:96
+#: includes/widgets/feature-box.php:97 includes/widgets/section-title.php:123
+#: includes/widgets/service.php:97
+msgid "Link Text"
+msgstr "Texto del enlace"
+
+#: includes/addon-support.php:178
+msgid "Please enter the text for the toggle link."
+msgstr "Por favor, introduzca el texto para el enlace de activación."
+
+#: includes/addon-support.php:181
+msgid "Toggle Map"
+msgstr "Ver mapa"
+
+#: includes/call-to-action.php:42
+msgid "Here you can place your call to action description."
+msgstr "Aquí puede poner la descripción del elemento Call to Action."
+
+#: includes/class-tgm-plugin-activation.php:333
+msgid "Install Required Plugins"
+msgstr "Instalar Plugins Requeridos"
+
+#: includes/class-tgm-plugin-activation.php:334
+msgid "Install Plugins"
+msgstr "Instalar Plugins"
+
+#: includes/class-tgm-plugin-activation.php:335
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr "Instalando el plugin: %s"
+
+#: includes/class-tgm-plugin-activation.php:336
+msgid "Something went wrong with the plugin API."
+msgstr "Algo ha ido mal con la API de plugins."
+
+#: includes/class-tgm-plugin-activation.php:338
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] "Este tema requiere el siguiente plugin: %1$s."
+msgstr[1] "Este tema requiere los siguientes plugins: %1$s."
+
+#: includes/class-tgm-plugin-activation.php:343
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] "Este tema recomienda el siguiente plugin: %1$s."
+msgstr[1] "Este tema recomienda los siguientes plugins: %1$s."
+
+#: includes/class-tgm-plugin-activation.php:348
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to install the %1$s "
+"plugin."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to install the %1$s "
+"plugins."
+msgstr[0] ""
+"Lo sentimos, pero Usted no tiene los permisos para activar el plugin %1$s."
+msgstr[1] ""
+"Lo sentimos, pero Usted no tiene los permisos para activar los plugins %1$s."
+
+#: includes/class-tgm-plugin-activation.php:353
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+"El siguiente plugin necesita ser actualizado a su última versión para "
+"garantizar la máxima compatibilidad con este tema: %1$s."
+msgstr[1] ""
+"Los siguientes plugins necesitan ser actualizados a su última versión para "
+"garantizar la máxima compatibilidad con este tema: %1$s."
+
+#: includes/class-tgm-plugin-activation.php:358
+#, php-format
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] "Hay una actualización disponible para: %1$s."
+msgstr[1] "Hay actualizaciones disponibles para: %1$s."
+
+#: includes/class-tgm-plugin-activation.php:363
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to update the %1$s plugin."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to update the %1$s "
+"plugins."
+msgstr[0] ""
+"Lo sentimos, pero usted no tiene los permisos para actualizar el plugin %1$s."
+msgstr[1] ""
+"Lo sentimos, pero usted no tiene los permisos para actualizar los plugins "
+"%1$s."
+
+#: includes/class-tgm-plugin-activation.php:368
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] "El siguiente plugin requerido no está activado: %1$s."
+msgstr[1] "Los siguientes plugins requeridos no están activados: %1$s."
+
+#: includes/class-tgm-plugin-activation.php:373
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] "El siguiente plugin recomendado no está activado: %1$s."
+msgstr[1] "Los siguientes plugins recomendados no están activados: %1$s."
+
+#: includes/class-tgm-plugin-activation.php:378
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to activate the %1$s "
+"plugin."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to activate the %1$s "
+"plugins."
+msgstr[0] ""
+"Lo sentimos, pero Usted no tiene los permisos para activar el plugin %1$s."
+msgstr[1] ""
+"Lo sentimos, pero Usted no tiene los permisos para activar los plugins %1$s."
+
+#: includes/class-tgm-plugin-activation.php:383
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] "Instalar plugin"
+msgstr[1] "Instalar plugins"
+
+#: includes/class-tgm-plugin-activation.php:388
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] "Actualizar plugin"
+msgstr[1] "Actualizar plugins"
+
+#: includes/class-tgm-plugin-activation.php:393
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] "Activar plugin"
+msgstr[1] "Activar plugins"
+
+#: includes/class-tgm-plugin-activation.php:397
+msgid "Return to Required Plugins Installer"
+msgstr "Volver al Instalador de Plugins"
+
+#: includes/class-tgm-plugin-activation.php:398
+msgid "Return to the dashboard"
+msgstr "Volver al escritorio"
+
+#: includes/class-tgm-plugin-activation.php:399
+#: includes/class-tgm-plugin-activation.php:3029
+msgid "Plugin activated successfully."
+msgstr "Plugin activado correctamente."
+
+#: includes/class-tgm-plugin-activation.php:400
+#: includes/class-tgm-plugin-activation.php:2832
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] "El siguiente plugin ha sido activado con éxito:"
+msgstr[1] "Los siguientes plugins han sido activados con éxito:"
+
+#: includes/class-tgm-plugin-activation.php:401
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr "No se ha realizado ninguna acción. El plugin %1$s ya estaba activo."
+
+#: includes/class-tgm-plugin-activation.php:402
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+"Plugin no activado. Una versión superior de %s es necesaria para este tema. "
+"Por favor, actualice el plugin."
+
+#: includes/class-tgm-plugin-activation.php:403
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr "Todos los plugins están instalados y activados correctamente. %1$s"
+
+#: includes/class-tgm-plugin-activation.php:404
+msgid "Dismiss this notice"
+msgstr "Descartar este aviso"
+
+#: includes/class-tgm-plugin-activation.php:405
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+"Por favor, póngase en contacto con el administrador de este sitio para "
+"obtener ayuda."
+
+#: includes/class-tgm-plugin-activation.php:520
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+"Este plugin necesita ser actualizado para que sea compatible con su "
+"plantilla."
+
+#: includes/class-tgm-plugin-activation.php:521
+msgid "Update Required"
+msgstr "Actualización necesaria"
+
+#: includes/class-tgm-plugin-activation.php:635
+msgid "Set the parent_slug config variable instead."
+msgstr "Establezca la variable de configuración parent_slug."
+
+#: includes/class-tgm-plugin-activation.php:828
+#: includes/class-tgm-plugin-activation.php:3438
+msgid "Return to the Dashboard"
+msgstr "Volver al escritorio"
+
+#: includes/class-tgm-plugin-activation.php:935
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+"El paquete de plugin remoto no contiene una carpeta con el slug necesario y "
+"renombrarlo no ha funcionado."
+
+#: includes/class-tgm-plugin-activation.php:935
+#: includes/class-tgm-plugin-activation.php:938
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+"Por favor, póngase en contacto con el proveedor del plugin y pídales que lo "
+"empaqueten de acuerdo con las directrices de WordPress."
+
+#: includes/class-tgm-plugin-activation.php:938
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+"El paquete remoto de plugin contiene más de un archivo, pero estos no están "
+"empaquetados en una carpeta."
+
+#: includes/class-tgm-plugin-activation.php:1116
+#: includes/class-tgm-plugin-activation.php:2828
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr "y"
+
+#: includes/class-tgm-plugin-activation.php:1881
+#, php-format
+msgctxt "%s = version number"
+msgid "TGMPA v%s"
+msgstr "TGMPA v%s"
+
+#: includes/class-tgm-plugin-activation.php:2167
+msgid "Required"
+msgstr "Requerido"
+
+#: includes/class-tgm-plugin-activation.php:2170
+msgid "Recommended"
+msgstr "Recomendado"
+
+#: includes/class-tgm-plugin-activation.php:2186
+msgid "WordPress Repository"
+msgstr "Repositorio de WordPress"
+
+#: includes/class-tgm-plugin-activation.php:2189
+msgid "External Source"
+msgstr "Origen externo"
+
+#: includes/class-tgm-plugin-activation.php:2192
+msgid "Pre-Packaged"
+msgstr "Pre-empaquetado"
+
+#: includes/class-tgm-plugin-activation.php:2209
+msgid "Not Installed"
+msgstr "No instalado"
+
+#: includes/class-tgm-plugin-activation.php:2213
+msgid "Installed But Not Activated"
+msgstr "Instalado pero no activado"
+
+#: includes/class-tgm-plugin-activation.php:2215
+msgid "Active"
+msgstr "Activo"
+
+#: includes/class-tgm-plugin-activation.php:2221
+msgid "Required Update not Available"
+msgstr "Actualización requerida no disponible"
+
+#: includes/class-tgm-plugin-activation.php:2224
+msgid "Requires Update"
+msgstr "Requiere actualización"
+
+#: includes/class-tgm-plugin-activation.php:2227
+msgid "Update recommended"
+msgstr "Actualización recomendada"
+
+#: includes/class-tgm-plugin-activation.php:2235
+#, php-format
+msgctxt "%1$s = install status, %2$s = update status"
+msgid "%1$s, %2$s"
+msgstr "%1$s, %2$s"
+
+#: includes/class-tgm-plugin-activation.php:2280
+#, php-format
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] "Todos <span class=\"count\">(%s)</span>"
+msgstr[1] "Todos <span class=\"count\">(%s)</span>"
+
+#: includes/class-tgm-plugin-activation.php:2283
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] "Para instalar <span class=“count”>(%s)</span>"
+msgstr[1] "Para instalar <span class=“count”>(%s)</span>"
+
+#: includes/class-tgm-plugin-activation.php:2286
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] "Actualización disponible <span class=“count”>(%s)</span>"
+msgstr[1] "Actualización disponible <span class=“count”>(%s)</span>"
+
+#: includes/class-tgm-plugin-activation.php:2289
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] "Para activar <span class=\"count\">(%s)</span>"
+msgstr[1] "Para activar <span class=\"count\">(%s)</span>"
+
+#: includes/class-tgm-plugin-activation.php:2371
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr "desconocido"
+
+#: includes/class-tgm-plugin-activation.php:2379
+msgid "Installed version:"
+msgstr "Versión instalada:"
+
+#: includes/class-tgm-plugin-activation.php:2387
+msgid "Minimum required version:"
+msgstr "Version mínima requerida:"
+
+#: includes/class-tgm-plugin-activation.php:2399
+msgid "Available version:"
+msgstr "Versión disponible:"
+
+#: includes/class-tgm-plugin-activation.php:2422
+#, php-format
+msgid ""
+"No plugins to install, update or activate. <a href=\"%1$s\">Return to the "
+"Dashboard</a>"
+msgstr ""
+"No hay plugins para instalar, actualizar o activar. <a href=“%1$s”>Volver al "
+"escritorio</a>"
+
+#: includes/class-tgm-plugin-activation.php:2436
+msgid "Plugin"
+msgstr "Plugin"
+
+#: includes/class-tgm-plugin-activation.php:2437
+msgid "Source"
+msgstr "Origen"
+
+#: includes/class-tgm-plugin-activation.php:2438
+msgid "Type"
+msgstr "Tipo"
+
+#: includes/class-tgm-plugin-activation.php:2442
+msgid "Version"
+msgstr "Versión"
+
+#: includes/class-tgm-plugin-activation.php:2443
+#: wpcasa/payment-transactions.php:25
+msgid "Status"
+msgstr "Estado"
+
+#: includes/class-tgm-plugin-activation.php:2491
+#, php-format
+msgctxt "%2$s = plugin name in screen reader markup"
+msgid "Install %2$s"
+msgstr "Instalar %2$s"
+
+#: includes/class-tgm-plugin-activation.php:2495
+#, php-format
+msgctxt "%2$s = plugin name in screen reader markup"
+msgid "Update %2$s"
+msgstr "Actualizar %2$s"
+
+#: includes/class-tgm-plugin-activation.php:2500
+#, php-format
+msgctxt "%2$s = plugin name in screen reader markup"
+msgid "Activate %2$s"
+msgstr "Activar %2$s"
+
+#: includes/class-tgm-plugin-activation.php:2570
+msgid "Upgrade message from the plugin author:"
+msgstr "Mensaje de actualización del autor del plugin:"
+
+#: includes/class-tgm-plugin-activation.php:2603
+msgid "Install"
+msgstr "Instalar"
+
+#: includes/class-tgm-plugin-activation.php:2609
+msgid "Update"
+msgstr "Actualizar"
+
+#: includes/class-tgm-plugin-activation.php:2612
+msgid "Activate"
+msgstr "Activar"
+
+#: includes/class-tgm-plugin-activation.php:2643
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+"Ningún plugin seleccionado para ser instalado. Ninguna acción a realizar."
+
+#: includes/class-tgm-plugin-activation.php:2645
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+"Ningún plugin seleccionado para ser actualizado. Ninguna acción a realizar."
+
+#: includes/class-tgm-plugin-activation.php:2681
+msgid "No plugins are available to be installed at this time."
+msgstr "No hay plugins disponibles para ser instalados en este momento."
+
+#: includes/class-tgm-plugin-activation.php:2683
+msgid "No plugins are available to be updated at this time."
+msgstr "No hay plugins disponibles para ser actualizados en este momento."
+
+#: includes/class-tgm-plugin-activation.php:2788
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+"Ningún plugin seleccionado para ser para ser activado. Ninguna acción a "
+"realizar."
+
+#: includes/class-tgm-plugin-activation.php:2814
+msgid "No plugins are available to be activated at this time."
+msgstr "No hay plugins disponibles para ser activados en este momento."
+
+#: includes/class-tgm-plugin-activation.php:3028
+msgid "Plugin activation failed."
+msgstr "La activación del plugin ha fallado."
+
+#: includes/class-tgm-plugin-activation.php:3362
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr "Actualizando Plugin %1$s (%2$d/%3$d)"
+
+#: includes/class-tgm-plugin-activation.php:3364
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+"Se produjo un error durante la instalación de %1$s: <strong>%2$s</strong>."
+
+#: includes/class-tgm-plugin-activation.php:3365
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr "La instalación de %1$s ha fallado."
+
+#: includes/class-tgm-plugin-activation.php:3369
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+"El proceso de instalación y activación se está iniciando. Este proceso puede "
+"tardar un poco en algunos servidores, por favor, sea paciente."
+
+#: includes/class-tgm-plugin-activation.php:3370
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr "%1$s instalado y activado con éxito."
+
+#: includes/class-tgm-plugin-activation.php:3370
+#: includes/class-tgm-plugin-activation.php:3376
+msgid "Show Details"
+msgstr "Mostrar detalles"
+
+#: includes/class-tgm-plugin-activation.php:3370
+#: includes/class-tgm-plugin-activation.php:3376
+msgid "Hide Details"
+msgstr "Ocultar detalles"
+
+#: includes/class-tgm-plugin-activation.php:3371
+msgid "All installations and activations have been completed."
+msgstr "Todas las instalaciones y activaciones se han completado."
+
+#: includes/class-tgm-plugin-activation.php:3372
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr "Instalando y activando plugin %1$s (%2$d/%3$d)"
+
+#: includes/class-tgm-plugin-activation.php:3375
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+"El proceso de instalación se está iniciando. Este proceso puede tardar un "
+"poco en algunos servidores, por favor, sea paciente."
+
+#: includes/class-tgm-plugin-activation.php:3376
+#, php-format
+msgid "%1$s installed successfully."
+msgstr "%1$s instalado con éxito."
+
+#: includes/class-tgm-plugin-activation.php:3377
+msgid "All installations have been completed."
+msgstr "Todas las instalaciones se han completado."
+
+#: includes/class-tgm-plugin-activation.php:3378
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr "Instalando plugin %1$s (%2$d/%3$d)"
+
+#: includes/class-wpsight-demo-import.php:39
+#: includes/class-wpsight-demo-import.php:223
+#, php-format
+msgid "%s Demo Import"
+msgstr "%s Demo Import"
+
+#: includes/class-wpsight-demo-import.php:39
+msgid "Demo Import"
+msgstr "Demo Import"
+
+#: includes/class-wpsight-demo-import.php:164
+msgid "WordPress Content"
+msgstr "Contenido WordPress"
+
+#: includes/class-wpsight-demo-import.php:165
+msgid ""
+"<strong>Please be patient!</strong> The attached images of the example "
+"listings, posts and pages are downloaded from our demo server."
+msgstr ""
+"<strong>Por favor, sea paciente!</strong> Las imágenes adjuntas de las "
+"propiedades de ejemplo, artículos y las páginas se descargan desde nuestro "
+"servidor de demo."
+
+#: includes/class-wpsight-demo-import.php:172
+msgid "Theme Options"
+msgstr "Opciones del Tema"
+
+#: includes/class-wpsight-demo-import.php:173
+msgid ""
+"Here we import options and theme modificactions from the theme customizer. "
+"Change them to your needs later."
+msgstr ""
+"Aquí importamos opciones y modificaciones tema del Theme Customizer. Puede "
+"cambiarlas más adelante."
+
+#: includes/class-wpsight-demo-import.php:180
+msgid "Widgets &amp; Settings"
+msgstr "Widgets &amp; Ajustes"
+
+#: includes/class-wpsight-demo-import.php:181
+msgid ""
+"In this step widgets including all their settings are imported to the widget "
+"areas of this theme."
+msgstr ""
+"En este paso importamos widgets incluyendo todos sus ajustes a las zonas de "
+"widget de este tema."
+
+#: includes/class-wpsight-demo-import.php:200
+msgid "General Options"
+msgstr "Opciones Generales"
+
+#: includes/class-wpsight-demo-import.php:201
+msgid "Finally we import some custom options with basic WordPress settings."
+msgstr ""
+"Finalmente importamos algunas opciones personalizadas con ajustes básicos de "
+"WordPress."
+
+#: includes/class-wpsight-demo-import.php:231
+msgid "Import Files Missing!"
+msgstr "Faltan archivos!"
+
+#: includes/class-wpsight-demo-import.php:232
+msgid ""
+"Seems that the import files that are necessary for the import process are "
+"missing. Please check that or contact support."
+msgstr ""
+"Parece que faltan archivos de importación que son necesarios para el proceso "
+"de importación. Por favor, compruebe o contacte con el soporte."
+
+#: includes/class-wpsight-demo-import.php:240
+msgid "The import is complete!"
+msgstr "La importación está completa!"
+
+#: includes/class-wpsight-demo-import.php:240
+msgid "All import steps have been processed sucessfully. Enjoy the theme!"
+msgstr ""
+"Todos los pasos de importación han sido procesado correctamente. ¡Disfrute "
+"el tema!"
+
+#: includes/class-wpsight-demo-import.php:247
+msgid "Please do not reload the browser window during the import process."
+msgstr ""
+"Por favor, no vuelva a cargar la ventana del navegador durante el proceso de "
+"importación."
+
+#: includes/class-wpsight-demo-import.php:252
+msgid "Run Missing Steps"
+msgstr "Completar Pasos Incompletos"
+
+#: includes/class-wpsight-demo-import.php:254
+msgid "Run Demo Import"
+msgstr "Ejecutar Importación"
+
+#: includes/class-wpsight-demo-import.php:262
+msgid "Plugins Missing!"
+msgstr "Faltan plugins!"
+
+#: includes/class-wpsight-demo-import.php:263
+msgid ""
+"Please install and activate the plugins listed below. They are necessary to "
+"complete the import process."
+msgstr ""
+"Por favor, instale y active los plugins listados a continuación. Son "
+"necesarios para completar el proceso de importación."
+
+#: includes/custom-menus.php:22
+msgid "Primary Menu"
+msgstr "Menú Principal"
+
+#: includes/custom-menus.php:23
+msgid "Bottom Menu"
+msgstr "Menú Pie da Página"
+
+#: includes/custom-menus.php:138
+msgid "Create a custom menu &rarr;"
+msgstr "Crear un menú personalizado &rarr;"
+
+#: includes/feature-box.php:43
+msgid "Here you can place your feature box description."
+msgstr "Aquí puede poner la descripción del Feature Box."
+
+#: includes/icon-box.php:43
+msgid "Here you can place your icon box description."
+msgstr "Aquí puede poner la descripción del Icon Box."
+
+#: includes/image-sizes.php:54
+msgid "small"
+msgstr "pequeño"
+
+#: includes/image-sizes.php:62
+msgid "half"
+msgstr "medio"
+
+#: includes/image-sizes.php:70
+msgid "large"
+msgstr "grande"
+
+#: includes/image-sizes.php:78
+msgid "full"
+msgstr "completo"
+
+#: includes/image-sizes.php:86
+msgid "slider"
+msgstr "deslizador"
+
+#: includes/meta-boxes.php:125 includes/meta-boxes.php:191
+#: includes/meta-boxes.php:349 includes/meta-boxes.php:436
+#: includes/meta-boxes.php:562 includes/meta-boxes.php:679
+#: includes/meta-boxes.php:769 includes/meta-boxes.php:1060
+msgid "Display"
+msgstr "Visualización"
+
+#: includes/meta-boxes.php:126
+msgid "Display search form on the front page"
+msgstr "Mostrar formulario de búsqueda en la portada"
+
+#: includes/meta-boxes.php:130 includes/meta-boxes.php:386
+#: includes/meta-boxes.php:716 includes/widgets/call-to-action.php:103
+#: includes/widgets/listings-search.php:84
+msgid "Orientation"
+msgstr "Orientación"
+
+#: includes/meta-boxes.php:134 includes/meta-boxes.php:390
+#: includes/meta-boxes.php:720 includes/widgets/call-to-action.php:105
+#: includes/widgets/listings-search.php:86
+msgctxt "listing widget"
+msgid "horizontal"
+msgstr "horizontal"
+
+#: includes/meta-boxes.php:135 includes/meta-boxes.php:391
+#: includes/meta-boxes.php:721 includes/widgets/call-to-action.php:106
+#: includes/widgets/listings-search.php:87
+msgctxt "listing widget"
+msgid "vertical"
+msgstr "vertical"
+
+#: includes/meta-boxes.php:149
+msgid "Home Search Form"
+msgstr "Portada Buscador"
+
+#: includes/meta-boxes.php:192
+msgid "Display carousel on the front page"
+msgstr "Mostrar carrusel en la portada"
+
+#: includes/meta-boxes.php:196 includes/meta-boxes.php:588
+#: includes/meta-boxes.php:830 includes/meta-boxes.php:1214
+#: includes/widgets/listings-carousel.php:189
+#: includes/widgets/listings-query.php:146
+#: includes/widgets/listings-slider.php:209
+msgid "Listings"
+msgstr "Anuncios"
+
+#: includes/meta-boxes.php:199 includes/meta-boxes.php:591
+#: includes/meta-boxes.php:833 includes/meta-boxes.php:1217
+msgid "Please enter the number of listings to be displayed"
+msgstr "Introduzca el número de inmuebles a mostrar"
+
+#: includes/meta-boxes.php:204 includes/meta-boxes.php:301
+#: includes/meta-boxes.php:595 includes/meta-boxes.php:632
+#: includes/meta-boxes.php:842 includes/meta-boxes.php:1012
+#: includes/meta-boxes.php:1222 includes/meta-boxes.php:1264
+msgid "Filter by"
+msgstr "Filtrar por"
+
+#: includes/meta-boxes.php:204 includes/meta-boxes.php:595
+#: includes/meta-boxes.php:842 includes/meta-boxes.php:1222
+msgid "Offer"
+msgstr "Oferta"
+
+#: includes/meta-boxes.php:208 includes/meta-boxes.php:293
+#: includes/meta-boxes.php:598 includes/meta-boxes.php:624
+#: includes/meta-boxes.php:850 includes/meta-boxes.php:1004
+#: includes/meta-boxes.php:1226 includes/meta-boxes.php:1256
+msgid "None"
+msgstr "Ninguna"
+
+#: includes/meta-boxes.php:212 includes/widgets/listings-carousel.php:216
+msgid "Items"
+msgstr "Ítems"
+
+#: includes/meta-boxes.php:215
+msgid "Please enter the number of listings to be visible"
+msgstr "Introduzca el número de inmuebles a mostrar"
+
+#: includes/meta-boxes.php:220 includes/widgets/listings-carousel.php:229
+msgid "Slide by"
+msgstr "Deslizar por"
+
+#: includes/meta-boxes.php:223
+msgid "Please enter the number of listings to move in one slide"
+msgstr "Introduzca el número de inmuebles a mover en un deslizamiento"
+
+#: includes/meta-boxes.php:228 includes/widgets/listings-carousel.php:242
+msgid "Margin"
+msgstr "Margen "
+
+#: includes/meta-boxes.php:231
+msgid "Please enter the space between two listings in px"
+msgstr "Introduzca el espacio entre dos inmuebles en px"
+
+#: includes/meta-boxes.php:239 includes/meta-boxes.php:872
+msgid "Loop"
+msgstr "Bucle"
+
+#: includes/meta-boxes.php:240 includes/meta-boxes.php:873
+#: includes/widgets/listing-image-slider.php:208
+#: includes/widgets/listings-slider.php:251
+msgid "Loop slider to be infinite"
+msgstr "Poner deslizador en un bucle infinito"
+
+#: includes/meta-boxes.php:248
+msgid "Carousel nav"
+msgstr "Nav Carrusel"
+
+#: includes/meta-boxes.php:249 includes/widgets/listings-carousel.php:258
+msgid "Show prev/next carousel navigation"
+msgstr "Mostrar navegación anterior/siguiente en el carrusel"
+
+#: includes/meta-boxes.php:257
+msgid "Carousel dots"
+msgstr "Puntos del carrusel"
+
+#: includes/meta-boxes.php:258 includes/widgets/listings-carousel.php:261
+msgid "Show <em>dots</em> carousel navigation"
+msgstr "Mostrar <em>puntos</em> de la navegación del carrusel"
+
+#: includes/meta-boxes.php:265
+msgid "Carousel autoplay"
+msgstr "Auto-reproducción del carrusel"
+
+#: includes/meta-boxes.php:266 includes/meta-boxes.php:923
+#: includes/widgets/listings-carousel.php:264
+msgid "Slide through items automatically"
+msgstr "Deslizar por los ítems automáticamente"
+
+#: includes/meta-boxes.php:274 includes/meta-boxes.php:275
+#: includes/meta-boxes.php:276 includes/meta-boxes.php:277
+#: includes/meta-boxes.php:278 includes/meta-boxes.php:935
+#: includes/meta-boxes.php:936 includes/meta-boxes.php:937
+#: includes/meta-boxes.php:938 includes/meta-boxes.php:939
+#: includes/widgets/listing-image-slider.php:217
+#: includes/widgets/listing-image-slider.php:218
+#: includes/widgets/listing-image-slider.php:219
+#: includes/widgets/listing-image-slider.php:220
+#: includes/widgets/listing-image-slider.php:221
+#: includes/widgets/listings-carousel.php:270
+#: includes/widgets/listings-carousel.php:271
+#: includes/widgets/listings-carousel.php:272
+#: includes/widgets/listings-carousel.php:273
+#: includes/widgets/listings-carousel.php:274
+#: includes/widgets/listings-slider.php:260
+#: includes/widgets/listings-slider.php:261
+#: includes/widgets/listings-slider.php:262
+#: includes/widgets/listings-slider.php:263
+#: includes/widgets/listings-slider.php:264
+msgctxt "listing widget"
+msgid "seconds"
+msgstr "segundos"
+
+#: includes/meta-boxes.php:280 includes/meta-boxes.php:941
+#: includes/widgets/listings-carousel.php:276
+msgid "Please select the autoplay interval timeout"
+msgstr "Seleccione el intervalo de espera de auto-reproducción"
+
+#: includes/meta-boxes.php:318
+msgid "Home Carousel"
+msgstr "Portada Carrusel"
+
+#: includes/meta-boxes.php:350 includes/meta-boxes.php:680
+msgid "Display call to action on the front page"
+msgstr "Mostrar llamada a acción en la portada"
+
+#: includes/meta-boxes.php:354 includes/meta-boxes.php:684
+#: includes/theme-customizer.php:158 includes/theme-customizer.php:232
+#: includes/theme-customizer.php:306 includes/widgets/call-to-action.php:91
+#: includes/widgets/feature-box.php:89 includes/widgets/icon-box.php:81
+#: includes/widgets/listing-agent.php:106
+#: includes/widgets/listing-description.php:76
+#: includes/widgets/listing-details.php:76
+#: includes/widgets/listing-image-gallery.php:218
+#: includes/widgets/listing-image-slider.php:191
+#: includes/widgets/listing-image.php:79
+#: includes/widgets/listing-location.php:107
+#: includes/widgets/listing-price.php:83 includes/widgets/listing-terms.php:94
+#: includes/widgets/listings-carousel.php:187
+#: includes/widgets/listings-query.php:144
+#: includes/widgets/listings-search.php:82
+#: includes/widgets/listings-slider.php:207
+#: includes/widgets/newsletter-box.php:81
+#: includes/widgets/section-title.php:107 includes/widgets/service.php:89
+msgid "Title"
+msgstr "Título"
+
+#: includes/meta-boxes.php:360 includes/meta-boxes.php:480
+#: includes/meta-boxes.php:690 includes/widgets/call-to-action.php:93
+#: includes/widgets/feature-box.php:94 includes/widgets/newsletter-box.php:83
+#: includes/widgets/section-title.php:112 includes/widgets/service.php:94
+msgid "Description"
+msgstr "Descripción"
+
+#: includes/meta-boxes.php:366 includes/meta-boxes.php:577
+#: includes/meta-boxes.php:696
+msgid "Button Label"
+msgstr "Etiqueta del botón"
+
+#: includes/meta-boxes.php:372 includes/meta-boxes.php:583
+#: includes/meta-boxes.php:702
+msgid "Button URL"
+msgstr "URL del botón"
+
+#: includes/meta-boxes.php:381 includes/meta-boxes.php:711
+msgid "Button Target"
+msgstr "Objetivo del botón"
+
+#: includes/meta-boxes.php:382 includes/meta-boxes.php:499
+#: includes/meta-boxes.php:712 includes/widgets/call-to-action.php:101
+#: includes/widgets/feature-box.php:102 includes/widgets/section-title.php:128
+#: includes/widgets/service.php:102
+msgid "Open link in new tab or window"
+msgstr "Abrir enlace en nueva pestaña o ventana"
+
+#: includes/meta-boxes.php:405
+msgid "Home Call to Action #1"
+msgstr "Portada Llamada a Acción #1"
+
+#: includes/meta-boxes.php:437
+msgid "Display services on the front page"
+msgstr "Mostrar servicios en la portada"
+
+#: includes/meta-boxes.php:444
+msgid "Feature Boxes"
+msgstr "Feature Boxes"
+
+#: includes/meta-boxes.php:445
+msgid "Display services as feature boxes"
+msgstr "Mostrar servicios como feature box"
+
+#: includes/meta-boxes.php:449 includes/meta-boxes.php:572
+msgid "Section Title"
+msgstr "Título de Sección"
+
+#: includes/meta-boxes.php:455
+msgid "Section Description"
+msgstr "Descripción de Sección"
+
+#: includes/meta-boxes.php:461
+msgid "Services"
+msgstr "Servicios"
+
+#: includes/meta-boxes.php:466
+msgid "Label"
+msgstr "Etiqueta"
+
+#: includes/meta-boxes.php:471 includes/theme-customizer.php:173
+#: includes/theme-customizer.php:247 includes/theme-customizer.php:321
+#: includes/widgets/feature-box.php:91 includes/widgets/icon-box.php:83
+#: includes/widgets/newsletter-box.php:90
+msgid "Icon Class"
+msgstr "Clase de icono"
+
+#: includes/meta-boxes.php:474 includes/theme-customizer.php:173
+#: includes/theme-customizer.php:247 includes/theme-customizer.php:321
+#: includes/widgets/feature-box.php:92 includes/widgets/icon-box.php:84
+#: includes/widgets/newsletter-box.php:91 includes/widgets/service.php:92
+msgid ""
+"For example <a href=\"https://fortawesome.github.io/Font-Awesome/icons/\" "
+"target=\"_blank\">Font Awesome</a>"
+msgstr ""
+"Por ejemplo <a href=\"https://fortawesome.github.io/Font-Awesome/icons/\" "
+"target=\"_blank\">Font Awesome</a>"
+
+#: includes/meta-boxes.php:485
+msgid "URL"
+msgstr "URL"
+
+#: includes/meta-boxes.php:490
+msgid "Button"
+msgstr "Botón"
+
+#: includes/meta-boxes.php:498
+msgid "Target"
+msgstr "Destino"
+
+#: includes/meta-boxes.php:502
+msgid "Display different services you offer"
+msgstr "Mostrar servicios que ofrece"
+
+#: includes/meta-boxes.php:505
+msgid "Service {#}"
+msgstr "Servicio {#}"
+
+#: includes/meta-boxes.php:506
+msgid "Add Service"
+msgstr "Añadir servicio"
+
+#: includes/meta-boxes.php:507 includes/meta-boxes.php:606
+#: wpcasa/submission-list.php:118
+msgid "Remove"
+msgstr "Eliminar"
+
+#: includes/meta-boxes.php:522
+msgid "Home Services"
+msgstr "Portada Servicios"
+
+#: includes/meta-boxes.php:563
+msgid "Display listings on the front page"
+msgstr "Mostrar inmuebles en la portada"
+
+#: includes/meta-boxes.php:567 includes/meta-boxes.php:1281
+msgid "Listings Query"
+msgstr "Consulta de Inmuebles"
+
+#: includes/meta-boxes.php:580
+msgid "View All"
+msgstr "Ver Todo"
+
+#: includes/meta-boxes.php:601
+msgid "Create listing queries for the home page"
+msgstr "Crear consultas de inmuebles para la portada"
+
+#: includes/meta-boxes.php:604
+msgid "Listings Query {#}"
+msgstr "Consulta de Inmuebles {#}"
+
+#: includes/meta-boxes.php:605
+msgid "Add Query"
+msgstr "Agregar consulta"
+
+#: includes/meta-boxes.php:648
+msgid "Home Listings"
+msgstr "Portada Inmuebles"
+
+#: includes/meta-boxes.php:735
+msgid "Home Call to Action #2"
+msgstr "Portada Llamada a Acción #2"
+
+#: includes/meta-boxes.php:773 includes/meta-boxes.php:1064
+msgid "Do not display"
+msgstr "No mostrar"
+
+#: includes/meta-boxes.php:774
+msgid "Page title"
+msgstr "Título de página"
+
+#: includes/meta-boxes.php:775 includes/meta-boxes.php:1065
+msgid "Tagline & background"
+msgstr "Lema y fondo"
+
+#: includes/meta-boxes.php:776 includes/meta-boxes.php:1066
+msgid "Featured image & title"
+msgstr "Imagen destacada y título"
+
+#: includes/meta-boxes.php:777 includes/meta-boxes.php:1067
+msgid "Image slider"
+msgstr "Deslizador de imágenes"
+
+#: includes/meta-boxes.php:778
+msgid "Listings slider"
+msgstr "Deslizador de anuncios"
+
+#: includes/meta-boxes.php:780 includes/meta-boxes.php:1069
+msgid "Display header area on this page"
+msgstr "Mostrar area de cabecera en esta página"
+
+#: includes/meta-boxes.php:784
+msgid "Page Title Right"
+msgstr "Area derecha del título"
+
+#: includes/meta-boxes.php:787
+msgid "Add custom content on the right side of the page title section"
+msgstr "Agregar contenido personalizado a la derecha del título de página"
+
+#: includes/meta-boxes.php:795 includes/meta-boxes.php:1073
+msgid "Tagline Background"
+msgstr "Fondo"
+
+#: includes/meta-boxes.php:798 includes/meta-boxes.php:1076
+msgid "Add an image to be displayed as tagline background"
+msgstr "Añadir una imagen que se mostrará como fondo de la cabecera"
+
+#: includes/meta-boxes.php:806 includes/meta-boxes.php:1084
+msgid "Tagline Text"
+msgstr "Texto"
+
+#: includes/meta-boxes.php:809 includes/meta-boxes.php:1087
+msgid "Please enter the text for the tagline"
+msgstr "Por favor introduzca el texto del eslogan"
+
+#: includes/meta-boxes.php:817 includes/meta-boxes.php:1160
+msgid "Images"
+msgstr "Imágenes"
+
+#: includes/meta-boxes.php:854 includes/widgets/listing-image-gallery.php:280
+#: includes/widgets/listing-image-slider.php:201
+#: includes/widgets/listings-slider.php:244
+msgid "Animation"
+msgstr "Animación"
+
+#: includes/meta-boxes.php:858
+msgid "slide"
+msgstr "slide"
+
+#: includes/meta-boxes.php:859
+msgid "fade"
+msgstr "fade"
+
+#: includes/meta-boxes.php:885
+msgid "Slider nav"
+msgstr "Nav deslizador"
+
+#: includes/meta-boxes.php:886 includes/widgets/listing-image-slider.php:256
+#: includes/widgets/listings-slider.php:280
+msgid "Show prev/next slider navigation"
+msgstr "Mostrar navegación anterior/siguiente en el deslizador"
+
+#: includes/meta-boxes.php:898
+msgid "Slider dots"
+msgstr "Puntos del deslizador"
+
+#: includes/meta-boxes.php:899 includes/widgets/listing-image-slider.php:227
+#: includes/widgets/listings-slider.php:270
+msgid "Show <em>dots</em> slider navigation"
+msgstr "Mostrar <em>puntos</em> de la navegación del deslizador"
+
+#: includes/meta-boxes.php:910
+msgid "Slider thumbs"
+msgstr "Miniaturas"
+
+#: includes/meta-boxes.php:911 includes/widgets/listing-image-slider.php:232
+#: includes/widgets/listings-slider.php:275
+msgid "Show thumbnails instead of <em>dots</em>"
+msgstr "Mostrar miniaturas en lugar de <em>puntos</em>"
+
+#: includes/meta-boxes.php:922
+msgid "Slider autoplay"
+msgstr "Auto-reproducción del deslizador"
+
+#: includes/meta-boxes.php:953
+msgid "Featured Image"
+msgstr "Imagen destacada"
+
+#: includes/meta-boxes.php:954
+msgid "Remove featured image from content area"
+msgstr "Ocultar imagen destacada en contenido principal"
+
+#: includes/meta-boxes.php:961
+msgid "Page Title"
+msgstr "Título pagina"
+
+#: includes/meta-boxes.php:962
+msgid "Remove page title from content area"
+msgstr "Ocultar título en contenido principal"
+
+#: includes/meta-boxes.php:973 includes/meta-boxes.php:1102
+msgid "Header Filter"
+msgstr "Filtro de cabecera"
+
+#: includes/meta-boxes.php:974 includes/meta-boxes.php:1103
+msgid "Remove filter effect from header images"
+msgstr "Eliminar efecto de filtro de imágenes de cabecera"
+
+#: includes/meta-boxes.php:990 includes/meta-boxes.php:1119
+msgid "Alt Logo"
+msgstr "Logotipo Alt"
+
+#: includes/meta-boxes.php:991 includes/meta-boxes.php:1120
+msgid "Use alternative logo on this page"
+msgstr "Usar logotipo alternativo en esta página"
+
+#: includes/meta-boxes.php:1033 includes/meta-boxes.php:1133
+msgid "Header Settings"
+msgstr "Configuración de Cabecera"
+
+#: includes/meta-boxes.php:1176
+msgid "Gallery"
+msgstr "Galería"
+
+#: includes/meta-boxes.php:1233
+msgid "Show Panel"
+msgstr "Mostrar panel"
+
+#: includes/meta-boxes.php:1234
+msgid "Check this box to show the listings panel before the query"
+msgstr ""
+"Marque esta casilla para mostrar el panel de anuncios antes de la consulta"
+
+#: includes/meta-boxes.php:1242
+msgid "Show Pagination"
+msgstr "Mostrar paginación"
+
+#: includes/meta-boxes.php:1243
+msgid "Check this box to show pagination options after the query"
+msgstr ""
+"Marque esta casilla para mostrar opciones de paginación después de la "
+"consulta"
+
+#: includes/newsletter-box.php:41 includes/widgets/newsletter-box.php:36
+#: includes/widgets/newsletter-box.php:73
+msgid "Signup for Our Newsletter"
+msgstr "Suscribirse a nuestro boletín"
+
+#: includes/newsletter-box.php:42 includes/widgets/newsletter-box.php:37
+#: includes/widgets/newsletter-box.php:74
+msgid "Stay updated and get our latest news right into your inbox. No spam."
+msgstr "Suscríbete y recibe las últimas noticias en su correo. Sin spam."
+
+#: includes/service.php:43 includes/widgets/service.php:38
+msgid "Here you can place your service description."
+msgstr "Aquí puede colocar la descripción del servicio."
+
+#: includes/template-tags.php:24
+msgid "Read more"
+msgstr "Leer más"
+
+#: includes/template-tags.php:24
+msgid "More info"
+msgstr "Más info"
+
+#: includes/template-tags.php:151
+#, php-format
+msgid ""
+"<span class=\"posted-on\"><i class=\"fa fa-fw fa-calendar\" aria-hidden="
+"\"true\"></i> %1$s</span>"
+msgstr ""
+"<span class=\"posted-on\"><i class=\"fa fa-fw fa-calendar\" aria-hidden="
+"\"true\"></i> %1$s</span>"
+
+#: includes/template-tags.php:157
+#, php-format
+msgid ""
+"<span class=\"byline\"><i class=\"fa fa-fw fa-user\" aria-hidden=\"true\"></"
+"i> %1$s</span>"
+msgstr ""
+"<span class=\"byline\"><i class=\"fa fa-fw fa-user\" aria-hidden=\"true\"></"
+"i> %1$s</span>"
+
+#: includes/template-tags.php:235
+msgid "Author"
+msgstr "Autor"
+
+#: includes/template-tags.php:235
+msgid "Agent"
+msgstr "Agente"
+
+#: includes/template-tags.php:238
+msgid "Page not found"
+msgstr "Página no encontrada"
+
+#: includes/theme-customizer.php:66
+msgid "Hide tagline"
+msgstr "Ocultar el lema"
+
+#: includes/theme-customizer.php:84
+msgid "Text Logo"
+msgstr "Logo de texto"
+
+#: includes/theme-customizer.php:86
+msgid "It will only be displayed if no regular logo image is provided."
+msgstr "Sólo se mostrará si no se proporciona ninguna imagen."
+
+#: includes/theme-customizer.php:102
+msgid "Logo"
+msgstr "Logotipo"
+
+#: includes/theme-customizer.php:118
+msgid "Print Logo"
+msgstr "Logo para imprimir"
+
+#: includes/theme-customizer.php:120
+msgid ""
+"Optionally upload a print logo that will be displayed in listing print "
+"versions or PDFs."
+msgstr ""
+"Opcionalmente puede añadir un logo que se mostrará en la versión para "
+"imprimir o en PDFs."
+
+#: includes/theme-customizer.php:142
+msgid "Site Top"
+msgstr "Parte superior"
+
+#: includes/theme-customizer.php:150 wpcasa/header-icon-boxes-print.php:16
+#: wpcasa/header-icon-boxes.php:16
+msgid "Get in touch"
+msgstr "Contáctanos"
+
+#: includes/theme-customizer.php:157 includes/theme-customizer.php:231
+#: includes/theme-customizer.php:305
+#, php-format
+msgid "Icon Box #%s"
+msgstr "Icon Box #%s"
+
+#: includes/theme-customizer.php:180 includes/theme-customizer.php:195
+#: includes/theme-customizer.php:254 includes/theme-customizer.php:269
+#: includes/theme-customizer.php:328 includes/theme-customizer.php:343
+#: wpcasa/header-icon-boxes-print.php:18 wpcasa/header-icon-boxes-print.php:19
+#: wpcasa/header-icon-boxes-print.php:35 wpcasa/header-icon-boxes-print.php:36
+#: wpcasa/header-icon-boxes-print.php:52 wpcasa/header-icon-boxes-print.php:53
+#: wpcasa/header-icon-boxes.php:18 wpcasa/header-icon-boxes.php:19
+#: wpcasa/header-icon-boxes.php:35 wpcasa/header-icon-boxes.php:36
+#: wpcasa/header-icon-boxes.php:52 wpcasa/header-icon-boxes.php:53
+msgid "Put some text here"
+msgstr "Escribir algún texto aquí"
+
+#: includes/theme-customizer.php:188 includes/theme-customizer.php:203
+#: includes/theme-customizer.php:262 includes/theme-customizer.php:277
+#: includes/theme-customizer.php:336 includes/theme-customizer.php:351
+#: includes/widgets/icon-box.php:86 includes/widgets/icon-box.php:88
+msgid "Text Line"
+msgstr "Línea de texto"
+
+#: includes/theme-customizer.php:215 includes/theme-customizer.php:289
+#: includes/theme-customizer.php:363
+#, php-format
+msgid "Display Box #%s"
+msgstr "Mostrar Box #%s"
+
+#: includes/theme-customizer.php:224 wpcasa/header-icon-boxes-print.php:33
+#: wpcasa/header-icon-boxes.php:33
+msgid "Office hours"
+msgstr "Horario de oficina"
+
+#: includes/theme-customizer.php:298 wpcasa/header-icon-boxes-print.php:50
+#: wpcasa/header-icon-boxes.php:50
+msgid "Our location"
+msgstr "Nuestra ubicación"
+
+#: includes/theme-customizer.php:376
+msgid "Show logo and icons vertically on small screens"
+msgstr "Mostrar el logo y los iconos verticalmente en pequeñas pantallas"
+
+#: includes/theme-customizer.php:399
+msgid "Site Bottom"
+msgstr "Parte inferior"
+
+#: includes/theme-customizer.php:414
+msgid "Site Bottom Left"
+msgstr "Parte inferior izquierda"
+
+#: includes/theme-customizer.php:430
+msgid "Site Bottom Right"
+msgstr "Parte inferior derecha"
+
+#: includes/theme-customizer.php:459
+msgid "Text Color"
+msgstr "Color de texto"
+
+#: includes/theme-customizer.php:474
+msgid "Section Background Color (light)"
+msgstr "Fondo de sección (claro)"
+
+#: includes/theme-customizer.php:489
+msgid "Section Background Color (dark)"
+msgstr "Fondo de sección (oscuro)"
+
+#: includes/theme-customizer.php:503
+msgid "Accent Color (light)"
+msgstr "Color acento (claro)"
+
+#: includes/theme-customizer.php:517
+msgid "Accent Color (dark)"
+msgstr "Color acento (oscuro)"
+
+#: includes/theme-customizer.php:532
+msgid "Header Overlay Color"
+msgstr "Overlay de cabecera"
+
+#: includes/theme-customizer.php:546
+msgid "Deactivate header overlay"
+msgstr "Desactivar el overlay de cabecera"
+
+#: includes/theme-setup.php:241
+msgctxt "search form"
+msgid "Search for"
+msgstr "Buscar"
+
+#: includes/theme-setup.php:242
+msgctxt "search form"
+msgid "Search&hellip;"
+msgstr "Buscar&hellip;"
+
+#: includes/theme-setup.php:245
+msgctxt "search form"
+msgid "Search"
+msgstr "Buscar"
+
+#: includes/theme-setup.php:346
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#: includes/theme-setup.php:346 includes/theme-setup.php:365
+#: wpcasa/submission-list.php:112
+msgid "Edit"
+msgstr "Editar"
+
+#: includes/theme-setup.php:356
+#, php-format
+msgid "%s <span class=\"says\">says:</span>"
+msgstr "%s <span class=\"says\">dice:</span>"
+
+#: includes/theme-setup.php:362
+#, php-format
+msgctxt "1: date, 2: time"
+msgid "%1$s at %2$s"
+msgstr "el %1$s a las %2$s"
+
+#: includes/theme-setup.php:369
+msgid "Your comment is awaiting moderation."
+msgstr "Su comentario está pendiente de aprobación."
+
+#: includes/updater/theme-updater.php:29
+msgid "Theme License"
+msgstr "Licencia del Tema"
+
+#: includes/updater/theme-updater.php:30
+msgid "Enter your theme license key."
+msgstr "Introduzca su clave de licencia."
+
+#: includes/updater/theme-updater.php:31
+msgid "License Key"
+msgstr "Clave de Licencia"
+
+#: includes/updater/theme-updater.php:32
+msgid "License Action"
+msgstr "Acción de Licencia"
+
+#: includes/updater/theme-updater.php:33
+msgid "Deactivate License"
+msgstr "Desactivar licencia"
+
+#: includes/updater/theme-updater.php:34
+msgid "Activate License"
+msgstr "Activar licencia"
+
+#: includes/updater/theme-updater.php:35 includes/updater/theme-updater.php:47
+msgid "License status is unknown."
+msgstr "Estado de licencia desconocido."
+
+#: includes/updater/theme-updater.php:36
+msgid "Renew?"
+msgstr "¿Renovar?"
+
+#: includes/updater/theme-updater.php:37
+msgid "unlimited"
+msgstr "sin límite"
+
+#: includes/updater/theme-updater.php:38
+msgid "License key is active."
+msgstr "Clave de licencia activada."
+
+#: includes/updater/theme-updater.php:39
+#, php-format
+msgid "Expires %s."
+msgstr "Caduca %s."
+
+#: includes/updater/theme-updater.php:40
+#, php-format
+msgid "You have %1$s / %2$s sites activated."
+msgstr "Usted tiene %1$s / %2$s sitios activados."
+
+#: includes/updater/theme-updater.php:41
+#, php-format
+msgid "License key expired %s."
+msgstr "Clave de licencia caducada %s."
+
+#: includes/updater/theme-updater.php:42
+msgid "License key has expired."
+msgstr "Clave de licencia caducada."
+
+#: includes/updater/theme-updater.php:43
+msgid "License keys do not match."
+msgstr "Claves de licencia no concuerdan."
+
+#: includes/updater/theme-updater.php:44
+msgid "License is inactive."
+msgstr "Licencia inactiva."
+
+#: includes/updater/theme-updater.php:45
+msgid "License key is disabled."
+msgstr "Clave de licencia deshabilitada."
+
+#: includes/updater/theme-updater.php:46
+msgid "License key for this site is inactive."
+msgstr "Clave de licencia para este sitio está inactiva."
+
+#: includes/updater/theme-updater.php:48
+msgid ""
+"Updating this theme will lose any customizations you have made. 'Cancel' to "
+"stop, 'OK' to update."
+msgstr ""
+"Si actualiza este tema cualquier personalización que haya hecho se perderá. "
+"'Cancelar' para parar, 'OK' para actualizar."
+
+#: includes/updater/theme-updater.php:49
+#, php-format
+msgid ""
+"<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" class=\"thickbox\" "
+"title=\"%4s\">Check out what's new</a> or <a href=\"%5$s\"%6$s>update now</"
+"a>."
+msgstr ""
+"<strong>%1$s %2$s</strong> está disponible. <a href=\"%3$s\" class=\"thickbox"
+"\" title=\"%4s\">Descubra las novedades</a> o <a href=\"%5$s\"%6$s>actualice "
+"ahora</a>."
+
+#: includes/widget-areas.php:44
+msgid "Top Left"
+msgstr "Arriba Izquierda"
+
+#: includes/widget-areas.php:45 includes/widget-areas.php:56
+msgid "Display content outside of the main site container."
+msgstr "Mostrar contenido fuera el contenedor del sitio principal."
+
+#: includes/widget-areas.php:55
+msgid "Top Right"
+msgstr "Arriba Derecha"
+
+#: includes/widget-areas.php:66
+msgid "Header Full"
+msgstr "Cabecera Ancho Completo"
+
+#: includes/widget-areas.php:67
+msgid "Display full-width content at the top of the site."
+msgstr "Mostrar contenido de ancho completo en la parte superior del sitio."
+
+#: includes/widget-areas.php:77
+msgid "Header"
+msgstr "Cabecera"
+
+#: includes/widget-areas.php:78
+msgid "Display content at the top of the site."
+msgstr "Mostrar contenido en la parte superior del sitio."
+
+#: includes/widget-areas.php:88
+msgid "Header (columns)"
+msgstr "Cabecera (columnas)"
+
+#: includes/widget-areas.php:89
+msgid "Display content columns at the top of the site."
+msgstr "Mostrar columnas de contenido en la parte superior del sitio."
+
+#: includes/widget-areas.php:99
+msgid "Sidebar"
+msgstr "Barra Lateral"
+
+#: includes/widget-areas.php:100
+msgid "Display content in the general sidebar widget area."
+msgstr "Mostrar contenido en la zona widget de la barra lateral general."
+
+#: includes/widget-areas.php:110
+msgid "Content Top"
+msgstr "Contenido Superior"
+
+#: includes/widget-areas.php:111
+msgid "Display content before the main content area."
+msgstr "Mostrar contenido antes de contenido principal"
+
+#: includes/widget-areas.php:121
+msgid "Content Bottom"
+msgstr "Contenido Inferior"
+
+#: includes/widget-areas.php:122
+msgid "Display content after the main content area."
+msgstr "Mostrar contenido después del contenido principal"
+
+#: includes/widget-areas.php:132
+msgid "Listing Top"
+msgstr "Anuncio Superior"
+
+#: includes/widget-areas.php:133
+msgid ""
+"Display full-width content above the regular content on single listing pages."
+msgstr ""
+"Mostrar contenido de ancho completo encima del contenido habitual en páginas "
+"de anuncio."
+
+#: includes/widget-areas.php:143
+msgid "Listing Content"
+msgstr "Anuncio Contenido"
+
+#: includes/widget-areas.php:144
+msgid "Display main content on single listing pages."
+msgstr "Mostrar contenido principal en páginas de anuncio."
+
+#: includes/widget-areas.php:154
+msgid "Listing Sidebar"
+msgstr "Anuncio Barra Lateral"
+
+#: includes/widget-areas.php:155
+msgid "Display content in the sidebar on single listing pages."
+msgstr "Mostrar contenido en la barra lateral en páginas de anuncio."
+
+#: includes/widget-areas.php:165
+msgid "Listing Bottom"
+msgstr "Anuncio Inferior"
+
+#: includes/widget-areas.php:166
+msgid ""
+"Display full-width content below the regular content on single listing pages."
+msgstr ""
+"Mostrar contenido de ancho completo por debajo del contenido habitual en "
+"páginas de anuncio."
+
+#: includes/widget-areas.php:176
+msgid "Footer (columns)"
+msgstr "Pie de Página (columnas)"
+
+#: includes/widget-areas.php:177
+msgid "Display content columns at the bottom of the site."
+msgstr "Mostrar columnas de contenido en la parte inferior del sitio."
+
+#: includes/widget-areas.php:187
+msgid "Footer"
+msgstr "Pie de Página"
+
+#: includes/widget-areas.php:188
+msgid "Display content in the footer widget area."
+msgstr "Mostrar contenido en la zona widget del pie de página."
+
+#: includes/widget-areas.php:198
+msgid "Footer Full"
+msgstr "Pie de Página Ancho Completo"
+
+#: includes/widget-areas.php:199
+msgid "Display full-width content in the footer widget area."
+msgstr ""
+"Mostrar contenido de ancho completo en el área de widget de pie de página."
+
+#: includes/widgets/call-to-action.php:26
+msgctxt "listing wigdet"
+msgid "Display a call to action."
+msgstr "Mostrar una llamada a acción."
+
+#: includes/widgets/call-to-action.php:29
+msgctxt "listing widget"
+msgid "Call to Action"
+msgstr "Llamada a Acción"
+
+#: includes/widgets/call-to-action.php:98 includes/widgets/feature-box.php:99
+#: includes/widgets/section-title.php:125 includes/widgets/service.php:99
+msgid "Link URL"
+msgstr "URL del enlace"
+
+#: includes/widgets/call-to-action.php:108
+#: includes/widgets/listings-search.php:89
+msgid "Please select the orientation"
+msgstr "Por favor, seleccione la orientación"
+
+#: includes/widgets/feature-box.php:26
+msgctxt "listing wigdet"
+msgid "Display a feature box with icon."
+msgstr "Mostrar un feature box con icono."
+
+#: includes/widgets/feature-box.php:29
+msgctxt "listing widget"
+msgid "Feature Box"
+msgstr "Feature Box"
+
+#: includes/widgets/icon-box.php:26
+msgctxt "listing wigdet"
+msgid "Display an icon box with text."
+msgstr "Mostrar un icon box con texto."
+
+#: includes/widgets/icon-box.php:29
+msgctxt "listing widget"
+msgid "Icon Box"
+msgstr "Icon Box"
+
+#: includes/widgets/listing-agent.php:26
+msgctxt "listing wigdet"
+msgid "Display listing agent on single listing pages."
+msgstr "Mostrar el agente captador en páginas de anuncio."
+
+#: includes/widgets/listing-agent.php:29
+msgctxt "listing widget"
+msgid "Single Listing Agent"
+msgstr "Anuncio Agente"
+
+#: includes/widgets/listing-agent.php:109
+msgid "Display agent image"
+msgstr "Mostrar imagen del agente"
+
+#: includes/widgets/listing-agent.php:113
+#: includes/widgets/listing-image-slider.php:193
+#: includes/widgets/listings-slider.php:236
+msgid "Image Size"
+msgstr "Tamaño de la Imagen"
+
+#: includes/widgets/listing-agent.php:124
+msgid "Display agent company"
+msgstr "Mostrar empresa del agente"
+
+#: includes/widgets/listing-agent.php:127
+msgid "Display agent phone"
+msgstr "Mostrar teléfono del agente"
+
+#: includes/widgets/listing-agent.php:130
+msgid "Display social profiles"
+msgstr "Mostrar perfiles sociales"
+
+#: includes/widgets/listing-agent.php:133
+msgid "Display agent archive link"
+msgstr "Mostrar enlace al listado del agente"
+
+#: includes/widgets/listing-description.php:26
+msgctxt "listing wigdet"
+msgid "Display listing description on single listing pages."
+msgstr "Mostrar la descripción del inmueble en páginas de anuncio."
+
+#: includes/widgets/listing-description.php:29
+msgctxt "listing widget"
+msgid "Single Listing Description"
+msgstr "Anuncio Descripción"
+
+#: includes/widgets/listing-details.php:26
+msgctxt "listing wigdet"
+msgid "Display listing details on single listing pages."
+msgstr "Mostrar detalles del inmueble en páginas de anuncio."
+
+#: includes/widgets/listing-details.php:29
+msgctxt "listing widget"
+msgid "Single Listing Details"
+msgstr "Anuncio Detalles"
+
+#: includes/widgets/listing-image-gallery.php:26
+msgctxt "listing wigdet"
+msgid "Display listing images in thumbnail gallery."
+msgstr "Mostrar imágenes del inmueble en la galería de miniaturas."
+
+#: includes/widgets/listing-image-gallery.php:29
+msgctxt "listing widget"
+msgid "Single Listing Image Gallery"
+msgstr "Anuncio Galería de Imágenes"
+
+#: includes/widgets/listing-image-gallery.php:220
+#: includes/widgets/listing-image-gallery.php:231
+msgid "Columns"
+msgstr "Columnas"
+
+#: includes/widgets/listing-image-gallery.php:222
+#: includes/widgets/listing-image-gallery.php:233
+msgctxt "listing widget"
+msgid "column"
+msgstr "columna"
+
+#: includes/widgets/listing-image-gallery.php:223
+#: includes/widgets/listing-image-gallery.php:224
+#: includes/widgets/listing-image-gallery.php:225
+#: includes/widgets/listing-image-gallery.php:226
+#: includes/widgets/listing-image-gallery.php:227
+#: includes/widgets/listing-image-gallery.php:234
+#: includes/widgets/listing-image-gallery.php:235
+#: includes/widgets/listing-image-gallery.php:236
+#: includes/widgets/listing-image-gallery.php:237
+#: includes/widgets/listing-image-gallery.php:238
+msgctxt "listing widget"
+msgid "columns"
+msgstr "columnas"
+
+#: includes/widgets/listing-image-gallery.php:229
+#: includes/widgets/listing-image-gallery.php:240
+msgid "Please select the number of columns"
+msgstr "Seleccione el número de columnas"
+
+#: includes/widgets/listing-image-gallery.php:231
+#: includes/widgets/listing-image-gallery.php:240
+msgctxt "listing widget"
+msgid "on small screens"
+msgstr "en pantallas pequeñas"
+
+#: includes/widgets/listing-image-gallery.php:242
+msgid "Gutter"
+msgstr "Margen interior"
+
+#: includes/widgets/listing-image-gallery.php:252
+msgid "Please select the gutter width (space between thumbs)"
+msgstr "Seleccione el ancho del margen interior (espacio entre las miniaturas)"
+
+#: includes/widgets/listing-image-gallery.php:254
+msgid "Thumbnail Size"
+msgstr "Tamaño de la miniatura"
+
+#: includes/widgets/listing-image-gallery.php:261
+msgid "Please select the thumbnail size"
+msgstr "Seleccione el tamaño de la miniatura"
+
+#: includes/widgets/listing-image-gallery.php:264
+msgid "Display thumbnail captions (if any)"
+msgstr "Mostrar leyendas de las miniaturas (si hay)"
+
+#: includes/widgets/listing-image-gallery.php:267
+msgid "Link thumbnails to image file (in lightbox)"
+msgstr ""
+"Enlazar miniaturas a archivos de imagen (en el lightbox si está activo)"
+
+#: includes/widgets/listing-image-gallery.php:271
+msgid "Lightbox Size"
+msgstr "Tamaño Lightbox"
+
+#: includes/widgets/listing-image-gallery.php:278
+msgid "Please select the image size for the lightbox"
+msgstr "Seleccione el tamaño de imagen para el lightbox"
+
+#: includes/widgets/listing-image-gallery.php:282
+#: includes/widgets/listing-image-slider.php:203
+#: includes/widgets/listings-slider.php:246
+msgctxt "listing widget"
+msgid "fade"
+msgstr "fade"
+
+#: includes/widgets/listing-image-gallery.php:283
+#: includes/widgets/listing-image-slider.php:204
+#: includes/widgets/listings-slider.php:247
+msgctxt "listing widget"
+msgid "slide"
+msgstr "slide"
+
+#: includes/widgets/listing-image-gallery.php:287
+msgid "Show image descriptions in lightbox"
+msgstr "Mostrar descripciones de imagen en lightbox"
+
+#: includes/widgets/listing-image-gallery.php:290
+msgid "Loop lightbox images"
+msgstr "Bucle de imágenes lightbox"
+
+#: includes/widgets/listing-image-gallery.php:293
+msgid "Show prev/next navigation in lightbox"
+msgstr "Mostrar navegación anterior/siguiente en el lightbox"
+
+#: includes/widgets/listing-image-gallery.php:296
+msgid "Show image download button"
+msgstr "Mostrar botón de descarga en el lightbox"
+
+#: includes/widgets/listing-image-gallery.php:299
+msgid "Allow zoom option in lightbox"
+msgstr "Permitir opción de zoom en el lightbox"
+
+#: includes/widgets/listing-image-gallery.php:302
+msgid "Allow fullscreen toggle in lightbox"
+msgstr "Permitir activar pantalla completa en el lightbox"
+
+#: includes/widgets/listing-image-gallery.php:305
+msgid "Show image counter in lightbox"
+msgstr "Mostrar contador de imágenes en el lightbox"
+
+#: includes/widgets/listing-image-gallery.php:308
+msgid "Show autoplay controls in lightbox"
+msgstr "Mostrar controles de reproducción automática en lightbox"
+
+#: includes/widgets/listing-image-gallery.php:311
+msgid "Show thumbnail previews in lightbox"
+msgstr "Mostrar vistas previas miniatura en lightbox"
+
+#: includes/widgets/listing-image-slider.php:26
+msgctxt "listing wigdet"
+msgid "Display listing images in slider."
+msgstr "Mostrar imágenes del inmueble en el deslizador de miniaturas."
+
+#: includes/widgets/listing-image-slider.php:29
+msgctxt "listing widget"
+msgid "Single Listing Image Slider"
+msgstr "Anuncio Deslizador de Imágenes"
+
+#: includes/widgets/listing-image-slider.php:211
+#: includes/widgets/listings-slider.php:254
+msgid "Animate slider automatically"
+msgstr "Deslizar por los ítems automáticamente"
+
+#: includes/widgets/listing-image-slider.php:215
+#: includes/widgets/listings-carousel.php:268
+#: includes/widgets/listings-slider.php:258
+msgid "Autoplay interval"
+msgstr "Intervalo de reproducción automática"
+
+#: includes/widgets/listing-image-slider.php:236
+msgid "Number of thumbnail items"
+msgstr "Número de miniaturas"
+
+#: includes/widgets/listing-image-slider.php:243
+msgid "Margin between thumbnail items"
+msgstr "Margen entre las miniaturas"
+
+#: includes/widgets/listing-image-slider.php:259
+#: includes/widgets/listings-slider.php:283
+msgid "Allow slider navigating via keyboard"
+msgstr "Permite la navegación mediante teclado"
+
+#: includes/widgets/listing-image-slider.php:262
+msgid "Display image captions (if any)"
+msgstr "Mostrar leyendas de las miniaturas (si hay)"
+
+#: includes/widgets/listing-image.php:26
+msgctxt "listing wigdet"
+msgid "Display featured image on single listing pages."
+msgstr "Mostrar imagen destacada en páginas de anuncio."
+
+#: includes/widgets/listing-image.php:29
+msgctxt "listing widget"
+msgid "Single Listing Image"
+msgstr "Anuncio Imagen Destacada"
+
+#: includes/widgets/listing-location.php:26
+msgctxt "listing wigdet"
+msgid "Display Google Map with marker on single listing pages."
+msgstr "Mostrar Mapa Google con marcador en páginas de anuncio."
+
+#: includes/widgets/listing-location.php:29
+msgctxt "listing widget"
+msgid "Single Listing Location"
+msgstr "Anuncio Ubicación"
+
+#: includes/widgets/listing-location.php:109
+msgid "Map Height (px)"
+msgstr "Altura del mapa (px)"
+
+#: includes/widgets/listing-location.php:111
+msgid "Map Type"
+msgstr "Tipo de Mapa"
+
+#: includes/widgets/listing-location.php:113
+msgctxt "listing widget"
+msgid "Roadmap"
+msgstr "Roadmap"
+
+#: includes/widgets/listing-location.php:114
+msgctxt "listing widget"
+msgid "Satellite"
+msgstr "Satellite"
+
+#: includes/widgets/listing-location.php:115
+msgctxt "listing widget"
+msgid "Hybrid"
+msgstr "Hybrid"
+
+#: includes/widgets/listing-location.php:116
+msgctxt "listing widget"
+msgid "Terrain"
+msgstr "Terrain"
+
+#: includes/widgets/listing-location.php:119
+msgid "Map Zoom"
+msgstr "Mapa Zoom"
+
+#: includes/widgets/listing-location.php:127
+msgid "Disable streetview"
+msgstr "Desactivar el streetview"
+
+#: includes/widgets/listing-location.php:130
+msgid "Enable type control"
+msgstr "Activar el control de tipo"
+
+#: includes/widgets/listing-location.php:133
+msgid "Enable nav control"
+msgstr "Activar el control de navegación"
+
+#: includes/widgets/listing-location.php:136
+msgid "Enable scrollwheel"
+msgstr "Habilitar rueda de ratón"
+
+#: includes/widgets/listing-location.php:139
+msgid "Display public note"
+msgstr "Mostrar nota pública"
+
+#: includes/widgets/listing-price.php:26
+msgctxt "listing wigdet"
+msgid ""
+"Display info bar with price, ID and offer badge (sale, rent etc.) on single "
+"listing pages."
+msgstr ""
+"Mostrar barra de información con precio y operación (venta, alquiler etc.) "
+"en páginas de anuncio."
+
+#: includes/widgets/listing-price.php:29
+msgctxt "listing widget"
+msgid "Single Listing Price"
+msgstr "Anuncio Precio"
+
+#: includes/widgets/listing-price.php:86
+msgid "Display listing ID"
+msgstr "ID del anuncio"
+
+#: includes/widgets/listing-price.php:89
+msgid "Display listing offer (sale/rent etc.)"
+msgstr "Mostrar oferta (venta o alquiler, etc.)"
+
+#: includes/widgets/listing-terms.php:26
+msgctxt "listing wigdet"
+msgid "Display listing taxonomy terms on single listing pages."
+msgstr "Mostrar términos de taxonomía del inmueble en páginas de anuncio."
+
+#: includes/widgets/listing-terms.php:29
+msgctxt "listing widget"
+msgid "Single Listing Terms"
+msgstr "Anuncio Términos"
+
+#: includes/widgets/listing-terms.php:96
+msgid "Taxonomy"
+msgstr "Taxonomía"
+
+#: includes/widgets/listing-terms.php:102
+msgid "Please select the term taxonomy"
+msgstr "Seleccione la taxonomía de los términos"
+
+#: includes/widgets/listing-terms.php:105
+msgid "Link terms to archive pages"
+msgstr "Enlazar términos a páginas de archivos"
+
+#: includes/widgets/listing-title.php:26
+msgctxt "listing wigdet"
+msgid "Display title and listing actions on single listing pages."
+msgstr "Mostrar título y acciones de inmueble en páginas de anuncio."
+
+#: includes/widgets/listing-title.php:29
+msgctxt "listing widget"
+msgid "Single Listing Title"
+msgstr "Anuncio Título"
+
+#: includes/widgets/listing-title.php:74
+msgid ""
+"Please select the listing actions that you want to be displayed along the "
+"title."
+msgstr ""
+"Seleccione las acciones de inmueble que quiere mostrar al lado del título."
+
+#: includes/widgets/listing-title.php:76
+msgid "Currently there are no listing actions to be displayed along the title."
+msgstr ""
+"Actualmente no hay acciones de inmueble para mostrar al lado del título."
+
+#: includes/widgets/listings-carousel.php:30
+msgctxt "listing wigdet"
+msgid "Display listings in a carousel."
+msgstr "Mostrar anuncios en un carrusel."
+
+#: includes/widgets/listings-carousel.php:33
+msgctxt "listing widget"
+msgid "Listings Carousel"
+msgstr "Carrusel de anuncios"
+
+#: includes/widgets/listings-carousel.php:190
+#: includes/widgets/listings-query.php:147
+#: includes/widgets/listings-slider.php:210
+msgid "Please enter the number of listings"
+msgstr "Introduzca el número de inmuebles"
+
+#: includes/widgets/listings-carousel.php:192
+#: includes/widgets/listings-query.php:149
+#: includes/widgets/listings-slider.php:212
+msgid "Filters"
+msgstr "Filtros"
+
+#: includes/widgets/listings-carousel.php:195
+#: includes/widgets/listings-query.php:152
+#: includes/widgets/listings-slider.php:215
+msgid "All Offers"
+msgstr "Todas las Ofertas"
+
+#: includes/widgets/listings-carousel.php:204
+#: includes/widgets/listings-query.php:161
+#: includes/widgets/listings-slider.php:224
+#, php-format
+msgid "All %s"
+msgstr "Todos los/las %s"
+
+#: includes/widgets/listings-carousel.php:218
+#: includes/widgets/listings-carousel.php:231
+msgctxt "listing widget"
+msgid "item"
+msgstr "ítem"
+
+#: includes/widgets/listings-carousel.php:219
+#: includes/widgets/listings-carousel.php:220
+#: includes/widgets/listings-carousel.php:221
+#: includes/widgets/listings-carousel.php:222
+#: includes/widgets/listings-carousel.php:223
+#: includes/widgets/listings-carousel.php:232
+#: includes/widgets/listings-carousel.php:233
+#: includes/widgets/listings-carousel.php:234
+#: includes/widgets/listings-carousel.php:235
+#: includes/widgets/listings-carousel.php:236
+msgctxt "listing widget"
+msgid "items"
+msgstr "ítems"
+
+#: includes/widgets/listings-carousel.php:225
+msgid "Please select the number of visible carousel items"
+msgstr "Seleccione el número de ítems visible en el carrusel"
+
+#: includes/widgets/listings-carousel.php:238
+msgid "Please select the number items to slide"
+msgstr "Seleccione el número de ítems para deslizar"
+
+#: includes/widgets/listings-carousel.php:252
+msgid "Please select the space between carousel items"
+msgstr "Seleccione el espacio entre los ítems del carrusel"
+
+#: includes/widgets/listings-carousel.php:255
+msgid "Loop carousel to be infinite"
+msgstr "Poner carrusel en un bucle infinito"
+
+#: includes/widgets/listings-query.php:30
+msgctxt "listing wigdet"
+msgid "Display a certain listings query."
+msgstr "Mostrar una consulta de anuncios."
+
+#: includes/widgets/listings-query.php:33
+msgctxt "listing widget"
+msgid "Listings Query"
+msgstr "Consulta de Anuncios"
+
+#: includes/widgets/listings-query.php:174
+msgid "Display smaller listing teasers"
+msgstr "Mostrar versión corta del anuncio"
+
+#: includes/widgets/listings-search.php:26
+msgctxt "listing wigdet"
+msgid "Display the listings search form."
+msgstr "Mostrar el formulario de búsqueda de anuncios."
+
+#: includes/widgets/listings-search.php:29
+msgctxt "listing widget"
+msgid "Listings Search"
+msgstr "Búsqueda de Inmuebles"
+
+#: includes/widgets/listings-slider.php:30
+msgctxt "listing wigdet"
+msgid "Display listings in a slider."
+msgstr "Mostrar inmuebles en un deslizador."
+
+#: includes/widgets/listings-slider.php:33
+msgctxt "listing widget"
+msgid "Listings Slider"
+msgstr "Deslizador de Inmuebles"
+
+#: includes/widgets/newsletter-box.php:26
+msgctxt "listing wigdet"
+msgid "Display a newsletter box."
+msgstr "Mostrar un cuadro para newsletters."
+
+#: includes/widgets/newsletter-box.php:29
+msgctxt "listing widget"
+msgid "Newsletter Box"
+msgstr "Newsletter Box"
+
+#: includes/widgets/newsletter-box.php:86
+msgid "Form"
+msgstr "Formulario"
+
+#: includes/widgets/newsletter-box.php:88
+msgid ""
+"Place the newsletter form code or shortcode here. We recommend to use <a "
+"href=\"https://wordpress.org/plugins/mailchimp-for-wp/\" target=\"_blank"
+"\">Mailchimp for WordPress</a>"
+msgstr ""
+"Colocar aquí el código de formulario o shortcode de newsletter. Recomendamos "
+"<a href=\"https://wordpress.org/plugins/mailchimp-for-wp/\" target=\"_blank"
+"\">Mailchimp para WordPress</a>"
+
+#: includes/widgets/section-title.php:26
+msgctxt "listing wigdet"
+msgid "Display a section title."
+msgstr "Mostrar un título de sección."
+
+#: includes/widgets/section-title.php:29
+msgctxt "listing widget"
+msgid "Section Title"
+msgstr "Título de Sección"
+
+#: includes/widgets/section-title.php:110
+msgid "Display a separotor under the title"
+msgstr "Mostrar un separador bajo el título"
+
+#: includes/widgets/section-title.php:115
+msgid "Align"
+msgstr "Alineación"
+
+#: includes/widgets/section-title.php:117
+msgctxt "listing widget"
+msgid "left"
+msgstr "izquierda"
+
+#: includes/widgets/section-title.php:118
+msgctxt "listing widget"
+msgid "center"
+msgstr "centro"
+
+#: includes/widgets/section-title.php:119
+msgctxt "listing widget"
+msgid "right"
+msgstr "derecha"
+
+#: includes/widgets/section-title.php:121
+msgid "Please select the alignment"
+msgstr "Por favor, seleccione la alineación"
+
+#: includes/widgets/service.php:26
+msgctxt "listing wigdet"
+msgid "Display a service."
+msgstr "Mostrar un servicio."
+
+#: includes/widgets/service.php:29
+msgctxt "listing widget"
+msgid "Service"
+msgstr "Servicio"
+
+#: includes/widgets/service.php:91
+msgid "Icon"
+msgstr "Icono"
+
+#: page-tpl-listings-query-full.php:29 page-tpl-listings-query.php:29
+msgid ""
+"<strong>Please notice!</strong> This page should not be your listings search "
+"results page set on the WPCasa settings page. Different queries would be "
+"mixed up."
+msgstr ""
+"<strong>Importante!</strong> Esta no debe ser la página de resultados de "
+"búsqueda de la configuración de WPCasa. Se podrían mezclar las consultas."
+
+#: sidebar-listing.php:24 sidebar.php:20
+msgid "This page is password protected."
+msgstr "Esta página está protegida con contraseña."
+
+#: template-parts/content-listing-single-expired.php:15
+#: template-parts/content-listing-single.php:20 wpcasa/listing-single.php:14
+msgid "This listing has expired."
+msgstr "Este anuncio ha caducado."
+
+#: template-parts/content-listing-single.php:42
+msgid "This listing is password protected."
+msgstr "Este inmueble está protegido con contraseña."
+
+#: template-parts/content-none.php:17
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"¿Listo para publicar su primer post? <a href=\"%1$s\">Comience aquí</a>."
+
+#: template-parts/content-none.php:21
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"No se encontraron resultados. Inténtelo de nuevo con otras palabras clave."
+
+#: template-parts/content-none.php:26
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Parece que no se encuentra lo que Usted busca. Quizá una búsqueda pueda "
+"ayudar."
+
+#: template-parts/content-page.php:29
+msgid "Pages:"
+msgstr "Páginas:"
+
+#: template-parts/content-search.php:23
+msgctxt "search results type"
+msgid "Article"
+msgstr "Artículo"
+
+#: template-parts/content-search.php:24
+msgctxt "search results type"
+msgid "Page"
+msgstr "Página"
+
+#: template-parts/content.php:46
+msgid "Pages"
+msgstr "Páginas"
+
+#: template-parts/header-search.php:18
+msgctxt "search page title"
+msgid "Search"
+msgstr "Buscar"
+
+#: template-parts/header-search.php:19
+#, php-format
+msgctxt "search page title"
+msgid "Your search results for <em><strong>%s</strong></em>"
+msgstr "Resultados de Búsqueda para <em><strong>%s</strong></em>"
+
+#: template-parts/header-search.php:23
+msgctxt "search page title"
+msgid "Home Page"
+msgstr "Inicio"
+
+#: template-parts/header-top.php:78
+msgid "Toggle navigation"
+msgstr "Cambiar navegación"
+
+#: wpcasa/account-login.php:12 wpcasa/account-register.php:14
+msgid "Username"
+msgstr "Usuario"
+
+#: wpcasa/account-login.php:17 wpcasa/account-register.php:24
+msgid "Password"
+msgstr "Contraseña"
+
+#: wpcasa/account-login.php:30
+msgid "Log In"
+msgstr "Iniciar sesión"
+
+#: wpcasa/account-login.php:38
+msgid "Need an account? Register now."
+msgstr "¿Necesita una cuenta? Regístrese ahora."
+
+#: wpcasa/account-login.php:46 wpcasa/account-register.php:71
+#: wpcasa/password-reset.php:22
+msgid "You are already logged in."
+msgstr "Ya ha iniciado sesión."
+
+#: wpcasa/account-register.php:19
+msgid "E-mail"
+msgstr "E­mail"
+
+#: wpcasa/account-register.php:29
+msgid "Retype Password"
+msgstr "Confirmar contraseña"
+
+#: wpcasa/account-register.php:40
+#, php-format
+msgid "I have read and agree to <a href=\"%s\" target=\"_blank\">%s</a>"
+msgstr ""
+"He leído y estoy de acuerdo con <a href=\"%s\" target=\"_blank\">%s</a>"
+
+#: wpcasa/account-register.php:55
+msgid "Sign Up"
+msgstr "Registrarse"
+
+#: wpcasa/account-register.php:63
+msgid "Already a member? Log in now."
+msgstr "Ya es miembro? Inicie sesión aquí."
+
+#: wpcasa/account-register.php:79
+msgid "Registrations are not allowed at the moment."
+msgstr "No se permiten registros en este momento."
+
+#: wpcasa/list-agent.php:69 wpcasa/listing-single-agent.php:73
+msgid "My Listings"
+msgstr "Mis anuncios"
+
+#: wpcasa/listing-archive-description.php:5 wpcasa/listing-print.php:133
+#: wpcasa/listing-single-description.php:11
+msgid "This property is currently not available."
+msgstr "Actualmente este inmueble no está disponible."
+
+#: wpcasa/listing-no.php:2
+msgid "Sorry, but no listing matches your criteria."
+msgstr "Lo sentimos, no hay resultados para su búsqueda."
+
+#: wpcasa/listing-print.php:28
+msgctxt "listing print"
+msgid "Back to Listing"
+msgstr "Volver al anuncio"
+
+#: wpcasa/listing-print.php:34
+msgctxt "listing print"
+msgid "Print Now"
+msgstr "Imprimir ahora"
+
+#: wpcasa/listing-single-widget-notice.php:9
+#, php-format
+msgid ""
+"Please only activate the widget <strong>%s</strong> in one of the single "
+"listing widget areas."
+msgstr ""
+"Por favor sólo activar el widget <strong>%s</strong> en páginas de anuncio."
+
+#: wpcasa/listing-slider.php:28
+msgid "More Info"
+msgstr "Más Info"
+
+#: wpcasa/listings-no.php:6
+msgid "Sorry, but no listing matches your search criteria."
+msgstr "Lo sentimos, no hay resultados para su búsqueda."
+
+#: wpcasa/listings-no.php:12
+msgid "Sorry, but you currently have no favorites."
+msgstr "Lo sentimos, pero actualmente no tiene favoritos."
+
+#: wpcasa/package-info.php:15
+msgid "Please upgrade your package to post a listing."
+msgstr "Por favor actualizar su paquete para publicar un anuncio."
+
+#: wpcasa/package-info.php:25
+#, php-format
+msgid "Current package: <strong>%s</strong>"
+msgstr "Paquete actual: <strong>%s</strong>"
+
+#: wpcasa/package-info.php:29 wpcasa/submission-create-link.php:11
+msgid "New listing"
+msgstr "Nuevo anuncio"
+
+#: wpcasa/package-info.php:39
+#, php-format
+msgid "Your subscription is valid until <strong>%s</strong>."
+msgstr "Su suscripción es válida hasta el <strong>%s</strong>."
+
+#: wpcasa/package-info.php:46
+msgid "You can add an <strong>unlimited</strong> amount of items"
+msgstr "Puede agregar una cantidad <strong>ilimitada</strong> de anuncios"
+
+#: wpcasa/package-info.php:48
+#, php-format
+msgid ""
+"At the moment you cannot add new listings because there are no credits left. "
+"You may need another package. The first <strong>%s</strong> listings have "
+"been unpublished."
+msgstr ""
+"En este momento se pueden añadir anuncios nuevos porque no tiene más "
+"créditos. Puede que necesite otro paquete. Sus primeros <strong>%s</strong> "
+"anuncios han sido postergados."
+
+#: wpcasa/package-info.php:50
+#, php-format
+msgid "You can add <strong>%s</strong> listings more."
+msgstr "Puede agregar <strong>%s</strong> anuncios más."
+
+#: wpcasa/package-info.php:56
+#, php-format
+msgid "Your subscription has expired on <strong>%s</strong>."
+msgstr "Su suscripción ha caducado el <strong>%s</strong>."
+
+#: wpcasa/package-info.php:58
+#, php-format
+msgid ""
+"Your listings have been unpublished on <strong>%s</strong>. To relist them "
+"please update your subscription."
+msgstr ""
+"Sus anuncios han sido postergados el <strong>%s</strong>. Para volver a "
+"publicarlos, por favor, actualice su suscripción."
+
+#: wpcasa/package-info.php:71
+msgid "Payment page has not been set."
+msgstr "La página de pago no se ha establecido."
+
+#: wpcasa/package-info.php:82
+msgid "Select a package"
+msgstr "Seleccionar paquete"
+
+#: wpcasa/package-info.php:93
+msgid "Change Package"
+msgstr "Cambiar paquete"
+
+#: wpcasa/password-change.php:10
+msgid "Old password"
+msgstr "Contraseña antigua"
+
+#: wpcasa/password-change.php:15
+msgid "New password"
+msgstr "Contraseña nueva"
+
+#: wpcasa/password-change.php:20
+msgid "Retype password"
+msgstr "Confirmar contraseña"
+
+#: wpcasa/password-change.php:24
+msgid "Change Password"
+msgstr "Cambiar contraseña"
+
+#: wpcasa/password-reset.php:11
+msgid "Username or email:"
+msgstr "Usuario o email:"
+
+#: wpcasa/password-reset.php:15
+msgid "Reset Password"
+msgstr "Restablecer contraseña"
+
+#: wpcasa/payment-form-before.php:10
+msgid "The trial package is currently not available."
+msgstr "El paquete de prueba no está disponible actualmente."
+
+#: wpcasa/payment-form-before.php:15
+#, php-format
+msgid "You selected the package <strong>%s</strong>."
+msgstr "Ha seleccionado el paquete <strong>%s</strong>."
+
+#: wpcasa/payment-form-before.php:20
+#, php-format
+msgid ""
+"You are going to pay <strong>%s</strong> for package <strong>%s</strong>."
+msgstr "Va a pagar <strong>%s</strong> por el paquete <strong>%s</strong>."
+
+#: wpcasa/payment-form-before.php:27
+msgid "The package is missing."
+msgstr "El paquete no ha sido identificado."
+
+#: wpcasa/payment-form-fields.php:8
+msgid "Confirm"
+msgstr "Confirmar"
+
+#: wpcasa/payment-form.php:14
+msgid "The payment type is missing. Please do not link this page directly."
+msgstr "El tipo de pago no ha podido ser identificado."
+
+#: wpcasa/payment-form.php:20
+msgid "The payment type does not seem to be valid."
+msgstr "El tipo de pago no parece ser válido."
+
+#: wpcasa/payment-form.php:26
+msgid "The payment object is missing."
+msgstr "El objeto del pago no ha sido identificado."
+
+#: wpcasa/payment-form.php:52
+msgid "Billing details"
+msgstr "Datos de facturación"
+
+#: wpcasa/payment-form.php:57
+msgid "Payment Gateway"
+msgstr "Forma de Pago"
+
+#: wpcasa/payment-form.php:111
+#, php-format
+msgid "I've read and agree to <a href=\"%s\" target=\"_blank\">%s</a>"
+msgstr ""
+"He leído y estoy de acuerdo con <a href=\"%s\" target=\"_blank\">%s</a>"
+
+#: wpcasa/payment-form.php:119
+msgid "Process Payment"
+msgstr "Pagar ahora"
+
+#: wpcasa/payment-form.php:126
+msgid "No payment gateways found."
+msgstr "No se han encontrado pasarelas de pago."
+
+#: wpcasa/payment-form.php:137 wpcasa/submission-form-remove.php:24
+msgid "Back to"
+msgstr "Volver a"
+
+#: wpcasa/payment-transactions.php:21
+msgid "ID"
+msgstr "ID"
+
+#: wpcasa/payment-transactions.php:22
+msgid "Price"
+msgstr "Precio"
+
+#: wpcasa/payment-transactions.php:23
+msgid "Gateway"
+msgstr "Pasarela"
+
+#: wpcasa/payment-transactions.php:24
+msgid "Package"
+msgstr "Paquete"
+
+#: wpcasa/payment-transactions.php:26
+msgid "Date"
+msgstr "Fecha"
+
+#: wpcasa/payment-transactions.php:76
+msgid "You don't have any transactions yet."
+msgstr "Aún no tiene transacciones."
+
+#: wpcasa/pricing-table-no.php:10
+msgid "A pricing table with this ID does not exist."
+msgstr "Una tabla de precios con este ID no existe."
+
+#: wpcasa/pricing-table.php:84
+msgid "Choose Plan"
+msgstr "Seleccionar tárifa"
+
+#: wpcasa/pricing-table.php:123
+msgid "This pricing table does not have any plans yet."
+msgstr "Esta tabla de precios aún no tiene tárifas."
+
+#: wpcasa/submission-form-remove.php:4
+msgid "The listing to remove is not specified."
+msgstr "No se especifica el anuncio a eliminar."
+
+#: wpcasa/submission-form-remove.php:9
+#, php-format
+msgid "Do you really want to delete <strong>%s</strong>?"
+msgstr "¿De verdad quiere eliminar <strong>%s</strong>?"
+
+#: wpcasa/submission-form-remove.php:19
+msgid "Delete Listing"
+msgstr "Eliminar anuncio"
+
+#: wpcasa/submission-list.php:60
+msgid "Marked unavailable"
+msgstr "Este inmueble actualmente está marcado como no disponible."
+
+#: wpcasa/submission-list.php:83
+msgid "Mark unavailable"
+msgstr "Marcar no disponible"
+
+#: wpcasa/submission-list.php:87
+msgid "Mark available"
+msgstr "Marcar disponible"
+
+#: wpcasa/submission-list.php:123
+msgid "Permalink"
+msgstr "Enlace permanente"
+
+#: wpcasa/submission-list.php:144
+msgid "You don't have any listings yet."
+msgstr "Aún no tiene ningún anuncio."
+
+#: wpcasa/submission-list.php:147
+msgid "Create one."
+msgstr "Crea uno aquí."
+
+#: wpcasa/submission-listing-edit.php:10
+msgid "You are the author of this listing."
+msgstr "Usted es el autor de este anuncio."
+
+#: wpcasa/submission-listing-edit.php:16
+msgid "Edit listing"
+msgstr "Editar"
+
+#: wpcasa/submission-steps.php:33
+msgid "No steps to show."
+msgstr "No hay pasos para mostrar."
+
+#. Theme Name of the plugin/theme
+msgid "WPCasa Oslo"
+msgstr "WPCasa Oslo"
+
+#. Theme URI of the plugin/theme
+msgid "https://wpcasa.com/downloads/wpcasa-madrid/"
+msgstr "https://wpcasa.com/downloads/wpcasa-madrid/"
+
+#. Description of the plugin/theme
+msgid "WordPress theme for WPCasa real estate."
+msgstr "Tema de WordPress de WPCasa para la inmobiliaria."
+
+#. Author of the plugin/theme
+msgid "WPSight"
+msgstr "WPSight"
+
+#. Author URI of the plugin/theme
+msgid "http://wpsight.com"
+msgstr "http://wpsight.com"
+
+#~ msgid "Tagline Margin"
+#~ msgstr "Margen"
+
+#~ msgid ""
+#~ "Optionally set the bottom margin in <strong>px</strong> to align the "
+#~ "tagline with your logo."
+#~ msgstr ""
+#~ "Opcionalmente puede introducir un margen inferior en <strong>px</strong> "
+#~ "para alinear el lema con su logo."
+
+#~ msgid ""
+#~ "Optionally upload an alternative logo. You can set the logo for "
+#~ "individual pages through the <strong>%s</strong> on editor pages."
+#~ msgstr ""
+#~ "Opcionalmente puede subir un logo alternativo. Puede establecer el "
+#~ "logotipo para páginas individuales a través de <strong>%s</strong> en "
+#~ "páginas del editor."
+
+#~ msgid "Call to Action"
+#~ msgstr "Llamada a Acción"
+
+#~ msgid "Light Background Highlight Color"
+#~ msgstr "Color de resaltado de fondo claro"
+
+#~ msgid "WPCasa London"
+#~ msgstr "WPCasa London"
+
+#~ msgid "https://wpcasa.com/downloads/wpcasa-london/"
+#~ msgstr "https://wpcasa.com/downloads/wpcasa-london/"
