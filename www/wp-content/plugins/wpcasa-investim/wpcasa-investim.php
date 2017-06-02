@@ -54,272 +54,274 @@ load_plugin_textdomain( 'wpcasa-investim', false, dirname( plugin_basename( __FI
 /**
  * Detalhes de anúncio customizados para a Investim
  */
+
+$detalhes = array(
+	'razao_social' => array(
+		'id'			=> 'razao_social',
+		'label'			=> __( 'Razão Social', 'wpcasa-investim' ),
+		'unit'			=> '',
+		'description'	=> '',
+		'query_var'		=> 'razao_social',
+		'data_compare'	=> 'LIKE',
+		'data_type'		=> 'CHAR',
+		'dashboard'		=> true,
+		'position'		=> 10
+	),
+	'cnpj' => array(
+		'id'			=> 'cnpj',
+		'label'			=> __( 'CNPJ', 'wpcasa-investim' ),
+		'unit'			=> '',
+		'description'	=> '',
+		'query_var'		=> 'cnpj',
+		'data_compare'	=> 'LIKE',
+		'data_type'		=> 'CHAR',
+		'dashboard'		=> true,
+		'position'		=> 20
+	),
+	'constituicao' => array(
+		'id'			=> 'constituicao',
+		'label'			=> __( 'Constituição', 'wpcasa-investim' ),
+		'unit'			=> '',
+		'data'			=> array( 
+			'' 			=> 'Selecione', 
+			'simples' 	=> 'Sociedade Simples', 
+			'limitada' 	=> 'Sociedade Limitada', 
+			'anonima' 	=> 'Sociedade Anônima'
+		),
+		'description'	=> '',
+		'query_var'		=> 'constituicao',
+		'data_compare'	=> 'LIKE',
+		'data_type'		=> 'CHAR',
+		'dashboard'		=> true,
+		'position'		=> 30
+	),
+	'tributacao' => array(
+		'id'			=> 'tributacao',
+		'label'			=> __( 'Tributação', 'wpcasa-investim' ),
+		'unit'			=> '',
+		'data'			=> array( 
+			''			=> 'Selecione', 
+			'simples'	=> 'Simples', 
+			'presumido' => 'Lucro Presumido', 
+			'real' 		=> 'Lucro Real'
+		),
+		'description'	=> '',
+		'query_var'		=> 'tributacao',
+		'data_compare'	=> 'LIKE',
+		'data_type'		=> 'CHAR',
+		'dashboard'		=> true,
+		'position'		=> 40
+	),
+	'ativos' => array(
+		'id'			=> 'ativos',
+		'label'			=> __( 'Lista de Ativos e Equipamentos', 'wpcasa-investim' ),
+		'unit'			=> '',
+		'description'	=> '',
+		'query_var'		=> 'ativos',
+		'data_compare'	=> 'LIKE',
+		'data_type'		=> 'CHAR',
+		'dashboard'		=> true,
+		'position'		=> 50
+	),
+	'valor_estoque' => array(
+		'id'			=> 'valor_estoque',
+		'label'			=> __( 'Valor do Estoque a Preço de Custo', 'wpcasa-investim' ),
+		'unit'			=> 'R$',
+		'description'	=> '',
+		'query_var'		=> 'valor_estoque',
+		'data_compare'	=> '>=',
+		'data_type'		=> 'numeric',
+		'dashboard'		=> true,
+		'position'		=> 60
+	),
+	'produtos' => array(
+		'id'			=> 'produtos',
+		'label'			=> __( 'Linha de Produtos', 'wpcasa-investim' ),
+		'unit'			=> '',
+		'description'	=> '',
+		'query_var'		=> 'produtos',
+		'data_compare'	=> 'LIKE',
+		'data_type'		=> 'CHAR',
+		'dashboard'		=> true,
+		'position'		=> 70
+	),
+	'servicos' => array(
+		'id'			=> 'servicos',
+		'label'			=> __( 'Linha de Serviços', 'wpcasa-investim' ),
+		'unit'			=> '',
+		'description'	=> '',
+		'query_var'		=> 'servicos',
+		'data_compare'	=> 'LIKE',
+		'data_type'		=> 'CHAR',
+		'dashboard'		=> true,
+		'position'		=> 80
+	),
+	'fundacao' => array(
+		'id'			=> 'fundacao',
+		'label'			=> __( 'Ano de Fundação', 'wpcasa-investim' ),
+		'unit'			=> '',
+		'description'	=> '',
+		'query_var'		=> 'fundacao',
+		'data_compare'	=> 'LIKE',
+		'data_type'		=> 'CHAR',
+		'dashboard'		=> true,
+		'position'		=> 90
+	),
+	'motivo_venda' => array(
+		'id'			=> 'motivo_venda',
+		'label'			=> __( 'Motivo da Venda', 'wpcasa-investim' ),
+		'unit'			=> '',
+		'description'	=> '',
+		'query_var'		=> 'motivo_venda',
+		'data_compare'	=> 'LIKE',
+		'data_type'		=> 'CHAR',
+		'dashboard'		=> true,
+		'position'		=> 100
+	),
+	'vol_vendas_a_1' => array(
+		'id'			=> 'vol_vendas_a_1',
+		'label'			=> __( 'Volume de Vendas Anuais (último ano)', 'wpcasa-investim' ),
+		'unit'			=> 'R$',
+		'description'	=> '(3 últimos anos)',
+		'query_var'		=> 'vol_vendas_a_1',
+		'data_compare'	=> '>=',
+		'data_type'		=> 'numeric',
+		'dashboard'		=> true,
+		'position'		=> 110
+	),
+	'vol_vendas_a_2' => array(
+		'id'			=> 'vol_vendas_a_2',
+		'label'			=> __( 'Volume de Vendas Anuais (penúltimo ano)', 'wpcasa-investim' ),
+		'unit'			=> 'R$',
+		'description'	=> '(3 últimos anos)',
+		'query_var'		=> 'vol_vendas_a_2',
+		'data_compare'	=> '>=',
+		'data_type'		=> 'numeric',
+		'dashboard'		=> true,
+		'position'		=> 120
+	),
+	'vol_vendas_a_3' => array(
+		'id'			=> 'vol_vendas_a_3',
+		'label'			=> __( 'Volume de Vendas Anuais (antepenúltimo ano)', 'wpcasa-investim' ),
+		'unit'			=> 'R$',
+		'description'	=> '(3 últimos anos)',
+		'query_var'		=> 'vol_vendas_a_3',
+		'data_compare'	=> '>=',
+		'data_type'		=> 'numeric',
+		'dashboard'		=> true,
+		'position'		=> 130
+	),
+	'faturamento_mensal' => array(
+		'id'			=> 'faturamento_mensal',
+		'label'			=> __( 'Faturamento Mensal Médio', 'wpcasa-investim' ),
+		'unit'			=> 'R$',
+		'description'	=> '',
+		'query_var'		=> 'faturamento_mensal',
+		'data_compare'	=> '>=',
+		'data_type'		=> 'numeric',
+		'dashboard'		=> true,
+		'position'		=> 140
+	),
+	'lucro_bruto' => array(
+		'id'			=> 'lucro_bruto',
+		'label'			=> __( 'Lucro Bruto', 'wpcasa-investim' ),
+		'unit'			=> 'R$',
+		'description'	=> '',
+		'query_var'		=> 'lucro_bruto',
+		'data_compare'	=> '>=',
+		'data_type'		=> 'numeric',
+		'dashboard'		=> true,
+		'position'		=> 150
+	),
+	'margem_lucro' => array(
+		'id'			=> 'margem_lucro',
+		'label'			=> __( 'Margem de Lucro', 'wpcasa-investim' ),
+		'unit'			=> '%',
+		'description'	=> '',
+		'query_var'		=> 'margem_lucro',
+		'data_compare'	=> '>=',
+		'data_type'		=> 'numeric',
+		'dashboard'		=> true,
+		'position'		=> 160
+	),
+	'lucro_liquido' => array(
+		'id'			=> 'lucro_liquido',
+		'label'			=> __( 'Lucro Líquido Médio', 'wpcasa-investim' ),
+		'unit'			=> 'R$',
+		'description'	=> '',
+		'query_var'		=> 'lucro_liquido',
+		'data_compare'	=> '>=',
+		'data_type'		=> 'numeric',
+		'dashboard'		=> true,
+		'position'		=> 170
+	),
+	'imovel' => array(
+		'id'			=> 'imovel',
+		'label'			=> __( 'Imóvel', 'wpcasa-investim' ),
+		'unit'			=> '',
+		'data'			=> array( 
+			'proprio' 	=> 'Próprio', 
+			'alugado' 	=> 'Alugado'
+		),
+		'description'	=> '',
+		'query_var'		=> 'imovel',
+		'data_compare'	=> '=',
+		'data_type'		=> 'CHAR',
+		'dashboard'		=> true,
+		'position'		=> 180
+	),
+	'endividamento' => array(
+		'id'			=> 'endividamento',
+		'label'			=> __( 'Endividamento', 'wpcasa-investim' ),
+		'unit'			=> '',
+		'description'	=> '',
+		'query_var'		=> 'endividamento',
+		'data_compare'	=> 'LIKE',
+		'data_type'		=> 'CHAR',
+		'dashboard'		=> true,
+		'position'		=> 190
+	),
+	'condicoes_venda' => array(
+		'id'			=> 'condicoes_venda',
+		'label'			=> __( 'Condições de Venda ou de Participação na Empresa', 'wpcasa-investim' ),
+		'unit'			=> '',
+		'description'	=> '',
+		'query_var'		=> 'condicoes_venda',
+		'data_compare'	=> 'LIKE',
+		'data_type'		=> 'CHAR',
+		'dashboard'		=> true,
+		'position'		=> 200
+	),
+	'numero_funcionarios' => array(
+		'id'			=> 'numero_funcionarios',
+		'label'			=> __( 'Número de Funcionários', 'wpcasa-investim' ),
+		'unit'			=> '',
+		'description'	=> '',
+		'query_var'		=> 'numero_funcionarios',
+		'data_compare'	=> '>=',
+		'data_type'		=> 'numeric',
+		'dashboard'		=> true,
+		'position'		=> 210
+	),
+	'diferencial' => array(
+		'id'			=> 'diferencial',
+		'label'			=> __( 'Diferencial do Negócio', 'wpcasa-investim' ),
+		'unit'			=> '',
+		'description'	=> '',
+		'query_var'		=> 'diferencial',
+		'data_compare'	=> 'LIKE',
+		'data_type'		=> 'CHAR',
+		'dashboard'		=> true,
+		'position'		=> 220
+	),
+);
+
+
+
 add_filter( 'wpsight_details', 'wpsight_details_custom' );
 function wpsight_details_custom( $details ) {
-
-	$details = array(
-		'razao_social' => array(
-			'id'			=> 'razao_social',
-			'label'			=> __( 'Razão Social', 'wpcasa-investim' ),
-			'unit'			=> '',
-			'description'	=> '',
-			'query_var'		=> 'razao_social',
-			'data_compare'	=> 'LIKE',
-			'data_type'		=> 'CHAR',
-			'dashboard'		=> true,
-			'position'		=> 10
-		),
-		'cnpj' => array(
-			'id'			=> 'cnpj',
-			'label'			=> __( 'CNPJ', 'wpcasa-investim' ),
-			'unit'			=> '',
-			'description'	=> '',
-			'query_var'		=> 'cnpj',
-			'data_compare'	=> 'LIKE',
-			'data_type'		=> 'CHAR',
-			'dashboard'		=> true,
-			'position'		=> 20
-		),
-		'constituicao' => array(
-			'id'			=> 'constituicao',
-			'label'			=> __( 'Constituição', 'wpcasa-investim' ),
-			'unit'			=> '',
-			'data'			=> array( 
-				'' 			=> 'Selecione', 
-				'simples' 	=> 'Sociedade Simples', 
-				'limitada' 	=> 'Sociedade Limitada', 
-				'anonima' 	=> 'Sociedade Anônima'
-			),
-			'description'	=> '',
-			'query_var'		=> 'constituicao',
-			'data_compare'	=> 'LIKE',
-			'data_type'		=> 'CHAR',
-			'dashboard'		=> true,
-			'position'		=> 30
-		),
-		'tributacao' => array(
-			'id'			=> 'tributacao',
-			'label'			=> __( 'Tributação', 'wpcasa-investim' ),
-			'unit'			=> '',
-			'data'			=> array( 
-				''			=> 'Selecione', 
-				'simples'	=> 'Simples', 
-				'presumido' => 'Lucro Presumido', 
-				'real' 		=> 'Lucro Real'
-			),
-			'description'	=> '',
-			'query_var'		=> 'tributacao',
-			'data_compare'	=> 'LIKE',
-			'data_type'		=> 'CHAR',
-			'dashboard'		=> true,
-			'position'		=> 40
-		),
-		'ativos' => array(
-			'id'			=> 'ativos',
-			'label'			=> __( 'Lista de Ativos e Equipamentos', 'wpcasa-investim' ),
-			'unit'			=> '',
-			'description'	=> '',
-			'query_var'		=> 'ativos',
-			'data_compare'	=> 'LIKE',
-			'data_type'		=> 'CHAR',
-			'dashboard'		=> true,
-			'position'		=> 50
-		),
-		'valor_estoque' => array(
-			'id'			=> 'valor_estoque',
-			'label'			=> __( 'Valor do Estoque a Preço de Custo', 'wpcasa-investim' ),
-			'unit'			=> 'R$',
-			'description'	=> '',
-			'query_var'		=> 'valor_estoque',
-			'data_compare'	=> '>=',
-			'data_type'		=> 'numeric',
-			'dashboard'		=> true,
-			'position'		=> 60
-		),
-		'produtos' => array(
-			'id'			=> 'produtos',
-			'label'			=> __( 'Linha de Produtos', 'wpcasa-investim' ),
-			'unit'			=> '',
-			'description'	=> '',
-			'query_var'		=> 'produtos',
-			'data_compare'	=> 'LIKE',
-			'data_type'		=> 'CHAR',
-			'dashboard'		=> true,
-			'position'		=> 70
-		),
-		'servicos' => array(
-			'id'			=> 'servicos',
-			'label'			=> __( 'Linha de Serviços', 'wpcasa-investim' ),
-			'unit'			=> '',
-			'description'	=> '',
-			'query_var'		=> 'servicos',
-			'data_compare'	=> 'LIKE',
-			'data_type'		=> 'CHAR',
-			'dashboard'		=> true,
-			'position'		=> 80
-		),
-		'fundacao' => array(
-			'id'			=> 'fundacao',
-			'label'			=> __( 'Ano de Fundação', 'wpcasa-investim' ),
-			'unit'			=> '',
-			'description'	=> '',
-			'query_var'		=> 'fundacao',
-			'data_compare'	=> 'LIKE',
-			'data_type'		=> 'CHAR',
-			'dashboard'		=> true,
-			'position'		=> 90
-		),
-		'motivo_venda' => array(
-			'id'			=> 'motivo_venda',
-			'label'			=> __( 'Motivo da Venda', 'wpcasa-investim' ),
-			'unit'			=> '',
-			'description'	=> '',
-			'query_var'		=> 'motivo_venda',
-			'data_compare'	=> 'LIKE',
-			'data_type'		=> 'CHAR',
-			'dashboard'		=> true,
-			'position'		=> 100
-		),
-		'vol_vendas_a_1' => array(
-			'id'			=> 'vol_vendas_a_1',
-			'label'			=> __( 'Volume de Vendas Anuais (último ano)', 'wpcasa-investim' ),
-			'unit'			=> 'R$',
-			'description'	=> '(3 últimos anos)',
-			'query_var'		=> 'vol_vendas_a_1',
-			'data_compare'	=> '>=',
-			'data_type'		=> 'numeric',
-			'dashboard'		=> true,
-			'position'		=> 110
-		),
-		'vol_vendas_a_2' => array(
-			'id'			=> 'vol_vendas_a_2',
-			'label'			=> __( 'Volume de Vendas Anuais (penúltimo ano)', 'wpcasa-investim' ),
-			'unit'			=> 'R$',
-			'description'	=> '(3 últimos anos)',
-			'query_var'		=> 'vol_vendas_a_2',
-			'data_compare'	=> '>=',
-			'data_type'		=> 'numeric',
-			'dashboard'		=> true,
-			'position'		=> 120
-		),
-		'vol_vendas_a_3' => array(
-			'id'			=> 'vol_vendas_a_3',
-			'label'			=> __( 'Volume de Vendas Anuais (antepenúltimo ano)', 'wpcasa-investim' ),
-			'unit'			=> 'R$',
-			'description'	=> '(3 últimos anos)',
-			'query_var'		=> 'vol_vendas_a_3',
-			'data_compare'	=> '>=',
-			'data_type'		=> 'numeric',
-			'dashboard'		=> true,
-			'position'		=> 130
-		),
-		'faturamento_mensal' => array(
-			'id'			=> 'faturamento_mensal',
-			'label'			=> __( 'Faturamento Mensal Médio', 'wpcasa-investim' ),
-			'unit'			=> 'R$',
-			'description'	=> '',
-			'query_var'		=> 'faturamento_mensal',
-			'data_compare'	=> '>=',
-			'data_type'		=> 'numeric',
-			'dashboard'		=> true,
-			'position'		=> 140
-		),
-		'lucro_bruto' => array(
-			'id'			=> 'lucro_bruto',
-			'label'			=> __( 'Lucro Bruto', 'wpcasa-investim' ),
-			'unit'			=> 'R$',
-			'description'	=> '',
-			'query_var'		=> 'lucro_bruto',
-			'data_compare'	=> '>=',
-			'data_type'		=> 'numeric',
-			'dashboard'		=> true,
-			'position'		=> 150
-		),
-		'margem_lucro' => array(
-			'id'			=> 'margem_lucro',
-			'label'			=> __( 'Margem de Lucro', 'wpcasa-investim' ),
-			'unit'			=> '%',
-			'description'	=> '',
-			'query_var'		=> 'margem_lucro',
-			'data_compare'	=> '>=',
-			'data_type'		=> 'numeric',
-			'dashboard'		=> true,
-			'position'		=> 160
-		),
-		'lucro_liquido' => array(
-			'id'			=> 'lucro_liquido',
-			'label'			=> __( 'Lucro Líquido Médio', 'wpcasa-investim' ),
-			'unit'			=> 'R$',
-			'description'	=> '',
-			'query_var'		=> 'lucro_liquido',
-			'data_compare'	=> '>=',
-			'data_type'		=> 'numeric',
-			'dashboard'		=> true,
-			'position'		=> 170
-		),
-		'imovel' => array(
-			'id'			=> 'imovel',
-			'label'			=> __( 'Imóvel', 'wpcasa-investim' ),
-			'unit'			=> '',
-			'data'			=> array( 
-				'proprio' 	=> 'Próprio', 
-				'alugado' 	=> 'Alugado'
-			),
-			'description'	=> '',
-			'query_var'		=> 'imovel',
-			'data_compare'	=> '=',
-			'data_type'		=> 'CHAR',
-			'dashboard'		=> true,
-			'position'		=> 180
-		),
-		'endividamento' => array(
-			'id'			=> 'endividamento',
-			'label'			=> __( 'Endividamento', 'wpcasa-investim' ),
-			'unit'			=> '',
-			'description'	=> '',
-			'query_var'		=> 'endividamento',
-			'data_compare'	=> 'LIKE',
-			'data_type'		=> 'CHAR',
-			'dashboard'		=> true,
-			'position'		=> 190
-		),
-		'condicoes_venda' => array(
-			'id'			=> 'condicoes_venda',
-			'label'			=> __( 'Condições de Venda ou de Participação na Empresa', 'wpcasa-investim' ),
-			'unit'			=> '',
-			'description'	=> '',
-			'query_var'		=> 'condicoes_venda',
-			'data_compare'	=> 'LIKE',
-			'data_type'		=> 'CHAR',
-			'dashboard'		=> true,
-			'position'		=> 200
-		),
-		'numero_funcionarios' => array(
-			'id'			=> 'numero_funcionarios',
-			'label'			=> __( 'Número de Funcionários', 'wpcasa-investim' ),
-			'unit'			=> '',
-			'description'	=> '',
-			'query_var'		=> 'numero_funcionarios',
-			'data_compare'	=> '>=',
-			'data_type'		=> 'numeric',
-			'dashboard'		=> true,
-			'position'		=> 210
-		),
-		'diferencial' => array(
-			'id'			=> 'diferencial',
-			'label'			=> __( 'Diferencial do Negócio', 'wpcasa-investim' ),
-			'unit'			=> '',
-			'description'	=> '',
-			'query_var'		=> 'diferencial',
-			'data_compare'	=> 'LIKE',
-			'data_type'		=> 'CHAR',
-			'dashboard'		=> true,
-			'position'		=> 220
-		),
-	);
-
-	return $details;
- 
+	global $detalhes;
+	return $detalhes;
 }
 
 
@@ -353,5 +355,46 @@ function wpsight_measurements_custom( $measurements ) {
 	$measurements['%'] = '%';
 
 	return $measurements;
+
+}
+
+
+/**
+ * Formatação da exibição dos detalhes do anúncio
+ */
+add_filter( 'wpsight_get_listing_details', 'wpsight_get_listing_details_custom', 10, 4);
+function wpsight_get_listing_details_custom( $listing_details, $post_id, $details, $formatted ) {
+	global $detalhes;
+
+	foreach ($detalhes as $key => $value) {
+		if ($value['unit'] == 'R$') {
+			$listing_details = formata_valor($listing_details, $key);
+		}
+	}
+
+	
+
+	//var_dump($valor);
+	//die();
+	
+	return $listing_details;
+
+}
+
+function formata_valor($listing_details, $campo) {
+
+	$campo = str_replace("_", "-", $campo);
+
+	$pattern = '/<span class="listing-' . $campo . '(.*)<span class="listing-details-value">(.*)<\/span><\/span>/';
+	
+	preg_match($pattern, $listing_details, $matches);
+
+	$valor = trim(str_replace('R$', '', $matches[2]));
+
+	$valor = 'R$ ' . number_format($valor, 2, ',', '.');
+
+	$replacement = str_replace($matches[2], $valor, $matches[0]);
+
+	return str_replace($matches[0], $replacement, $listing_details);
 
 }
