@@ -127,7 +127,7 @@ $detalhes = array(
 		'id'			=> 'valor_estoque',
 		'label'			=> __( 'Valor do Estoque a Preço de Custo', 'wpcasa-investim' ),
 		'unit'			=> 'R$',
-		'description'	=> '',
+		'description'	=> 'Sem símbolos de moeda ou separadores de milhares',
 		'query_var'		=> 'valor_estoque',
 		'data_compare'	=> '>=',
 		'data_type'		=> 'numeric',
@@ -182,7 +182,7 @@ $detalhes = array(
 		'id'			=> 'vol_vendas_a_1',
 		'label'			=> __( 'Volume de Vendas Anuais (último ano)', 'wpcasa-investim' ),
 		'unit'			=> 'R$',
-		'description'	=> '(3 últimos anos)',
+		'description'	=> '(3 últimos anos - Sem símbolos de moeda ou separadores de milhares)',
 		'query_var'		=> 'vol_vendas_a_1',
 		'data_compare'	=> '>=',
 		'data_type'		=> 'numeric',
@@ -193,7 +193,7 @@ $detalhes = array(
 		'id'			=> 'vol_vendas_a_2',
 		'label'			=> __( 'Volume de Vendas Anuais (penúltimo ano)', 'wpcasa-investim' ),
 		'unit'			=> 'R$',
-		'description'	=> '(3 últimos anos)',
+		'description'	=> '(3 últimos anos - Sem símbolos de moeda ou separadores de milhares)',
 		'query_var'		=> 'vol_vendas_a_2',
 		'data_compare'	=> '>=',
 		'data_type'		=> 'numeric',
@@ -204,7 +204,7 @@ $detalhes = array(
 		'id'			=> 'vol_vendas_a_3',
 		'label'			=> __( 'Volume de Vendas Anuais (antepenúltimo ano)', 'wpcasa-investim' ),
 		'unit'			=> 'R$',
-		'description'	=> '(3 últimos anos)',
+		'description'	=> '(3 últimos anos - Sem símbolos de moeda ou separadores de milhares)',
 		'query_var'		=> 'vol_vendas_a_3',
 		'data_compare'	=> '>=',
 		'data_type'		=> 'numeric',
@@ -215,7 +215,7 @@ $detalhes = array(
 		'id'			=> 'faturamento_mensal',
 		'label'			=> __( 'Faturamento Mensal Médio', 'wpcasa-investim' ),
 		'unit'			=> 'R$',
-		'description'	=> '',
+		'description'	=> 'Sem símbolos de moeda ou separadores de milhares',
 		'query_var'		=> 'faturamento_mensal',
 		'data_compare'	=> '>=',
 		'data_type'		=> 'numeric',
@@ -226,7 +226,7 @@ $detalhes = array(
 		'id'			=> 'lucro_bruto',
 		'label'			=> __( 'Lucro Bruto', 'wpcasa-investim' ),
 		'unit'			=> 'R$',
-		'description'	=> '',
+		'description'	=> 'Sem símbolos de moeda ou separadores de milhares',
 		'query_var'		=> 'lucro_bruto',
 		'data_compare'	=> '>=',
 		'data_type'		=> 'numeric',
@@ -248,7 +248,7 @@ $detalhes = array(
 		'id'			=> 'lucro_liquido',
 		'label'			=> __( 'Lucro Líquido Médio', 'wpcasa-investim' ),
 		'unit'			=> 'R$',
-		'description'	=> '',
+		'description'	=> 'Sem símbolos de moeda ou separadores de milhares',
 		'query_var'		=> 'lucro_liquido',
 		'data_compare'	=> '>=',
 		'data_type'		=> 'numeric',
@@ -369,31 +369,48 @@ function wpsight_get_listing_details_custom( $listing_details, $post_id, $detail
 	foreach ($detalhes as $key => $value) {
 		if ($value['unit'] == 'R$') {
 			$listing_details = formata_valor($listing_details, $key);
+		} elseif ($value['data_type'] == 'CHAR') {
+			$listing_details = formata_nova_linha($listing_details, $key);
 		}
 	}
 
-	
-
-	//var_dump($valor);
-	//die();
-	
 	return $listing_details;
+
+}
+
+function resgata_html_detalhe($listing_details, $campo) {
+
+	$campo = str_replace("_", "-", $campo);
+
+	$pattern = '/<span class="listing-' . $campo . '(.*?)"><span class="listing-details-label">(.*?)<\/span>.<span class="listing-details-value">(.*?)<\/span><\/span>/s';
+	
+	preg_match($pattern, $listing_details, $matches);
+
+	return $matches;
 
 }
 
 function formata_valor($listing_details, $campo) {
 
-	$campo = str_replace("_", "-", $campo);
+	$matches = resgata_html_detalhe($listing_details, $campo);
 
-	$pattern = '/<span class="listing-' . $campo . '(.*)<span class="listing-details-value">(.*)<\/span><\/span>/';
-	
-	preg_match($pattern, $listing_details, $matches);
-
-	$valor = trim(str_replace('R$', '', $matches[2]));
+	$valor = trim(str_replace('R$', '', $matches[3]));
 
 	$valor = 'R$ ' . number_format($valor, 2, ',', '.');
 
-	$replacement = str_replace($matches[2], $valor, $matches[0]);
+	$replacement = str_replace($matches[3], $valor, $matches[0]);
+
+	return str_replace($matches[0], $replacement, $listing_details);
+
+}
+
+function formata_nova_linha($listing_details, $campo) {
+
+	$matches = resgata_html_detalhe($listing_details, $campo);
+
+	$valor = str_replace("\n", '<br/>', $matches[3]);
+
+	$replacement = str_replace($matches[3], $valor, $matches[0]);
 
 	return str_replace($matches[0], $replacement, $listing_details);
 
