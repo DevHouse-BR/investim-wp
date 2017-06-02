@@ -1,0 +1,134 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Project-Id-Version: WPCasa Investim - Customização\n"
+"POT-Creation-Date: 2017-06-01 08:38-0300\n"
+"PO-Revision-Date: 2017-06-01 08:40-0300\n"
+"Language-Team: Leonardo Lima de Vasconcellos <leo.lima.web@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: wpcasa-investim.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: Leonardo Lima de Vasconcellos <leo.lima.web@gmail.com>\n"
+"Language: pt_BR\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: wpcasa-investim.php:66
+msgid "Razão Social"
+msgstr "Razão Social"
+
+#: wpcasa-investim.php:77
+msgid "CNPJ"
+msgstr "CNPJ"
+
+#: wpcasa-investim.php:88
+msgid "Constituição"
+msgstr "Constituição"
+
+#: wpcasa-investim.php:105
+msgid "Tributação"
+msgstr "Tributação"
+
+#: wpcasa-investim.php:122
+msgid "Lista de Ativos e Equipamentos"
+msgstr "Lista de Ativos e Equipamentos"
+
+#: wpcasa-investim.php:133
+msgid "Valor do Estoque a Preço de Custo"
+msgstr "Valor do Estoque a Preço de Custo"
+
+#: wpcasa-investim.php:144
+msgid "Linha de Produtos"
+msgstr "Linha de Produtos"
+
+#: wpcasa-investim.php:155
+msgid "Linha de Serviços"
+msgstr "Linha de Serviços"
+
+#: wpcasa-investim.php:166
+msgid "Ano de Fundação"
+msgstr "Ano de Fundação"
+
+#: wpcasa-investim.php:177
+msgid "Motivo da Venda"
+msgstr "Motivo da Venda"
+
+#: wpcasa-investim.php:188
+msgid "Volume de Vendas Anuais (último ano)"
+msgstr "Volume de Vendas Anuais (último ano)"
+
+#: wpcasa-investim.php:199
+msgid "Volume de Vendas Anuais (penúltimo ano)"
+msgstr "Volume de Vendas Anuais (penúltimo ano)"
+
+#: wpcasa-investim.php:210
+msgid "Volume de Vendas Anuais (antepenúltimo ano)"
+msgstr "Volume de Vendas Anuais (antepenúltimo ano)"
+
+#: wpcasa-investim.php:221
+msgid "Faturamento Mensal Médio"
+msgstr "Faturamento Mensal Médio"
+
+#: wpcasa-investim.php:232
+msgid "Lucro Bruto"
+msgstr "Lucro Bruto"
+
+#: wpcasa-investim.php:243
+msgid "Margem de Lucro"
+msgstr "Margem de Lucro"
+
+#: wpcasa-investim.php:254
+msgid "Lucro Líquido Médio"
+msgstr "Lucro Líquido Médio"
+
+#: wpcasa-investim.php:265
+msgid "Imóvel"
+msgstr "Imóvel"
+
+#: wpcasa-investim.php:280
+msgid "Endividamento"
+msgstr "Endividamento"
+
+#: wpcasa-investim.php:291
+msgid "Condições de Venda ou de Participação na Empresa"
+msgstr "Condições de Venda ou de Participação na Empresa"
+
+#: wpcasa-investim.php:302
+msgid "Número de Funcionários"
+msgstr "Número de Funcionários"
+
+#: wpcasa-investim.php:313
+msgid "Diferencial do Negócio"
+msgstr "Diferencial do Negócio"
+
+#. Plugin Name of the plugin/theme
+msgid "WPCasa Investim - Customização"
+msgstr "WPCasa Investim - Customização"
+
+#. Plugin URI of the plugin/theme
+msgid "https://devhouse.com.br/"
+msgstr "https://devhouse.com.br/"
+
+#. Description of the plugin/theme
+msgid ""
+"Plugin desenvolvido especificamente para o site investim.com.br fornecendo "
+"customizações para a plataforma WPCasa."
+msgstr ""
+"Plugin desenvolvido especificamente para o site investim.com.br fornecendo "
+"customizações para a plataforma WPCasa."
+
+#. Author of the plugin/theme
+msgid "Leonardo Lima de Vasconcellos"
+msgstr "Leonardo Lima de Vasconcellos"
+
+#. Author URI of the plugin/theme
+msgid "https://devhouse.com.br/sobre/"
+msgstr "https://devhouse.com.br/sobre/"
