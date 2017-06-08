@@ -1,13 +1,15 @@
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"Project-Id-Version: WPCasa London\n"
-"POT-Creation-Date: 2017-06-07 14:17-0300\n"
-"PO-Revision-Date: 2017-06-08 01:14-0300\n"
+"Project-Id-Version: WPCasa Madrid\n"
+"POT-Creation-Date: 2017-06-08 11:36-0300\n"
+"PO-Revision-Date: 2017-06-08 11:39-0300\n"
+"Last-Translator: Leonardo Lima de Vasconcellos <leo.lima.web@gmail.com>\n"
 "Language-Team: \n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 2.0.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: style.css\n"
@@ -15,8 +17,6 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
-"Last-Translator: Leonardo Lima de Vasconcellos <leo.lima.web@gmail.com>\n"
-"Language: pt_BR\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
@@ -107,6 +107,10 @@ msgstr ""
 "Construído com <a href=\"http://wordpress.org\">WordPress</a> &amp; <a href="
 "\"https://wpcasa.com\">WPCasa</a>"
 
+#: header.php:71
+msgid "Toggle navigation"
+msgstr "Alternar navegação"
+
 #: includes/addon-support.php:170
 msgid "Map Toggle"
 msgstr "Mostrar Mapa"
@@ -133,7 +137,7 @@ msgstr "Texto do Link"
 msgid "Please enter the text for the toggle link."
 msgstr "Digite o texto para o link de ativação."
 
-#: includes/addon-support.php:181
+#: includes/addon-support.php:181 includes/theme-setup.php:589
 msgid "Toggle Map"
 msgstr "Mostrar Mapa"
 
@@ -761,17 +765,21 @@ msgid "large"
 msgstr "grande"
 
 #: includes/image-sizes.php:78
+msgid "print"
+msgstr "imprimir"
+
+#: includes/image-sizes.php:86
 msgid "full"
 msgstr "completo"
 
-#: includes/image-sizes.php:86
+#: includes/image-sizes.php:94
 msgid "slider"
 msgstr "slider"
 
-#: includes/meta-boxes.php:125 includes/meta-boxes.php:191
-#: includes/meta-boxes.php:349 includes/meta-boxes.php:436
-#: includes/meta-boxes.php:562 includes/meta-boxes.php:679
-#: includes/meta-boxes.php:769 includes/meta-boxes.php:1060
+#: includes/meta-boxes.php:125 includes/meta-boxes.php:203
+#: includes/meta-boxes.php:373 includes/meta-boxes.php:472
+#: includes/meta-boxes.php:610 includes/meta-boxes.php:739
+#: includes/meta-boxes.php:841 includes/meta-boxes.php:1135
 msgid "Display"
 msgstr "Exibir"
 
@@ -779,130 +787,144 @@ msgstr "Exibir"
 msgid "Display search form on the front page"
 msgstr "Mostrar formulário de busca na página inicial"
 
-#: includes/meta-boxes.php:130 includes/meta-boxes.php:386
-#: includes/meta-boxes.php:716 includes/widgets/call-to-action.php:103
+#: includes/meta-boxes.php:130 includes/meta-boxes.php:410
+#: includes/meta-boxes.php:776 includes/widgets/call-to-action.php:103
 #: includes/widgets/listings-search.php:84
 msgid "Orientation"
 msgstr "Orientação"
 
-#: includes/meta-boxes.php:134 includes/meta-boxes.php:390
-#: includes/meta-boxes.php:720 includes/widgets/call-to-action.php:105
+#: includes/meta-boxes.php:134 includes/meta-boxes.php:414
+#: includes/meta-boxes.php:780 includes/widgets/call-to-action.php:105
 #: includes/widgets/listings-search.php:86
 msgctxt "listing widget"
 msgid "horizontal"
 msgstr "horizontal"
 
-#: includes/meta-boxes.php:135 includes/meta-boxes.php:391
-#: includes/meta-boxes.php:721 includes/widgets/call-to-action.php:106
+#: includes/meta-boxes.php:135 includes/meta-boxes.php:415
+#: includes/meta-boxes.php:781 includes/widgets/call-to-action.php:106
 #: includes/widgets/listings-search.php:87
 msgctxt "listing widget"
 msgid "vertical"
 msgstr "vertical"
 
-#: includes/meta-boxes.php:149
+#: includes/meta-boxes.php:141 includes/meta-boxes.php:297
+#: includes/meta-boxes.php:421 includes/meta-boxes.php:550
+#: includes/meta-boxes.php:661 includes/meta-boxes.php:787
+msgid "Priority"
+msgstr "Prioridade"
+
+#: includes/meta-boxes.php:148 includes/meta-boxes.php:304
+#: includes/meta-boxes.php:428 includes/meta-boxes.php:557
+#: includes/meta-boxes.php:668 includes/meta-boxes.php:794
+msgid "Set priority to order home page elements. Lowest are displayed first."
+msgstr ""
+"Definir prioridade para ordenar elementos na página inicial. Menores são "
+"exibidos primeiro."
+
+#: includes/meta-boxes.php:161
 msgid "Home Search Form"
 msgstr "Formulário de busca da Página Inicial"
 
-#: includes/meta-boxes.php:192
+#: includes/meta-boxes.php:204
 msgid "Display carousel on the front page"
 msgstr "Exibir carrossel na página inicial"
 
-#: includes/meta-boxes.php:196 includes/meta-boxes.php:588
-#: includes/meta-boxes.php:830 includes/meta-boxes.php:1214
+#: includes/meta-boxes.php:208 includes/meta-boxes.php:636
+#: includes/meta-boxes.php:902 includes/meta-boxes.php:1289
 #: includes/widgets/listings-carousel.php:189
 #: includes/widgets/listings-query.php:146
 #: includes/widgets/listings-slider.php:209
 msgid "Listings"
 msgstr "Anúncios"
 
-#: includes/meta-boxes.php:199 includes/meta-boxes.php:591
-#: includes/meta-boxes.php:833 includes/meta-boxes.php:1217
+#: includes/meta-boxes.php:211 includes/meta-boxes.php:639
+#: includes/meta-boxes.php:905 includes/meta-boxes.php:1292
 msgid "Please enter the number of listings to be displayed"
 msgstr "Por favor, digite o número de anúncios a serem exibidos"
 
-#: includes/meta-boxes.php:204 includes/meta-boxes.php:301
-#: includes/meta-boxes.php:595 includes/meta-boxes.php:632
-#: includes/meta-boxes.php:842 includes/meta-boxes.php:1012
-#: includes/meta-boxes.php:1222 includes/meta-boxes.php:1264
+#: includes/meta-boxes.php:216 includes/meta-boxes.php:325
+#: includes/meta-boxes.php:643 includes/meta-boxes.php:692
+#: includes/meta-boxes.php:914 includes/meta-boxes.php:1087
+#: includes/meta-boxes.php:1297 includes/meta-boxes.php:1339
 msgid "Filter by"
 msgstr "Filtre por"
 
-#: includes/meta-boxes.php:204 includes/meta-boxes.php:595
-#: includes/meta-boxes.php:842 includes/meta-boxes.php:1222
+#: includes/meta-boxes.php:216 includes/meta-boxes.php:643
+#: includes/meta-boxes.php:914 includes/meta-boxes.php:1297
 msgid "Offer"
 msgstr "Oferta"
 
-#: includes/meta-boxes.php:208 includes/meta-boxes.php:293
-#: includes/meta-boxes.php:598 includes/meta-boxes.php:624
-#: includes/meta-boxes.php:850 includes/meta-boxes.php:1004
-#: includes/meta-boxes.php:1226 includes/meta-boxes.php:1256
+#: includes/meta-boxes.php:220 includes/meta-boxes.php:317
+#: includes/meta-boxes.php:646 includes/meta-boxes.php:684
+#: includes/meta-boxes.php:922 includes/meta-boxes.php:1079
+#: includes/meta-boxes.php:1301 includes/meta-boxes.php:1331
 msgid "None"
 msgstr "Nenhum"
 
-#: includes/meta-boxes.php:212 includes/widgets/listings-carousel.php:216
+#: includes/meta-boxes.php:224 includes/widgets/listings-carousel.php:216
 msgid "Items"
 msgstr "Itens"
 
-#: includes/meta-boxes.php:215
+#: includes/meta-boxes.php:227
 msgid "Please enter the number of listings to be visible"
 msgstr "Por favor, digite o número de anúncios a serem visíveis"
 
-#: includes/meta-boxes.php:220 includes/widgets/listings-carousel.php:229
+#: includes/meta-boxes.php:232 includes/widgets/listings-carousel.php:229
 msgid "Slide by"
 msgstr "Deslize por"
 
-#: includes/meta-boxes.php:223
+#: includes/meta-boxes.php:235
 msgid "Please enter the number of listings to move in one slide"
 msgstr "Por favor, insira o número de anúncios a mover-se em um slide"
 
-#: includes/meta-boxes.php:228 includes/widgets/listings-carousel.php:242
+#: includes/meta-boxes.php:240 includes/widgets/listings-carousel.php:242
 msgid "Margin"
 msgstr "Margem"
 
-#: includes/meta-boxes.php:231
+#: includes/meta-boxes.php:243
 msgid "Please enter the space between two listings in px"
 msgstr "Por favor, insira o espaço entre dois anúncios em px"
 
-#: includes/meta-boxes.php:239 includes/meta-boxes.php:872
+#: includes/meta-boxes.php:251 includes/meta-boxes.php:944
 msgid "Loop"
 msgstr "Loop"
 
-#: includes/meta-boxes.php:240 includes/meta-boxes.php:873
+#: includes/meta-boxes.php:252 includes/meta-boxes.php:945
 #: includes/widgets/listing-image-slider.php:208
 #: includes/widgets/listings-slider.php:251
 msgid "Loop slider to be infinite"
 msgstr "Slider em Loop infinito"
 
-#: includes/meta-boxes.php:248
+#: includes/meta-boxes.php:260
 msgid "Carousel nav"
 msgstr "Navegação do Carrossel"
 
-#: includes/meta-boxes.php:249 includes/widgets/listings-carousel.php:258
+#: includes/meta-boxes.php:261 includes/widgets/listings-carousel.php:258
 msgid "Show prev/next carousel navigation"
 msgstr "Exibir navegação do carrossel (Anterior/Próximo)"
 
-#: includes/meta-boxes.php:257
+#: includes/meta-boxes.php:269
 msgid "Carousel dots"
 msgstr "Pontos do carrossel"
 
-#: includes/meta-boxes.php:258 includes/widgets/listings-carousel.php:261
+#: includes/meta-boxes.php:270 includes/widgets/listings-carousel.php:261
 msgid "Show <em>dots</em> carousel navigation"
 msgstr "Exibir <em>pontos</em> de navegação do carrossel"
 
-#: includes/meta-boxes.php:265
+#: includes/meta-boxes.php:277
 msgid "Carousel autoplay"
 msgstr "Reprodução Automática no Carrossel"
 
-#: includes/meta-boxes.php:266 includes/meta-boxes.php:923
+#: includes/meta-boxes.php:278 includes/meta-boxes.php:995
 #: includes/widgets/listings-carousel.php:264
 msgid "Slide through items automatically"
 msgstr "Deslize através de itens automaticamente"
 
-#: includes/meta-boxes.php:274 includes/meta-boxes.php:275
-#: includes/meta-boxes.php:276 includes/meta-boxes.php:277
-#: includes/meta-boxes.php:278 includes/meta-boxes.php:935
-#: includes/meta-boxes.php:936 includes/meta-boxes.php:937
-#: includes/meta-boxes.php:938 includes/meta-boxes.php:939
+#: includes/meta-boxes.php:286 includes/meta-boxes.php:287
+#: includes/meta-boxes.php:288 includes/meta-boxes.php:289
+#: includes/meta-boxes.php:290 includes/meta-boxes.php:1007
+#: includes/meta-boxes.php:1008 includes/meta-boxes.php:1009
+#: includes/meta-boxes.php:1010 includes/meta-boxes.php:1011
 #: includes/widgets/listing-image-slider.php:217
 #: includes/widgets/listing-image-slider.php:218
 #: includes/widgets/listing-image-slider.php:219
@@ -922,20 +944,20 @@ msgctxt "listing widget"
 msgid "seconds"
 msgstr "segundos"
 
-#: includes/meta-boxes.php:280 includes/meta-boxes.php:941
+#: includes/meta-boxes.php:292 includes/meta-boxes.php:1013
 #: includes/widgets/listings-carousel.php:276
 msgid "Please select the autoplay interval timeout"
 msgstr "Intervalo da Reprodução automática"
 
-#: includes/meta-boxes.php:318
+#: includes/meta-boxes.php:342
 msgid "Home Carousel"
 msgstr "Carrossel da Página Inicial"
 
-#: includes/meta-boxes.php:350 includes/meta-boxes.php:680
+#: includes/meta-boxes.php:374 includes/meta-boxes.php:740
 msgid "Display call to action on the front page"
 msgstr "Exibir o plano de ação na página inicial"
 
-#: includes/meta-boxes.php:354 includes/meta-boxes.php:684
+#: includes/meta-boxes.php:378 includes/meta-boxes.php:744
 #: includes/theme-customizer.php:158 includes/theme-customizer.php:232
 #: includes/theme-customizer.php:306 includes/widgets/call-to-action.php:91
 #: includes/widgets/feature-box.php:89 includes/widgets/icon-box.php:81
@@ -956,74 +978,74 @@ msgstr "Exibir o plano de ação na página inicial"
 msgid "Title"
 msgstr "Título"
 
-#: includes/meta-boxes.php:360 includes/meta-boxes.php:480
-#: includes/meta-boxes.php:690 includes/widgets/call-to-action.php:93
+#: includes/meta-boxes.php:384 includes/meta-boxes.php:516
+#: includes/meta-boxes.php:750 includes/widgets/call-to-action.php:93
 #: includes/widgets/feature-box.php:94 includes/widgets/newsletter-box.php:83
 #: includes/widgets/section-title.php:112 includes/widgets/service.php:94
 msgid "Description"
 msgstr "Descrição"
 
-#: includes/meta-boxes.php:366 includes/meta-boxes.php:577
-#: includes/meta-boxes.php:696
+#: includes/meta-boxes.php:390 includes/meta-boxes.php:625
+#: includes/meta-boxes.php:756
 msgid "Button Label"
 msgstr "Texto do botão"
 
-#: includes/meta-boxes.php:372 includes/meta-boxes.php:583
-#: includes/meta-boxes.php:702
+#: includes/meta-boxes.php:396 includes/meta-boxes.php:631
+#: includes/meta-boxes.php:762
 msgid "Button URL"
 msgstr "URL do Botão"
 
-#: includes/meta-boxes.php:381 includes/meta-boxes.php:711
+#: includes/meta-boxes.php:405 includes/meta-boxes.php:771
 msgid "Button Target"
 msgstr "Botão - Destino"
 
-#: includes/meta-boxes.php:382 includes/meta-boxes.php:499
-#: includes/meta-boxes.php:712 includes/widgets/call-to-action.php:101
+#: includes/meta-boxes.php:406 includes/meta-boxes.php:535
+#: includes/meta-boxes.php:772 includes/widgets/call-to-action.php:101
 #: includes/widgets/feature-box.php:102 includes/widgets/section-title.php:128
 #: includes/widgets/service.php:102
 msgid "Open link in new tab or window"
 msgstr "Abrir link em nova aba ou janela"
 
-#: includes/meta-boxes.php:405
+#: includes/meta-boxes.php:441
 msgid "Home Call to Action #1"
 msgstr "Chamada para Ação #1"
 
-#: includes/meta-boxes.php:437
+#: includes/meta-boxes.php:473
 msgid "Display services on the front page"
 msgstr "Exibir serviços na página inicial"
 
-#: includes/meta-boxes.php:444
+#: includes/meta-boxes.php:480
 msgid "Feature Boxes"
 msgstr "Caixas de Características"
 
-#: includes/meta-boxes.php:445
+#: includes/meta-boxes.php:481
 msgid "Display services as feature boxes"
 msgstr "Exibir serviços como caixas de características"
 
-#: includes/meta-boxes.php:449 includes/meta-boxes.php:572
+#: includes/meta-boxes.php:485 includes/meta-boxes.php:620
 msgid "Section Title"
 msgstr "Título da seção"
 
-#: includes/meta-boxes.php:455
+#: includes/meta-boxes.php:491
 msgid "Section Description"
 msgstr "Descrição da Seção"
 
-#: includes/meta-boxes.php:461
+#: includes/meta-boxes.php:497
 msgid "Services"
 msgstr "Serviços"
 
-#: includes/meta-boxes.php:466
+#: includes/meta-boxes.php:502
 msgid "Label"
 msgstr "Rótulo"
 
-#: includes/meta-boxes.php:471 includes/theme-customizer.php:173
+#: includes/meta-boxes.php:507 includes/theme-customizer.php:173
 #: includes/theme-customizer.php:247 includes/theme-customizer.php:321
 #: includes/widgets/feature-box.php:91 includes/widgets/icon-box.php:83
 #: includes/widgets/newsletter-box.php:90
 msgid "Icon Class"
 msgstr "Classe do Ícone"
 
-#: includes/meta-boxes.php:474 includes/theme-customizer.php:173
+#: includes/meta-boxes.php:510 includes/theme-customizer.php:173
 #: includes/theme-customizer.php:247 includes/theme-customizer.php:321
 #: includes/widgets/feature-box.php:92 includes/widgets/icon-box.php:84
 #: includes/widgets/newsletter-box.php:91 includes/widgets/service.php:92
@@ -1034,226 +1056,230 @@ msgstr ""
 "Por exemplo <a href=\"https://fortawesome.github.io/Font-Awesome/icons/\" "
 "target=\"_blank\">Font Awesome</a>"
 
-#: includes/meta-boxes.php:485
+#: includes/meta-boxes.php:521
 msgid "URL"
 msgstr "URL"
 
-#: includes/meta-boxes.php:490
+#: includes/meta-boxes.php:526
 msgid "Button"
 msgstr "Botão"
 
-#: includes/meta-boxes.php:498
+#: includes/meta-boxes.php:534
 msgid "Target"
 msgstr "Alvo"
 
-#: includes/meta-boxes.php:502
+#: includes/meta-boxes.php:538
 msgid "Display different services you offer"
 msgstr "Promova os diversos serviços que você oferece"
 
-#: includes/meta-boxes.php:505
+#: includes/meta-boxes.php:541
 msgid "Service {#}"
 msgstr "Serviço {#}"
 
-#: includes/meta-boxes.php:506
+#: includes/meta-boxes.php:542
 msgid "Add Service"
 msgstr "Adicionar Serviço"
 
-#: includes/meta-boxes.php:507 includes/meta-boxes.php:606
+#: includes/meta-boxes.php:543 includes/meta-boxes.php:654
 #: wpcasa/submission-list.php:118
 msgid "Remove"
 msgstr "Remover"
 
-#: includes/meta-boxes.php:522
+#: includes/meta-boxes.php:570
 msgid "Home Services"
 msgstr "Serviços da Página Inicial"
 
-#: includes/meta-boxes.php:563
+#: includes/meta-boxes.php:611
 msgid "Display listings on the front page"
 msgstr "Exibir anúncios na página inicial"
 
-#: includes/meta-boxes.php:567 includes/meta-boxes.php:1281
+#: includes/meta-boxes.php:615 includes/meta-boxes.php:1356
 msgid "Listings Query"
 msgstr "Consulta de Anúncios"
 
-#: includes/meta-boxes.php:580
+#: includes/meta-boxes.php:628
 msgid "View All"
 msgstr "Ver Tudo"
 
-#: includes/meta-boxes.php:601
+#: includes/meta-boxes.php:649
 msgid "Create listing queries for the home page"
 msgstr "Criar consultas de anúncios para a página inicial"
 
-#: includes/meta-boxes.php:604
+#: includes/meta-boxes.php:652
 msgid "Listings Query {#}"
 msgstr "Consulta de Anúncios {#}"
 
-#: includes/meta-boxes.php:605
+#: includes/meta-boxes.php:653
 msgid "Add Query"
 msgstr "Adicionar consulta"
 
-#: includes/meta-boxes.php:648
+#: includes/meta-boxes.php:708
 msgid "Home Listings"
 msgstr "Anúncios da Página Inicial"
 
-#: includes/meta-boxes.php:735
+#: includes/meta-boxes.php:807
 msgid "Home Call to Action #2"
 msgstr "Chamada para Ação da Página Inicial #2"
 
-#: includes/meta-boxes.php:773 includes/meta-boxes.php:1064
+#: includes/meta-boxes.php:845 includes/meta-boxes.php:1139
 msgid "Do not display"
 msgstr "Não exibir"
 
-#: includes/meta-boxes.php:774
+#: includes/meta-boxes.php:846
 msgid "Page title"
 msgstr "Título da página"
 
-#: includes/meta-boxes.php:775 includes/meta-boxes.php:1065
+#: includes/meta-boxes.php:847 includes/meta-boxes.php:1140
 msgid "Tagline & background"
 msgstr "Slogan & Plano de fundo"
 
-#: includes/meta-boxes.php:776 includes/meta-boxes.php:1066
+#: includes/meta-boxes.php:848 includes/meta-boxes.php:1141
 msgid "Featured image & title"
 msgstr "Imagem em destaque & título"
 
-#: includes/meta-boxes.php:777 includes/meta-boxes.php:1067
+#: includes/meta-boxes.php:849 includes/meta-boxes.php:1142
 msgid "Image slider"
 msgstr "Slider de Imagens"
 
-#: includes/meta-boxes.php:778
+#: includes/meta-boxes.php:850
 msgid "Listings slider"
 msgstr "Slider de anúncios"
 
-#: includes/meta-boxes.php:780 includes/meta-boxes.php:1069
+#: includes/meta-boxes.php:852 includes/meta-boxes.php:1144
 msgid "Display header area on this page"
 msgstr "Exibir a área de cabeçalho nesta página"
 
-#: includes/meta-boxes.php:784
+#: includes/meta-boxes.php:856
 msgid "Page Title Right"
 msgstr "Título da Página à Direita"
 
-#: includes/meta-boxes.php:787
+#: includes/meta-boxes.php:859
 msgid "Add custom content on the right side of the page title section"
 msgstr ""
 "Adicionar conteúdo personalizado no lado direito da seção de título da página"
 
-#: includes/meta-boxes.php:795 includes/meta-boxes.php:1073
+#: includes/meta-boxes.php:867 includes/meta-boxes.php:1148
 msgid "Tagline Background"
 msgstr "Cor de fundo do Slogan"
 
-#: includes/meta-boxes.php:798 includes/meta-boxes.php:1076
+#: includes/meta-boxes.php:870 includes/meta-boxes.php:1151
 msgid "Add an image to be displayed as tagline background"
 msgstr "Adicionar uma imagem a ser exibida como plano de fundo do slogan"
 
-#: includes/meta-boxes.php:806 includes/meta-boxes.php:1084
+#: includes/meta-boxes.php:878 includes/meta-boxes.php:1159
 msgid "Tagline Text"
 msgstr "Texto do Slogan"
 
-#: includes/meta-boxes.php:809 includes/meta-boxes.php:1087
+#: includes/meta-boxes.php:881 includes/meta-boxes.php:1162
 msgid "Please enter the text for the tagline"
 msgstr "Por favor, digite o texto para o slogan"
 
-#: includes/meta-boxes.php:817 includes/meta-boxes.php:1160
+#: includes/meta-boxes.php:889 includes/meta-boxes.php:1235
 msgid "Images"
 msgstr "Imagens"
 
-#: includes/meta-boxes.php:854 includes/widgets/listing-image-gallery.php:280
+#: includes/meta-boxes.php:926 includes/widgets/listing-image-gallery.php:280
 #: includes/widgets/listing-image-slider.php:201
 #: includes/widgets/listings-slider.php:244
 msgid "Animation"
 msgstr "Animação"
 
-#: includes/meta-boxes.php:858
+#: includes/meta-boxes.php:930
 msgid "slide"
 msgstr "slide"
 
-#: includes/meta-boxes.php:859
+#: includes/meta-boxes.php:931
 msgid "fade"
 msgstr "fade"
 
-#: includes/meta-boxes.php:885
+#: includes/meta-boxes.php:957
 msgid "Slider nav"
 msgstr "Navegação do Slider"
 
-#: includes/meta-boxes.php:886 includes/widgets/listing-image-slider.php:256
+#: includes/meta-boxes.php:958 includes/widgets/listing-image-slider.php:256
 #: includes/widgets/listings-slider.php:280
 msgid "Show prev/next slider navigation"
 msgstr "Exibir navegação do slider (Anterior/Próximo)"
 
-#: includes/meta-boxes.php:898
+#: includes/meta-boxes.php:970
 msgid "Slider dots"
 msgstr "Pontos do slider"
 
-#: includes/meta-boxes.php:899 includes/widgets/listing-image-slider.php:227
+#: includes/meta-boxes.php:971 includes/widgets/listing-image-slider.php:227
 #: includes/widgets/listings-slider.php:270
 msgid "Show <em>dots</em> slider navigation"
 msgstr "Exibir <em>pontos</em> de navegação do slider"
 
-#: includes/meta-boxes.php:910
+#: includes/meta-boxes.php:982
 msgid "Slider thumbs"
 msgstr "Miniaturas do Slider"
 
-#: includes/meta-boxes.php:911 includes/widgets/listing-image-slider.php:232
+#: includes/meta-boxes.php:983 includes/widgets/listing-image-slider.php:232
 #: includes/widgets/listings-slider.php:275
 msgid "Show thumbnails instead of <em>dots</em>"
 msgstr "Mostrar miniaturas em vez de <em>pontos</em>"
 
-#: includes/meta-boxes.php:922
+#: includes/meta-boxes.php:994
 msgid "Slider autoplay"
 msgstr "Ativar reprodução automática do slider"
 
-#: includes/meta-boxes.php:953
+#: includes/meta-boxes.php:1025
 msgid "Featured Image"
 msgstr "Imagem em destaque"
 
-#: includes/meta-boxes.php:954
+#: includes/meta-boxes.php:1026
 msgid "Remove featured image from content area"
 msgstr "Remover imagem de destaque da área de conteúdo"
 
-#: includes/meta-boxes.php:961
+#: includes/meta-boxes.php:1033
 msgid "Page Title"
 msgstr "Título da Página"
 
-#: includes/meta-boxes.php:962
+#: includes/meta-boxes.php:1034
 msgid "Remove page title from content area"
 msgstr "Remover o título da página da área de conteúdo"
 
-#: includes/meta-boxes.php:973 includes/meta-boxes.php:1102
+#: includes/meta-boxes.php:1040
+msgid "Listings map"
+msgstr "Mapa de Anúncios"
+
+#: includes/meta-boxes.php:1048 includes/meta-boxes.php:1177
 msgid "Header Filter"
 msgstr "Filtro de cabeçalho"
 
-#: includes/meta-boxes.php:974 includes/meta-boxes.php:1103
+#: includes/meta-boxes.php:1049 includes/meta-boxes.php:1178
 msgid "Remove filter effect from header images"
 msgstr "Remover o efeito de filtro de imagens de cabeçalho"
 
-#: includes/meta-boxes.php:990 includes/meta-boxes.php:1119
+#: includes/meta-boxes.php:1065 includes/meta-boxes.php:1194
 msgid "Alt Logo"
 msgstr "Logotipo Alternativo"
 
-#: includes/meta-boxes.php:991 includes/meta-boxes.php:1120
+#: includes/meta-boxes.php:1066 includes/meta-boxes.php:1195
 msgid "Use alternative logo on this page"
 msgstr "Usar o logotipo alternativo nesta página"
 
-#: includes/meta-boxes.php:1033 includes/meta-boxes.php:1133
+#: includes/meta-boxes.php:1108 includes/meta-boxes.php:1208
 msgid "Header Settings"
 msgstr "Configurações de Cabeçalho"
 
-#: includes/meta-boxes.php:1176
+#: includes/meta-boxes.php:1251
 msgid "Gallery"
 msgstr "Galeria"
 
-#: includes/meta-boxes.php:1233
+#: includes/meta-boxes.php:1308
 msgid "Show Panel"
 msgstr "Mostrar Painel"
 
-#: includes/meta-boxes.php:1234
+#: includes/meta-boxes.php:1309
 msgid "Check this box to show the listings panel before the query"
 msgstr "Marque esta caixa para mostrar o painel de anúncios antes da consulta"
 
-#: includes/meta-boxes.php:1242
+#: includes/meta-boxes.php:1317
 msgid "Show Pagination"
 msgstr "Mostrar Paginação"
 
-#: includes/meta-boxes.php:1243
+#: includes/meta-boxes.php:1318
 msgid "Check this box to show pagination options after the query"
 msgstr "Marque esta caixa para mostrar as opções de paginação após a consulta"
 
@@ -1281,7 +1307,7 @@ msgstr "Leia Mais"
 msgid "More info"
 msgstr "Mais Informações"
 
-#: includes/template-tags.php:151
+#: includes/template-tags.php:169
 #, php-format
 msgid ""
 "<span class=\"posted-on\"><i class=\"fa fa-fw fa-calendar\" aria-hidden="
@@ -1290,7 +1316,7 @@ msgstr ""
 "<span class=\"posted-on\"><i class=\"fa fa-fw fa-calendar\" aria-hidden="
 "\"true\"></i>%1$s</span>"
 
-#: includes/template-tags.php:157
+#: includes/template-tags.php:175
 #, php-format
 msgid ""
 "<span class=\"byline\"><i class=\"fa fa-fw fa-user\" aria-hidden=\"true\"></"
@@ -1299,15 +1325,15 @@ msgstr ""
 "<span class=\"byline\"><i class=\"fa fa-fw fa-user\" aria-hidden=\"true\"></"
 "i>%1$s</span>"
 
-#: includes/template-tags.php:235
+#: includes/template-tags.php:253
 msgid "Author"
 msgstr "Autor"
 
-#: includes/template-tags.php:235
+#: includes/template-tags.php:253
 msgid "Agent"
 msgstr "Corretor"
 
-#: includes/template-tags.php:238
+#: includes/template-tags.php:256
 msgid "Page not found"
 msgstr "Página não encontrada"
 
@@ -1344,8 +1370,8 @@ msgstr ""
 msgid "Site Top"
 msgstr "Topo do Site"
 
-#: includes/theme-customizer.php:150 wpcasa/header-icon-boxes-print.php:16
-#: wpcasa/header-icon-boxes.php:16
+#: includes/theme-customizer.php:150 wpcasa/header-icon-boxes-pdf.php:16
+#: wpcasa/header-icon-boxes-print.php:16 wpcasa/header-icon-boxes.php:16
 msgid "Get in touch"
 msgstr "Entre em contato"
 
@@ -1358,6 +1384,9 @@ msgstr "Caixa de Ícone #%s"
 #: includes/theme-customizer.php:180 includes/theme-customizer.php:195
 #: includes/theme-customizer.php:254 includes/theme-customizer.php:269
 #: includes/theme-customizer.php:328 includes/theme-customizer.php:343
+#: wpcasa/header-icon-boxes-pdf.php:18 wpcasa/header-icon-boxes-pdf.php:19
+#: wpcasa/header-icon-boxes-pdf.php:35 wpcasa/header-icon-boxes-pdf.php:36
+#: wpcasa/header-icon-boxes-pdf.php:52 wpcasa/header-icon-boxes-pdf.php:53
 #: wpcasa/header-icon-boxes-print.php:18 wpcasa/header-icon-boxes-print.php:19
 #: wpcasa/header-icon-boxes-print.php:35 wpcasa/header-icon-boxes-print.php:36
 #: wpcasa/header-icon-boxes-print.php:52 wpcasa/header-icon-boxes-print.php:53
@@ -1380,13 +1409,13 @@ msgstr "Linha de texto"
 msgid "Display Box #%s"
 msgstr "Exibir Caixa #%s"
 
-#: includes/theme-customizer.php:224 wpcasa/header-icon-boxes-print.php:33
-#: wpcasa/header-icon-boxes.php:33
+#: includes/theme-customizer.php:224 wpcasa/header-icon-boxes-pdf.php:33
+#: wpcasa/header-icon-boxes-print.php:33 wpcasa/header-icon-boxes.php:33
 msgid "Office hours"
 msgstr "Horário comercial"
 
-#: includes/theme-customizer.php:298 wpcasa/header-icon-boxes-print.php:50
-#: wpcasa/header-icon-boxes.php:50
+#: includes/theme-customizer.php:298 wpcasa/header-icon-boxes-pdf.php:50
+#: wpcasa/header-icon-boxes-print.php:50 wpcasa/header-icon-boxes.php:50
 msgid "Our location"
 msgstr "Nossa localização"
 
@@ -1414,62 +1443,70 @@ msgstr "Cor do Texto"
 msgid "Section Background Color (light)"
 msgstr "Cor de Fundo da Seção (claro)"
 
-#: includes/theme-customizer.php:489
+#: includes/theme-customizer.php:488 includes/theme-customizer.php:503
 msgid "Section Background Color (dark)"
 msgstr "Cor de Fundo da Seção (escuro)"
 
-#: includes/theme-customizer.php:503
+#: includes/theme-customizer.php:489
+msgid "Gradient start"
+msgstr "Início do degradê"
+
+#: includes/theme-customizer.php:504
+msgid "Gradient end"
+msgstr "Fim do degradê"
+
+#: includes/theme-customizer.php:519
 msgid "Accent Color (light)"
 msgstr "Cor de Enfase (claro)"
 
-#: includes/theme-customizer.php:517
+#: includes/theme-customizer.php:534
 msgid "Accent Color (dark)"
 msgstr "Cor de Enfase (escuro)"
 
-#: includes/theme-customizer.php:532
+#: includes/theme-customizer.php:549
 msgid "Header Overlay Color"
 msgstr "Cor de Sobreposição do Cabeçalho"
 
-#: includes/theme-customizer.php:546
+#: includes/theme-customizer.php:563
 msgid "Deactivate header overlay"
 msgstr "Desativar a sobreposição de cabeçalho"
 
-#: includes/theme-setup.php:241
+#: includes/theme-setup.php:220
 msgctxt "search form"
 msgid "Search for"
 msgstr "Buscar por"
 
-#: includes/theme-setup.php:242
+#: includes/theme-setup.php:221
 msgctxt "search form"
 msgid "Search&hellip;"
 msgstr "Buscar &hellip;"
 
-#: includes/theme-setup.php:245
+#: includes/theme-setup.php:224
 msgctxt "search form"
 msgid "Search"
 msgstr "Buscar"
 
-#: includes/theme-setup.php:346
+#: includes/theme-setup.php:325
 msgid "Pingback:"
 msgstr "Pingback:"
 
-#: includes/theme-setup.php:346 includes/theme-setup.php:365
+#: includes/theme-setup.php:325 includes/theme-setup.php:344
 #: wpcasa/submission-list.php:112
 msgid "Edit"
 msgstr "Editar"
 
-#: includes/theme-setup.php:356
+#: includes/theme-setup.php:335
 #, php-format
 msgid "%s <span class=\"says\">says:</span>"
 msgstr "%s <span class=\"says\">diz:</span>"
 
-#: includes/theme-setup.php:362
+#: includes/theme-setup.php:341
 #, php-format
 msgctxt "1: date, 2: time"
 msgid "%1$s at %2$s"
 msgstr "%1$s de %2$s"
 
-#: includes/theme-setup.php:369
+#: includes/theme-setup.php:348
 msgid "Your comment is awaiting moderation."
 msgstr "Seu comentário está aguardando moderação."
 
@@ -1666,20 +1703,20 @@ msgstr ""
 "anúncio."
 
 #: includes/widget-areas.php:176
-msgid "Footer (columns)"
-msgstr "Rodapé (colunas)"
-
-#: includes/widget-areas.php:177
-msgid "Display content columns at the bottom of the site."
-msgstr "Exibir colunas conteúdo na parte inferior do site."
-
-#: includes/widget-areas.php:187
 msgid "Footer"
 msgstr "Rodapé"
 
-#: includes/widget-areas.php:188
+#: includes/widget-areas.php:177
 msgid "Display content in the footer widget area."
 msgstr "Exibir o conteúdo na área de widget de rodapé."
+
+#: includes/widget-areas.php:187
+msgid "Footer (columns)"
+msgstr "Rodapé (colunas)"
+
+#: includes/widget-areas.php:188
+msgid "Display content columns at the bottom of the site."
+msgstr "Exibir colunas conteúdo na parte inferior do site."
 
 #: includes/widget-areas.php:198
 msgid "Footer Full"
@@ -2270,7 +2307,7 @@ msgstr "Serviço"
 msgid "Icon"
 msgstr "Ícone"
 
-#: page-tpl-listings-query-full.php:29 page-tpl-listings-query.php:29
+#: page-tpl-listings-query-full.php:72 page-tpl-listings-query.php:72
 msgid ""
 "<strong>Please notice!</strong> This page should not be your listings search "
 "results page set on the WPCasa settings page. Different queries would be "
@@ -2316,7 +2353,7 @@ msgstr ""
 "Parece que não conseguimos encontrar o que você procura. Talvez usar a busca "
 "ajude."
 
-#: template-parts/content-page.php:29
+#: template-parts/content-page.php:30
 msgid "Pages:"
 msgstr "Páginas:"
 
@@ -2349,10 +2386,6 @@ msgstr "Os resultados da busca por <em> <strong>%s</strong></em>"
 msgctxt "search page title"
 msgid "Home Page"
 msgstr "Página Inicial"
-
-#: template-parts/header-top.php:78
-msgid "Toggle navigation"
-msgstr "Alternar navegação"
 
 #: wpcasa/account-login.php:12 wpcasa/account-register.php:14
 msgid "Username"
@@ -2435,6 +2468,10 @@ msgstr ""
 #: wpcasa/listing-slider.php:28
 msgid "More Info"
 msgstr "Mais Informações"
+
+#: wpcasa/listings-map-infobox.php:40
+msgid "View details"
+msgstr "Ver detalhes"
 
 #: wpcasa/listings-no.php:6
 msgid "Sorry, but no listing matches your search criteria."
@@ -2680,12 +2717,12 @@ msgid "No steps to show."
 msgstr "Não há passos para mostrar."
 
 #. Theme Name of the plugin/theme
-msgid "WPCasa Oslo"
-msgstr "WPCasa Oslo"
+msgid "WPCasa Madrid"
+msgstr "WPCasa Madrid"
 
 #. Theme URI of the plugin/theme
-msgid "https://wpcasa.com/downloads/wpcasa-oslo/"
-msgstr "https://wpcasa.com/downloads/wpcasa-oslo/"
+msgid "https://wpcasa.com/downloads/wpcasa-madrid/"
+msgstr "https://wpcasa.com/downloads/wpcasa-madrid/"
 
 #. Description of the plugin/theme
 msgid "WordPress theme for WPCasa real estate."
@@ -2698,3 +2735,9 @@ msgstr "WPSight"
 #. Author URI of the plugin/theme
 msgid "http://wpsight.com"
 msgstr "http://wpsight.com"
+
+#~ msgid "WPCasa Oslo"
+#~ msgstr "WPCasa Oslo"
+
+#~ msgid "https://wpcasa.com/downloads/wpcasa-oslo/"
+#~ msgstr "https://wpcasa.com/downloads/wpcasa-oslo/"
