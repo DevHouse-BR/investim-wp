@@ -364,6 +364,16 @@ function wpsight_measurements_custom( $measurements ) {
  */
 add_filter( 'wpsight_get_listing_details', 'wpsight_get_listing_details_custom', 10, 4);
 function wpsight_get_listing_details_custom( $listing_details, $post_id, $details, $formatted ) {
+	
+	if( $formatted == "wpsight-listing-details" ) {
+		return parse_wpsight_listing_details( $listing_details, $post_id, $details );
+	} elseif ( $formatted == "wpsight-listing-summary" ) {
+		return parse_wpsight_listing_summary( $listing_details, $post_id, $details );
+	}
+
+}
+
+function parse_wpsight_listing_details( $listing_details, $post_id, $details ) {
 	global $detalhes;
 
 	foreach ($details as $key => $value) {
@@ -375,43 +385,80 @@ function wpsight_get_listing_details_custom( $listing_details, $post_id, $detail
 	}
 
 	return $listing_details;
-
 }
 
-function resgata_html_detalhe($listing_details, $campo) {
+function parse_wpsight_listing_summary( $listing_details, $post_id, $details ) {
+	global $detalhes;
 
-	$campo = str_replace("_", "-", $campo);
+	foreach ($details as $key => $value) {
+		if ($detalhes[$value]['unit'] == 'R$') {
+			$listing_details = formata_valor($listing_details, $value);
+		}
+	}
+
+	return $listing_details;
+}
+
+function resgata_html_detalhe( $listing_details, $campo ) {
+
+	$campo = str_replace( "_", "-", $campo );
 
 	$pattern = '/<span class="listing-' . $campo . '(.*?)"><span class="listing-details-label">(.*?)<\/span>.<span class="listing-details-value">(.*?)<\/span><\/span>/s';
 	
-	preg_match($pattern, $listing_details, $matches);
+	preg_match( $pattern, $listing_details, $matches );
 
 	return $matches;
 
 }
 
-function formata_valor($listing_details, $campo) {
+function formata_valor( $listing_details, $campo ) {
 
-	$matches = resgata_html_detalhe($listing_details, $campo);
+	$matches = resgata_html_detalhe( $listing_details, $campo );
 
-	$valor = trim(str_replace('R$', '', $matches[3]));
+	$valor = trim( str_replace( 'R$', '', $matches[3] ) );
 
-	$valor = 'R$ ' . number_format($valor, 2, ',', '.');
+	$valor = 'R$ ' . number_format( $valor, 2, ',', '.' );
 
-	$replacement = str_replace($matches[3], $valor, $matches[0]);
+	$replacement = str_replace( $matches[3], $valor, $matches[0] );
 
-	return str_replace($matches[0], $replacement, $listing_details);
+	return str_replace( $matches[0], $replacement, $listing_details );
 
 }
 
-function formata_nova_linha($listing_details, $campo) {
+function formata_nova_linha( $listing_details, $campo ) {
 
-	$matches = resgata_html_detalhe($listing_details, $campo);
+	$matches = resgata_html_detalhe( $listing_details, $campo );
 
-	$valor = str_replace("\n", '<br/>', $matches[3]);
+	$valor = str_replace( "\n", '<br/>', $matches[3] );
 
-	$replacement = str_replace($matches[3], $valor, $matches[0]);
+	$replacement = str_replace( $matches[3], $valor, $matches[0] );
 
-	return str_replace($matches[0], $replacement, $listing_details);
+	return str_replace( $matches[0], $replacement, $listing_details );
+
+}
+
+add_filter( 'wpsight_get_currency', 'wpsight_get_currency_custom' );
+function wpsight_get_currency_custom( $currency_ent  ) {
+
+	if ( $currency_ent == " BRL " ) {
+		return " R$ ";
+	} else {
+		return $currency_ent;
+	}
+
+}
+
+add_filter( 'wpsight_get_listing_price', 'wpsight_get_listing_price_custom', 10, 5 );
+function wpsight_get_listing_price_custom( $listing_price, $post_id, $before, $after, $args  ) {
+
+	$pattern = '/content="(.*?)">(.*?)<\/span>/';
+	
+	preg_match( $pattern, $listing_price, $matches );
+
+	$valor = number_format( $matches[1], 2, ',', '.' );
+
+	$replacement = str_replace( $matches[2], $valor, $listing_price );
+
+	return str_replace( $matches[2], $valor, $listing_price );
 
 }

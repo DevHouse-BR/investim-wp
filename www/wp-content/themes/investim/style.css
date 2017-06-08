@@ -19,3 +19,9 @@
 	    margin-right: 3%
 	}
 }
+
+.wpsight-listings .wpsight-listing-summary .listing-details-detail .listing-details-label {
+	min-height: 3em;
+}
+
+.wpsight-listings .wpsight-listing-summary .listing-details-detail .listing-details-value {}
