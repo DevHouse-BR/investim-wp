@@ -3,6 +3,8 @@
 add_action( 'after_setup_theme', function () {
     // load custom translation file for the parent theme
     load_theme_textdomain( 'wpcasa-madrid', get_stylesheet_directory() . '/languages/wpcasa-madrid' );
+	load_theme_textdomain( 'wpcasa-listings-map', get_stylesheet_directory() . '/languages/wpcasa-madrid' );
+    
     // load translation file for the child theme
     //load_child_theme_textdomain( 'my-child-theme', get_stylesheet_directory() . '/languages' );
 } );

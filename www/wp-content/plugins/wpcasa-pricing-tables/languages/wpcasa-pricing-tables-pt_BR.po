@@ -1,0 +1,222 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WPCasa Pricing Tables\n"
+"POT-Creation-Date: 2017-06-08 15:29-0300\n"
+"PO-Revision-Date: 2017-06-08 15:29-0300\n"
+"Last-Translator: Leonardo Lima de Vasconcellos <leo.lima.web@gmail.com>\n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 2.0.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: wpcasa-pricing-tables.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:36
+#: includes/class-wpsight-pricing-tables-post-type.php:42
+#: includes/class-wpsight-pricing-tables-post-type.php:48
+msgid "Pricing Tables"
+msgstr "Tabelas de Preços"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:37
+msgid "Pricing Table"
+msgstr "Tabela de Preço"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:38
+msgid "Add New"
+msgstr "Adicionar Novo"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:39
+msgid "Add New Pricing Table"
+msgstr "Adicionar Nova Tabela de Preço"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:40
+msgid "Edit Pricing Table"
+msgstr "Editar Tabela de Preço"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:41
+msgid "New Pricing Table"
+msgstr "Novo Tabela de Preço"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:43
+msgid "View Pricing Table"
+msgstr "Ver Tabela de Preço"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:44
+msgid "Search Pricing Table"
+msgstr "Buscar Tabela de Preço"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:45
+msgid "No Pricing Tables found"
+msgstr "Nenhuma Tabela de Preços encontrada"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:46
+msgid "No Items Found in Trash"
+msgstr "Nenhum Item Encontrado na Lixeira"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:88
+#: includes/class-wpsight-pricing-tables-post-type.php:106
+msgid "Subtitle"
+msgstr "Legenda"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:91
+msgid "Enter a subtitle that is displayed before the pricing table"
+msgstr "Insira uma legenda que é exibida antes da tabela de preços"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:95
+msgid "Pricing Plans"
+msgstr "Planos de Preços"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:100
+msgid "Title"
+msgstr "Título"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:103
+msgid "Enter the name of the pricing plan here"
+msgstr "Digite o nome do plano de preços aqui"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:109
+msgid "Enter the subtitle of the pricing plan here"
+msgstr "Digite a legenda do plano de preços aqui"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:112
+msgid "Price"
+msgstr "Preço"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:116
+#, php-format
+msgid "In %s."
+msgstr "Em %s."
+
+#: includes/class-wpsight-pricing-tables-post-type.php:126
+msgid "Duration"
+msgstr "Duração"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:129
+msgid "Enter the pricing plan duration (e.g. <code>/ month</code>)"
+msgstr "Insira a duração do plano (por exemplo, <code>/ mês</code> )"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:132
+msgid "Details"
+msgstr "Detalhes"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:135
+msgid "Enter the pricing plan details here (one per line)"
+msgstr "Insira os detalhes do plano de preços aqui (um por linha)"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:138
+msgid "Ribbon"
+msgstr "Fita"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:141
+msgid "Enter some text (e.g. Best Value) to display a ribbon"
+msgstr "Digite algum texto (por exemplo, Mais Vendido) para exibir na fita"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:144
+msgid "Button Text"
+msgstr "Texto do Botão"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:147
+msgid "Enter the text for the button"
+msgstr "Digite o texto para o botão"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:150
+msgid "Button URL"
+msgstr "URL do Botão"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:153
+msgid "Enter the URL for the button"
+msgstr "Digite a URL do botão"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:156
+msgid "Create the pricing plans for this table"
+msgstr "Criar os planos de preços para esta tabela"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:159
+msgid "Pricing Plan {#}"
+msgstr "Plano de Preços {#}"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:160
+msgid "Add Pricing Plan"
+msgstr "Adicionar o plano de preços"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:161
+msgid "Remove"
+msgstr "Remover"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:168
+msgid "Note"
+msgstr "Nota"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:171
+msgid "Enter a note that is displayed after the pricing table"
+msgstr "Insira uma nota que é exibida após a tabela de preços"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:183
+msgid "General"
+msgstr "Geral"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:216
+msgid "Package"
+msgstr "Pacote"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:220
+msgid "Select a package this plan is linked to"
+msgstr "Selecione um pacote em que este plano está ligado"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:223
+msgid "will be ignored when a package is selected"
+msgstr "será ignorado quando um pacote é selecionado"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:252
+#: includes/class-wpsight-pricing-tables-post-type.php:272
+#: includes/class-wpsight-pricing-tables-post-type.php:378
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: includes/class-wpsight-pricing-tables-post-type.php:260
+msgid "Use this shortcode to display this pricing table in your content"
+msgstr "Usar este shortcode para exibir esta tabela de preços em seu conteúdo"
+
+#: templates/pricing-table-no.php:10
+msgid "A pricing table with this ID does not exist."
+msgstr "Não existe uma tabela de preços com esse ID."
+
+#: templates/pricing-table.php:72
+msgid "Choose Plan"
+msgstr "Escolher Plano"
+
+#: templates/pricing-table.php:111
+msgid "This pricing table does not have any plans yet."
+msgstr "Esta tabela de preços não tem planos ainda."
+
+#. Plugin Name of the plugin/theme
+msgid "WPCasa Pricing Tables"
+msgstr "Tabelas de Preços do WPCasa"
+
+#. Plugin URI of the plugin/theme
+msgid "https://wpcasa.com/"
+msgstr "https://wpcasa.com/"
+
+#. Description of the plugin/theme
+msgid "Add pricing tables to WPCasa using a shortcode."
+msgstr "Adicione tabelas de preços ao  WPCasa usando um shortcode."
+
+#. Author of the plugin/theme
+msgid "WPSight"
+msgstr "WPSight"
+
+#. Author URI of the plugin/theme
+msgid "http://wpsight.com"
+msgstr "http://wpsight.com"
+
+#~ msgid "Enter a not that is displayed after the pricing table"
+#~ msgstr "Insira um não que é exibida após a tabela de preços"

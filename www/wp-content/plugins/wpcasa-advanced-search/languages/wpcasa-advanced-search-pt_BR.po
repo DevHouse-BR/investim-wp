@@ -1,11 +1,9 @@
-#, fuzzy
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "Project-Id-Version: WPCasa Advanced Search\n"
 "POT-Creation-Date: 2017-06-08 13:18-0300\n"
-"PO-Revision-Date: 2015-11-10 12:54+0100\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2017-06-08 13:21-0300\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,63 +15,67 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
 "_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: Leonardo Lima de Vasconcellos <leo.lima.web@gmail.com>\n"
+"Language: pt_BR\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
 #: wpcasa-advanced-search.php:142
 msgid "Price (min)"
-msgstr ""
+msgstr "Preço (Min)"
 
 #: wpcasa-advanced-search.php:153
 msgid "Price (max)"
-msgstr ""
+msgstr "Preço (Max)"
 
 #: wpcasa-advanced-search.php:164
 msgid "Order by"
-msgstr ""
+msgstr "Ordenar por"
 
 #: wpcasa-advanced-search.php:167
 msgid "Date"
-msgstr ""
+msgstr "Data"
 
 #: wpcasa-advanced-search.php:168
 msgid "Price"
-msgstr ""
+msgstr "Preço"
 
 #: wpcasa-advanced-search.php:169
 msgid "Title"
-msgstr ""
+msgstr "Título"
 
 #: wpcasa-advanced-search.php:178
 msgid "Order"
-msgstr ""
+msgstr "Ordenar"
 
 #: wpcasa-advanced-search.php:181
 msgid "asc"
-msgstr ""
+msgstr "asc"
 
 #: wpcasa-advanced-search.php:182
 msgid "desc"
-msgstr ""
+msgstr "desc"
 
 #. Plugin Name of the plugin/theme
 msgid "WPCasa Advanced Search"
-msgstr ""
+msgstr "Busca Avançada WPCasa"
 
 #. Plugin URI of the plugin/theme
 msgid "https://wpcasa.com/downloads/wpcasa-advanced-search"
-msgstr ""
+msgstr "https://wpcasa.com/downloads/wpcasa-advanced-search"
 
 #. Description of the plugin/theme
 msgid ""
 "Display an expandable area with advanced options in WPCasa property search "
 "form."
 msgstr ""
+"Exibe uma área expansível com opções avançadas no formulário de busca de "
+"propriedades do WPCasa."
 
 #. Author of the plugin/theme
 msgid "WPSight"
-msgstr ""
+msgstr "WPSight"
 
 #. Author URI of the plugin/theme
 msgid "http://wpsight.com"
-msgstr ""
+msgstr "http://wpsight.com"
