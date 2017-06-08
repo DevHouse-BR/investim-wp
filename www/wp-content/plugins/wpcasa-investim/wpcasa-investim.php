@@ -366,11 +366,11 @@ add_filter( 'wpsight_get_listing_details', 'wpsight_get_listing_details_custom',
 function wpsight_get_listing_details_custom( $listing_details, $post_id, $details, $formatted ) {
 	global $detalhes;
 
-	foreach ($detalhes as $key => $value) {
-		if ($value['unit'] == 'R$') {
-			$listing_details = formata_valor($listing_details, $key);
-		} elseif ($value['data_type'] == 'CHAR') {
-			$listing_details = formata_nova_linha($listing_details, $key);
+	foreach ($details as $key => $value) {
+		if ($detalhes[$value]['unit'] == 'R$') {
+			$listing_details = formata_valor($listing_details, $value);
+		} elseif ($detalhes[$value]['data_type'] == 'CHAR') {
+			$listing_details = formata_nova_linha($listing_details, $value);
 		}
 	}
 

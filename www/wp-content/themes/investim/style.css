@@ -1,0 +1,21 @@
+/*
+ Theme Name:   Investim - WPCasa Madrid Child
+ Theme URI:    https://www.devhouse.com.br
+ Description:  Tema criado para o site Investim.com.br derivado do tema WPCasa Madrid
+ Author:       Leonardo Lima de Vasconcellos
+ Author URI:   https://www.devhouse.com.br/sobre
+ Template:     wpcasa-madrid
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         wpcasa, investim
+ Text Domain:  investim
+*/
+
+@media only screen and (min-width: 768px){
+	.single-listing .wpsight-listing-details .listing-details-detail {
+	    float: none;
+	    display: inline-grid;
+	    margin-right: 3%
+	}
+}
