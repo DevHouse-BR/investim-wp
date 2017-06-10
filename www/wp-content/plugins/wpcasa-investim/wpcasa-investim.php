@@ -449,7 +449,7 @@ function wpsight_get_currency_custom( $currency_ent  ) {
 }
 
 add_filter( 'wpsight_get_listing_price', 'wpsight_get_listing_price_custom', 10, 5 );
-function wpsight_get_listing_price_custom( $listing_price, $post_id, $before, $after, $args  ) {
+function wpsight_get_listing_price_custom( $listing_price, $post_id, $before, $after, $args ) {
 
 	$pattern = '/content="(.*?)">(.*?)<\/span>/';
 	
@@ -460,5 +460,65 @@ function wpsight_get_listing_price_custom( $listing_price, $post_id, $before, $a
 	$replacement = str_replace( $matches[2], $valor, $listing_price );
 
 	return str_replace( $matches[2], $valor, $listing_price );
+
+}
+
+add_filter( 'wpsight_meta_boxes', 'wpsight_meta_boxes_custom' );
+function wpsight_meta_boxes_custom( $meta_boxes ) {
+
+	$fields = array(
+		'responsavel' => array(
+			'name'      => __( 'Responável', 'wpcasa' ),
+			'id'        => '_contato_responsavel',
+			'type'      => 'text',
+			'desc'      => '',
+			'class'     => '',
+			'dashboard'	=> true,
+			'priority'  => 10
+		),
+		'telefone' => array(
+			'name'      => __( 'Telefone', 'wpcasa' ),
+			'id'        => '_contato_telefone',
+			'type'      => 'text',
+			'desc'      => '',
+			'dashboard'	=> true,
+			'priority'  => 20
+		),
+		'whatsapp' => array(
+			'name'      => __( 'Whatsapp', 'wpcasa' ),
+			'id'        => '_contato_whatsapp',
+			'type'      => 'text',
+			'desc'      => '',
+			'dashboard'	=> true,
+			'priority'  => 30
+		),
+		'email' => array(
+			'name'      => __( 'E-mail', 'wpcasa' ),
+			'id'        => '_contato_email',
+			'type'      => 'text',
+			'desc'      => '',
+			'dashboard'	=> true,
+			'priority'  => 40
+		),
+		'skype' => array(
+			'name'      => __( 'Skype', 'wpcasa' ),
+			'id'        => '_contato_skype',
+			'type'      => 'text',
+			'desc'      => '',
+			'dashboard'	=> true,
+			'priority'  => 50
+		),
+	);
+
+	$meta_boxes["contato"] = array(
+		'id'       => 'contato',
+		'title'    => __( 'Informações de Contato', 'wpcasa' ),
+		'object_types'    => array( 'listing' ),
+		'context'  => 'normal',
+		'priority' => 'high',
+		'fields'   => $fields
+	);
+
+	return $meta_boxes;
 
 }
