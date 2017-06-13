@@ -415,13 +415,14 @@ function formata_valor( $listing_details, $campo ) {
 
 	$matches = resgata_html_detalhe( $listing_details, $campo );
 
-	$valor = trim( str_replace( 'R$', '', $matches[3] ) );
-
-	$valor = 'R$ ' . number_format( $valor, 2, ',', '.' );
-
-	$replacement = str_replace( $matches[3], $valor, $matches[0] );
-
-	return str_replace( $matches[0], $replacement, $listing_details );
+	if ( count($matches) > 0 ) {
+		$valor = trim( str_replace( 'R$', '', $matches[3] ) );
+		$valor = 'R$ ' . number_format( $valor, 2, ',', '.' );
+		$replacement = str_replace( $matches[3], $valor, $matches[0] );
+		return str_replace( $matches[0], $replacement, $listing_details );
+	} else {
+		return $listing_details;
+	}
 
 }
 

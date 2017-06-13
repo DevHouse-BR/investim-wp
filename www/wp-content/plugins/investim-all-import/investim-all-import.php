@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: WPCasa All Import
+Plugin Name: Investim All Import
 Plugin URI: https://wpcasa.com/downloads/wpcasa-all-import
 Description: Add-on for the WP All Import plugin to import any XML or CSV File to WPCasa
 Version: 1.0.0
@@ -25,6 +25,10 @@ if ( ! defined( 'ABSPATH' ) )
 // Include WP All Import Rapid library
 include( 'rapid-addon.php' );
 
+include( plugin_dir_path( __DIR__  ) . 'wpcasa/wpcasa.php' );
+
+include( plugin_dir_path( __DIR__  ) . 'wpcasa-investim/wpcasa-investim.php' );
+
 // Create and name new add-on
 $all_import = new RapidAddon( 'WPCasa All Import', 'wpcasa_all_import' );
 
@@ -44,16 +48,57 @@ $all_import->import_images( 'wpsight_all_import_gallery', 'WPCasa Listing Images
 // Set up details array and add listing ID
 $wpsight_details = array( 'listing_id' => array( 'label' => 'Listing ID' ) );
 
+$all_import->add_title( 'Detalhes' );
+
 // Loop through options and grab details
-foreach( $wpsight_options as $key => $option ) {
-	
-	if( false !== strpos( $key, 'details_' ) )
-		$wpsight_details[ $key ] = $option;
-	
+foreach( wpsight_details() as $key => $value ) {
+
+	$wpsight_details[ $key ] = array(
+		'label' => $value['label'], 
+		'unit'  => $value['unit']
+	);
 }
 
 // Loop through details and set fields
 foreach( $wpsight_details as $key => $detail ) {
+	
+	// Use underscore for post meta
+	$key = '_' . $key;
+	
+	$label = $detail['label'];
+	
+	// Optionally add unit to detail label	
+	if( isset( $detail['unit'] ) && ! empty( $detail['unit'] ) )
+		$label .= ' (' . $detail['unit'] . ')';
+	
+	// Create field for detail
+	$all_import->add_field( $key, $label, 'text' );
+	
+	// Add field to central import fields
+	$import_fields[] = $key;
+	
+}
+
+######################################################################
+
+// Set up details array and add listing ID
+$wpsight_contactinfo = array();
+
+$all_import->add_title( 'Informações de Contato' );
+
+$contatos = wpsight_meta_boxes_custom(array());
+
+// Loop through contatos and grab details
+foreach( $contatos['contato']['fields'] as $key => $value ) {
+
+	$wpsight_contactinfo[ $value['id'] ] = array(
+		'label' => $value['name'], 
+		'unit'  => ''
+	);
+}
+
+// Loop through details and set fields
+foreach( $wpsight_contactinfo as $key => $detail ) {
 	
 	// Use underscore for post meta
 	$key = '_' . $key;
