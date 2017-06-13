@@ -1,0 +1,12 @@
+Important: I am using the CS4 version of Adobe Illustrator, I don't know if this works for previous versions.
+
+How to use: 
+Put the .ai file in your Adobe Illustrator swatches (/gradients) folder. 
+Usually: C:\Program Files\Adobe\Adobe Illustrator CS*\Presets\en_US\Swatches\Gradients
+
+You can then access the gradients in Illustrator under the menu 'Window/Swatch Libraries/Gradients' 
+or in the 'swatches' palette by clicking the bottom left folders icon. 
+
+Restart Illustrator if necessary.
+
+Have fun ^^
