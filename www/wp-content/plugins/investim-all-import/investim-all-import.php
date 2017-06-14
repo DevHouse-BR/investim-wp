@@ -100,8 +100,8 @@ foreach( $contatos['contato']['fields'] as $key => $value ) {
 // Loop through details and set fields
 foreach( $wpsight_contactinfo as $key => $detail ) {
 	
-	// Use underscore for post meta
-	$key = '_' . $key;
+	// Contact info already has underscore
+	//$key = '_' . $key;
 	
 	$label = $detail['label'];
 	
