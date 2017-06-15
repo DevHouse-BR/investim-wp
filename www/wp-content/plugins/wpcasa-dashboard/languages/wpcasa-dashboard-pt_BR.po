@@ -1,0 +1,1545 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WPCasa Dashboard\n"
+"POT-Creation-Date: 2017-06-15 10:16-0300\n"
+"PO-Revision-Date: 2017-06-15 10:16-0300\n"
+"Last-Translator: Leonardo Lima de Vasconcellos <leo.lima.web@gmail.com>\n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 2.0.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: wpcasa-dashboard.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:101
+msgid "Pages"
+msgstr "Páginas"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:102
+msgid "Activate to set dashboard pages"
+msgstr "Ativar para definir páginas de painel de controle"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:107
+msgid "Create Pages"
+msgstr "Criar Páginas"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:108
+msgid "Activate to automatically create and assign dashboard pages."
+msgstr ""
+"Ative para automaticamente criar e atribuir páginas de painel de controle."
+
+#: includes/admin/class-wpsight-dashboard-admin.php:109
+msgid ""
+"<span style=\"color:red\">Please handle with care!</span> You can change the "
+"pages to your needs after creating them. Only unassigned pages will be "
+"created."
+msgstr ""
+"<span style=\"color:red\">Por favor manusear com cuidado!</span> Você pode "
+"alterar as páginas para as suas necessidades após criá-las. Apenas as "
+"páginas não atribuídas serão criadas."
+
+#: includes/admin/class-wpsight-dashboard-admin.php:115
+msgid "Dashboard Page"
+msgstr "Página do Painel de Controle"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:116
+msgid "Please select the page that contains the dashboard shortcode."
+msgstr ""
+"Por favor, selecione a página que contém o shortcode do painel de controle."
+
+#: includes/admin/class-wpsight-dashboard-admin.php:122
+msgid "Submit Page"
+msgstr "Página de Envio"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:123
+msgid "Please select the page that contains the dashboard submit shortcode."
+msgstr ""
+"Por favor, selecione a página que contém o shortcode do envio para o painel "
+"de controle."
+
+#: includes/admin/class-wpsight-dashboard-admin.php:129
+msgid "Edit Page"
+msgstr "Página de Edição"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:130
+msgid ""
+"Please select another page that contains the dashboard submit shortcode."
+msgstr ""
+"Por favor, selecione outra página que contém o shortcode do envio para o "
+"painel de controle."
+
+#: includes/admin/class-wpsight-dashboard-admin.php:136
+msgid "Remove Page"
+msgstr "Página de Remoção"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:137
+msgid "Please select the page that contains the dashboard remove shortcode."
+msgstr ""
+"Por favor, selecione a página que contém o shortcode remover do painel de "
+"controle."
+
+#: includes/admin/class-wpsight-dashboard-admin.php:143
+msgid "Registration Page"
+msgstr "Página de Registro"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:144
+msgid ""
+"Please select the page that contains the dashboard registration shortcode."
+msgstr ""
+"Por favor, selecione a página que contém o shortcode de registro no painel "
+"de controle."
+
+#: includes/admin/class-wpsight-dashboard-admin.php:150
+msgid "After Registration Page"
+msgstr "Página Posterior ao Registro"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:151
+msgid ""
+"Please select the page a user should be redirected to after registration."
+msgstr ""
+"Por favor, selecione a página que um usuário deve ser redirecionado para "
+"após o registo."
+
+#: includes/admin/class-wpsight-dashboard-admin.php:157
+msgid "Login Page"
+msgstr "Página de Login"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:158
+msgid "Please select the page that contains the dashboard login shortcode."
+msgstr ""
+"Por favor, selecione a página que contém o shortcode  de login do painel de "
+"controle."
+
+#: includes/admin/class-wpsight-dashboard-admin.php:164
+msgid "Logout Page"
+msgstr "Página de Logout"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:165
+msgid "Please select the page that contains the dashboard logout shortcode."
+msgstr ""
+"Por favor, selecione a página que contém o shortcode de logout do painel de "
+"controle."
+
+#: includes/admin/class-wpsight-dashboard-admin.php:171
+msgid "Profile Page"
+msgstr "Página de Perfil"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:172
+msgid "Please select the page that contains the dashboard profile shortcode."
+msgstr ""
+"Por favor, selecione a página que contém o shortcode do perfil do painel de "
+"controle."
+
+#: includes/admin/class-wpsight-dashboard-admin.php:178
+msgid "Payment Page"
+msgstr "Página de Pagamento"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:179
+msgid "Please select the page that contains the payment shortcode."
+msgstr "Por favor, selecione a página que contém o shortcode de pagamento."
+
+#: includes/admin/class-wpsight-dashboard-admin.php:185
+msgid "Package Page"
+msgstr "Página de Pacotes"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:186
+msgid "Please select the page that contains the package shortcode."
+msgstr "Por favor, selecione a página que contém o shortcode dos pacotes."
+
+#: includes/admin/class-wpsight-dashboard-admin.php:192
+msgid "Transactions Page"
+msgstr "Página de Transação"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:193
+msgid "Please select the page that contains the transactions shortcode."
+msgstr "Por favor, selecione a página que contém o shortcode de transações."
+
+#: includes/admin/class-wpsight-dashboard-admin.php:199
+msgid "Terms Page"
+msgstr "Página de Termos"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:200
+msgid ""
+"Please select a page with terms and conditions. If selected, users must "
+"agree before they can register or make a payment."
+msgstr ""
+"Por favor, selecione uma página com os termos e condições. Se selecionado, "
+"os usuários devem concordar antes de poderem registrar ou fazer um pagamento."
+
+#: includes/admin/class-wpsight-dashboard-admin.php:206
+msgid "Account Role"
+msgstr "Papel da Conta"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:207
+msgid "Select a role for users that register via the dashboard form."
+msgstr ""
+"Selecione um papel para atribuir aos usuários que se registram via o "
+"formulário do painel de controle."
+
+#: includes/admin/class-wpsight-dashboard-admin.php:214
+msgid "Approval Required"
+msgstr "É necessário aprovação"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:215
+msgid "Listing submissions require approval"
+msgstr "Envios de anúncios requerem aprovação"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:216
+msgid "New listings need to be approved by an admin or listing admin."
+msgstr ""
+"Novos anúncios precisam ser aprovado por um administrador ou administrador "
+"de anúncios."
+
+#: includes/admin/class-wpsight-dashboard-admin.php:222
+msgid "Edit Active"
+msgstr "Editar Ativos"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:223
+msgid "Allow users to edit active listings"
+msgstr "Permitir que usuários editem anúncios ativos"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:224
+msgid ""
+"Keep in mind that admins and listing admins can always edit published "
+"listings."
+msgstr ""
+"Tenha em mente que administradores e administradores de anúncios sempre "
+"podem editar anúncios publicados."
+
+#: includes/admin/class-wpsight-dashboard-admin.php:229
+msgid "Listing ID"
+msgstr "ID do Anúncio"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:230
+msgid "Allow users to set and edit the listing ID"
+msgstr "Permitir que os usuários definir e editar o ID do anúncio"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:231
+msgid ""
+"Keep in mind that admins and listing admins can always edit listing IDs."
+msgstr ""
+"Tenha em mente que administradores e administradores de anúncios sempre "
+"podem editar os IDs de anúncios publicados."
+
+#: includes/admin/class-wpsight-dashboard-admin.php:236
+msgid "Payment Options"
+msgstr "Opções de Pagamento"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:237
+msgid "Please select a payment option."
+msgstr "Por favor, selecione uma opção de pagamento."
+
+#: includes/admin/class-wpsight-dashboard-admin.php:244
+msgid "Default Package"
+msgstr "Pacote Padrão"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:245
+#, php-format
+msgid ""
+"Please select a default package. You can manage packages <a href=\"%s"
+"\">here</a>."
+msgstr ""
+"Por favor selecione um pacote padrão. Você pode gerenciar pacotes <a href="
+"\"%s\">aqui</a>."
+
+#: includes/admin/class-wpsight-dashboard-admin.php:251
+msgid "PayPal"
+msgstr "PayPal"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:252
+msgid "Activate to set PayPal payment gateway"
+msgstr "Ativar para definir o gateway de pagamento PayPal"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:257
+msgid "PayPal Client ID"
+msgstr "ID do cliente do PayPal"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:258
+msgid "Please enter your PayPal client ID."
+msgstr "Por favor, digite seu ID de cliente de PayPal."
+
+#: includes/admin/class-wpsight-dashboard-admin.php:258
+#: includes/admin/class-wpsight-dashboard-admin.php:265
+msgid ""
+"More information at <a href=\"https://developer.paypal.com/docs/integration/"
+"admin/manage-apps/\" target=\"_blank\">PayPal Developer</a>."
+msgstr ""
+"Mais informações no <a href=\"https://developer.paypal.com/docs/integration/"
+"admin/manage-apps/\" target=\"_blank\">Desenvolvedor PayPal</a>."
+
+#: includes/admin/class-wpsight-dashboard-admin.php:264
+msgid "PayPal Secret Key"
+msgstr "Chave Secreta do Paypal"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:265
+msgid "Please enter your PayPal secret key."
+msgstr "Por favor insira sua chave secreta do PayPal."
+
+#: includes/admin/class-wpsight-dashboard-admin.php:271
+msgid "PayPal Live Mode"
+msgstr "PayPal Live Mode (Modo ao Vivo do Paypal)"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:272
+msgid "Activate PayPal live mode"
+msgstr "Ativar o PayPal Live Mode (Modo ao Vivo do Paypal)"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:273
+msgid "If not activated, PayPal is used in sandbox mode."
+msgstr "Se não está ativado, o PayPal é usado no modo sandbox (testes)."
+
+#: includes/admin/class-wpsight-dashboard-admin.php:279
+#: includes/class-wpsight-dashboard-paypal.php:71
+msgid "PayPal Credit Card"
+msgstr "PayPal - Cartão de Crédito"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:280
+msgid "Activate PayPal credit cards"
+msgstr "Activar o cartão de crédito PayPal"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:281
+msgid ""
+"Allow payments with credit cards through PayPal. Please note that the direct "
+"credit card API is <a href=\"https://developer.paypal.com/docs/integration/"
+"direct/rest-api-payment-country-currency-support/\" target=\"_blank\">not "
+"available everywhere</a>."
+msgstr ""
+"Permitir pagamentos com cartões de crédito através do PayPal. Por favor, "
+"note que a API de cartão de crédito direto <a href=\"https://developer."
+"paypal.com/docs/integration/direct/rest-api-payment-country-currency-support/"
+"\" target=\"_blank\">não está disponível em todos os lugares</a>."
+
+#: includes/admin/class-wpsight-dashboard-admin.php:287
+msgid "Stripe"
+msgstr "Stripe"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:288
+msgid "Activate to set Stripe payment gateway"
+msgstr "Ative para configurar o gateway de pagamento Stripe"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:293
+msgid "Stripe Secret Key (live)"
+msgstr "Chave-secreta Stripe (live)"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:294
+msgid "Please enter your Stripe live secret key."
+msgstr "Por favor insira sua chave secreta (live) do Stripe."
+
+#: includes/admin/class-wpsight-dashboard-admin.php:300
+msgid "Stripe Publishable Key (live)"
+msgstr "Chave Publicável do Stripe (live)"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:301
+msgid "Please enter your Stripe live publishable key."
+msgstr "Por favor digite sua chave de publicável (live) do Stripe."
+
+#: includes/admin/class-wpsight-dashboard-admin.php:307
+msgid "Stripe Secret Key (test)"
+msgstr "Chave-secreta Stripe (test)"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:308
+msgid "Please enter your Stripe test secret key."
+msgstr "Por favor insira sua chave secreta (teste) do Stripe."
+
+#: includes/admin/class-wpsight-dashboard-admin.php:314
+msgid "Stripe Publishable Key (test)"
+msgstr "Chave Publicável do Stripe (teste)"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:315
+msgid "Please enter your Stripe test publishable key."
+msgstr "Por favor digite sua chave de publicável (teste) do Stripe."
+
+#: includes/admin/class-wpsight-dashboard-admin.php:321
+msgid "Stripe Live Mode"
+msgstr "Stripe Live Mode (Modo ao Vivo do Stripe)"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:322
+msgid "Activate Stripe live mode"
+msgstr "Ativar o Stripe Live Mode (Modo ao Vivo do Stripe)"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:323
+msgid "If not activated, Stripe is used in test mode."
+msgstr "Se não está ativado, o Stripe é usado no modo de teste."
+
+#: includes/admin/class-wpsight-dashboard-admin.php:329
+msgid "Default Payment Gateway"
+msgstr "Gateway de Pagamento Padrão"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:330
+msgid ""
+"Please select a default payment gateway. Make sure it is activated above."
+msgstr ""
+"Por favor selecione um gateway de pagamento padrão. Certifique-se que ele "
+"está ativado acima."
+
+#: includes/admin/class-wpsight-dashboard-admin.php:336
+msgid "reCAPTCHA"
+msgstr "reCAPTCHA"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:337
+msgid "Activate to set reCAPTCHA keys"
+msgstr "Ativar para definir chaves de reCAPTCHA"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:342
+msgid "reCAPTCHA Site Key"
+msgstr "Chave do Site reCAPTCHA"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:343
+msgid "Please enter your reCAPTCHA site key."
+msgstr "Por favor digite sua chave de site do reCAPTCHA."
+
+#: includes/admin/class-wpsight-dashboard-admin.php:343
+#: includes/admin/class-wpsight-dashboard-admin.php:350
+msgid ""
+"You can <a href=\"https://www.google.com/recaptcha/\" target=\"_blank\">get "
+"it here</a>."
+msgstr ""
+"Você pode <a href=\"https://www.google.com/recaptcha/\" target=\"_blank"
+"\">obtê-lo aqui</a>."
+
+#: includes/admin/class-wpsight-dashboard-admin.php:349
+msgid "reCAPTCHA Secret Key"
+msgstr "Chave Secreta reCAPTCHA"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:350
+msgid "Please enter your reCAPTCHA secret key."
+msgstr "Por favor insira sua chave secreta reCAPTCHA."
+
+#: includes/admin/class-wpsight-dashboard-admin.php:359
+msgid "Dashboard"
+msgstr "Painel de Controle"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:452
+msgctxt "dashboard page title"
+msgid "Dashboard"
+msgstr "Painel de Controle"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:465
+msgctxt "dashboard page title"
+msgid "New Listing"
+msgstr "Novo Anúncio"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:480
+msgctxt "dashboard page title"
+msgid "Edit Listing"
+msgstr "Editar Anúncio"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:495
+msgctxt "dashboard page title"
+msgid "Remove Listing"
+msgstr "Remover Anúncio"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:510
+msgctxt "dashboard page title"
+msgid "Register"
+msgstr "Registar"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:524
+msgctxt "dashboard page title"
+msgid "Login"
+msgstr "Entrar"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:538
+msgctxt "dashboard page title"
+msgid "Logout"
+msgstr "Sair"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:552
+msgctxt "dashboard page title"
+msgid "Profile"
+msgstr "Perfil"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:566
+msgctxt "dashboard page title"
+msgid "Change Password"
+msgstr "Alterar Senha"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:580
+msgctxt "dashboard page title"
+msgid "Reset Password"
+msgstr "Resetar Senha"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:594
+msgctxt "dashboard page title"
+msgid "Payment"
+msgstr "Pagamento"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:608
+msgctxt "dashboard page title"
+msgid "Transactions"
+msgstr "Transações"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:622
+msgctxt "dashboard page title"
+msgid "Terms & Conditions"
+msgstr "Termos & Condições"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:625
+msgid "Add your terms and conditions here."
+msgstr "Adicione seus termos e condições aqui."
+
+#: includes/admin/class-wpsight-dashboard-admin.php:637
+msgctxt "dashboard page title"
+msgid "Package"
+msgstr "Pacote"
+
+#: includes/admin/class-wpsight-dashboard-admin.php:698
+#, php-format
+msgid ""
+"For premium support and seamless updates for %s please activate your license."
+msgstr ""
+"Para suporte premium e atualizações transparentes para %s por favor ativar "
+"sua licença."
+
+#: includes/class-wpsight-dashboard-billing.php:32
+msgctxt "billing fields"
+msgid "Name"
+msgstr "Nome"
+
+#: includes/class-wpsight-dashboard-billing.php:33
+msgctxt "billing fields"
+msgid "Reg. No."
+msgstr "No. Reg."
+
+#: includes/class-wpsight-dashboard-billing.php:34
+msgctxt "billing fields"
+msgid "VAT No."
+msgstr "No. IVA"
+
+#: includes/class-wpsight-dashboard-billing.php:35
+msgctxt "billing fields"
+msgid "Street and number"
+msgstr "Rua e número"
+
+#: includes/class-wpsight-dashboard-billing.php:36
+msgctxt "billing fields"
+msgid "Country"
+msgstr "País"
+
+#: includes/class-wpsight-dashboard-billing.php:37
+msgctxt "billing fields"
+msgid "State / County"
+msgstr "Estado"
+
+#: includes/class-wpsight-dashboard-billing.php:38
+msgctxt "billing fields"
+msgid "City"
+msgstr "Cidade"
+
+#: includes/class-wpsight-dashboard-billing.php:39
+msgctxt "billing fields"
+msgid "Postal code"
+msgstr "CEP"
+
+#: includes/class-wpsight-dashboard-billing.php:126
+msgid "Billing Information"
+msgstr "Dados para Faturamento"
+
+#: includes/class-wpsight-dashboard-billing.php:156
+msgid "Billing"
+msgstr "Fauramento"
+
+#: includes/class-wpsight-dashboard-meta-boxes.php:164
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:262
+msgid "Title"
+msgstr "Título"
+
+#: includes/class-wpsight-dashboard-meta-boxes.php:173
+#: includes/post-types/class-wpsight-dashboard-post-type-user.php:96
+msgid "Description"
+msgstr "Descrição"
+
+#: includes/class-wpsight-dashboard-meta-boxes.php:183
+msgid "Featured Image"
+msgstr "Imagem em destaque"
+
+#: includes/class-wpsight-dashboard-meta-boxes.php:189
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:220
+msgid "Location"
+msgstr "Localização"
+
+#: includes/class-wpsight-dashboard-meta-boxes.php:196
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:266
+msgid "Type"
+msgstr "Tipo"
+
+#: includes/class-wpsight-dashboard-meta-boxes.php:203
+msgid "Features"
+msgstr "Características"
+
+#: includes/class-wpsight-dashboard-meta-boxes.php:218
+msgid "Listing General"
+msgstr "Configuração Geral do Anúncio"
+
+#: includes/class-wpsight-dashboard-meta-boxes.php:355
+msgid "Drag to set the exact location"
+msgstr "Arraste para definir a localização exata"
+
+#: includes/class-wpsight-dashboard-meta-boxes.php:479
+msgid "Invalid E-mail value."
+msgstr "Email inválido."
+
+#: includes/class-wpsight-dashboard-meta-boxes.php:486
+msgid "E-mail already exists."
+msgstr "Este email já está registado."
+
+#: includes/class-wpsight-dashboard-packages.php:103
+#: includes/class-wpsight-dashboard-packages.php:108
+#, php-format
+msgid "%s day"
+msgid_plural "%s days"
+msgstr[0] "%s dia"
+msgstr[1] "%s dias"
+
+#: includes/class-wpsight-dashboard-packages.php:113
+#: includes/class-wpsight-dashboard-packages.php:118
+#, php-format
+msgid "%s week"
+msgid_plural "%s weeks"
+msgstr[0] "%s semana"
+msgstr[1] "%s semanas"
+
+#: includes/class-wpsight-dashboard-packages.php:123
+#: includes/class-wpsight-dashboard-packages.php:128
+#: includes/class-wpsight-dashboard-packages.php:133
+#: includes/class-wpsight-dashboard-packages.php:138
+#, php-format
+msgid "%s month"
+msgid_plural "%s months"
+msgstr[0] "%s mes"
+msgstr[1] "%s meses"
+
+#: includes/class-wpsight-dashboard-packages.php:143
+#, php-format
+msgid "%s year"
+msgid_plural "%s years"
+msgstr[0] "%s ano"
+msgstr[1] "%s anos"
+
+#: includes/class-wpsight-dashboard-packages.php:169
+#: includes/class-wpsight-dashboard-packages.php:313
+#: includes/class-wpsight-dashboard-payments.php:59
+msgid "None"
+msgstr "Nenhum"
+
+#: includes/class-wpsight-dashboard-packages.php:735
+msgid "Package is not free."
+msgstr "Pacote não gratuito."
+
+#: includes/class-wpsight-dashboard-packages.php:741
+msgid "Package has been set."
+msgstr "O pacote foi definido."
+
+#: includes/class-wpsight-dashboard-packages.php:743
+msgid "Could not set package for user."
+msgstr "Não foi possível definir o pacote para o usuário."
+
+#: includes/class-wpsight-dashboard-packages.php:840
+#, php-format
+msgid "The first %s will be visible in your listing."
+msgstr "O primeiro %s será visível no seu anúncio."
+
+#: includes/class-wpsight-dashboard-packages.php:840
+#, php-format
+msgid "%s image"
+msgid_plural "%s images"
+msgstr[0] "%s imagem"
+msgstr[1] "%s imagens"
+
+#: includes/class-wpsight-dashboard-payments.php:126
+msgid "Purchase package"
+msgstr "Contratar pacote"
+
+#: includes/class-wpsight-dashboard-payments.php:127
+#, php-format
+msgid "Upgrade package to %s"
+msgstr "Atualizar pacote para %s"
+
+#: includes/class-wpsight-dashboard-payments.php:206
+msgid "Package has been upgraded."
+msgstr "O pacote foi atualizado."
+
+#: includes/class-wpsight-dashboard-paypal.php:58
+msgid "PayPal Account"
+msgstr "Conta PayPal"
+
+#: includes/class-wpsight-dashboard-paypal.php:130
+msgid "First name is required."
+msgstr "O primeiro nome é obrigatório."
+
+#: includes/class-wpsight-dashboard-paypal.php:135
+msgid "Last name is required."
+msgstr "Sobrenome é obrigatório."
+
+#: includes/class-wpsight-dashboard-paypal.php:140
+msgid "Card number is required."
+msgstr "O número do cartão é obrigatório."
+
+#: includes/class-wpsight-dashboard-paypal.php:145
+msgid "CVV is required."
+msgstr "Código de Segurança (CVV) é obrigatório."
+
+#: includes/class-wpsight-dashboard-paypal.php:150
+msgid "Expires month is required."
+msgstr "O Mês de expiração é obrigatório."
+
+#: includes/class-wpsight-dashboard-paypal.php:155
+msgid "Expires year is required."
+msgstr "O Ano de expiração é obrigatório."
+
+#: includes/class-wpsight-dashboard-paypal.php:160
+msgid "Credit card number is not valid."
+msgstr "O número do cartão não é válido."
+
+#: includes/class-wpsight-dashboard-paypal.php:165
+msgid "CVV number is not valid."
+msgstr "O número CVV não é válido."
+
+#: includes/class-wpsight-dashboard-paypal.php:170
+#: includes/class-wpsight-dashboard-paypal.php:200
+msgid "You must agree terms &amp; conditions."
+msgstr "Você deve concordar com os Termos &amp; Condições."
+
+#: includes/class-wpsight-dashboard-paypal.php:318
+#: includes/class-wpsight-dashboard-stripe.php:223
+msgid "Payment is invalid."
+msgstr "Pagamento inválido."
+
+#: includes/class-wpsight-dashboard-paypal.php:320
+#: includes/class-wpsight-dashboard-stripe.php:225
+msgid "Undefined payment type."
+msgstr "Tipo de pagamento indefinido."
+
+#: includes/class-wpsight-dashboard-paypal.php:322
+#: includes/class-wpsight-dashboard-paypal.php:567
+#: includes/class-wpsight-dashboard-stripe.php:227
+msgid "Payment has been successful."
+msgstr "Pagamento efetuado com sucesso."
+
+#: includes/class-wpsight-dashboard-paypal.php:325
+msgid "Payment failed, canceled or is invalid."
+msgstr "Pagamento falhou, cancelado ou é inválido."
+
+#: includes/class-wpsight-dashboard-paypal.php:571
+msgid "Sorry, there was an error processing the payment."
+msgstr "Desculpe, houve um erro ao processar o pagamento."
+
+#: includes/class-wpsight-dashboard-shortcodes.php:54
+msgid "You have been successfully logged out."
+msgstr "Você desconectou-se com sucesso."
+
+#: includes/class-wpsight-dashboard-shortcodes.php:156
+msgid "Please check your package."
+msgstr "Por favor, verifique o seu pacote."
+
+#: includes/class-wpsight-dashboard-shortcodes.php:163
+#: includes/class-wpsight-dashboard-submission.php:586
+msgid "This listing cannot be edited at the moment."
+msgstr "Este anúncio não pode ser editada no momento."
+
+#: includes/class-wpsight-dashboard-shortcodes.php:191
+msgid "Next step"
+msgstr "Próximo Passo"
+
+#: includes/class-wpsight-dashboard-shortcodes.php:191
+msgid "Submit listing"
+msgstr "Enviar anúncio"
+
+#: includes/class-wpsight-dashboard-shortcodes.php:192
+msgid "Update listing"
+msgstr "Atualizar Anúncio"
+
+#: includes/class-wpsight-dashboard-shortcodes.php:362
+msgid "Save profile"
+msgstr "Salvar Perfil"
+
+#: includes/class-wpsight-dashboard-stripe.php:44
+msgid "Stripe Checkout"
+msgstr "Checkout do Stripe"
+
+#: includes/class-wpsight-dashboard-stripe.php:142
+msgid "The card has been declined."
+msgstr "O cartão foi recusado."
+
+#: includes/class-wpsight-dashboard-stripe.php:230
+msgid "Payment failed, was canceled or is invalid."
+msgstr "Pagamento falhou, foi cancelado ou é inválido."
+
+#: includes/class-wpsight-dashboard-submission.php:212
+msgctxt "submission step title"
+msgid "General Information"
+msgstr "Informações Gerais"
+
+#: includes/class-wpsight-dashboard-submission.php:213
+msgctxt "submission step title"
+msgid "General"
+msgstr "Geral"
+
+#: includes/class-wpsight-dashboard-submission.php:216
+msgctxt "submission step title"
+msgid "Price Information"
+msgstr "Informação de Preço"
+
+#: includes/class-wpsight-dashboard-submission.php:217
+msgctxt "submission step title"
+msgid "Price"
+msgstr "Preço"
+
+#: includes/class-wpsight-dashboard-submission.php:220
+msgctxt "submission step title"
+msgid "Property Details"
+msgstr "Detalhes sobre a propriedade"
+
+#: includes/class-wpsight-dashboard-submission.php:221
+msgctxt "submission step title"
+msgid "Details"
+msgstr "Detalhes"
+
+#: includes/class-wpsight-dashboard-submission.php:224
+msgctxt "submission step title"
+msgid "Property Images"
+msgstr "Imagens da Propriedade"
+
+#: includes/class-wpsight-dashboard-submission.php:225
+msgctxt "submission step title"
+msgid "Images"
+msgstr "Imagens"
+
+#: includes/class-wpsight-dashboard-submission.php:228
+msgctxt "submission step title"
+msgid "Property Location"
+msgstr "Localização da Propriedade"
+
+#: includes/class-wpsight-dashboard-submission.php:229
+msgctxt "submission step title"
+msgid "Location"
+msgstr "Localização"
+
+#: includes/class-wpsight-dashboard-submission.php:232
+msgctxt "submission step title"
+msgid "Agent Information"
+msgstr "Informação do Corretor"
+
+#: includes/class-wpsight-dashboard-submission.php:233
+msgctxt "submission step title"
+msgid "Agent"
+msgstr "Corretor"
+
+#: includes/class-wpsight-dashboard-submission.php:427
+msgid "New submission has been successfully created."
+msgstr "Nova apresentação foi criada com sucesso."
+
+#: includes/class-wpsight-dashboard-submission.php:429
+msgid "Submission has been successfully updated."
+msgstr "Apresentação foi atualizada com sucesso."
+
+#: includes/class-wpsight-dashboard-submission.php:594
+#, php-format
+msgid "<em>%s</em> has been marked available."
+msgstr "<em>%s</em> foi marcado como disponível."
+
+#: includes/class-wpsight-dashboard-submission.php:598
+#, php-format
+msgid "<em>%s</em> has been marked unavailable."
+msgstr "<em>%s</em> foi marcado como indisponível."
+
+#: includes/class-wpsight-dashboard-submission.php:619
+msgid "Item has been successfully removed."
+msgstr "Item removido com sucesso."
+
+#: includes/class-wpsight-dashboard-submission.php:621
+msgid "An error occurred when removing an item."
+msgstr "Ocorreu um erro ao remover um item."
+
+#: includes/class-wpsight-dashboard-submission.php:639
+msgctxt "submission type"
+msgid "Free"
+msgstr "Gratuito"
+
+#: includes/class-wpsight-dashboard-submission.php:640
+msgctxt "submission type"
+msgid "Packages"
+msgstr "Pacotes"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:35
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:41
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:47
+msgid "Packages"
+msgstr "Pacotes"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:36
+#: includes/post-types/class-wpsight-dashboard-post-type-user.php:167
+#: includes/post-types/class-wpsight-dashboard-post-type-user.php:202
+#: templates/payment-transactions.php:23
+msgid "Package"
+msgstr "Pacote"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:37
+#: includes/post-types/class-wpsight-dashboard-post-type-transaction.php:35
+msgid "Add New"
+msgstr "Adicionar Novo"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:38
+msgid "Add New Package"
+msgstr "Adicionar Novo Pacote"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:39
+msgid "Edit Package"
+msgstr "Editar Pacote"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:40
+msgid "New Package"
+msgstr "Novo Pacote"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:42
+msgid "View Package"
+msgstr "Ver Pacote"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:43
+msgid "Search Package"
+msgstr "Pesquisar Pacote"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:44
+msgid "No Packages found"
+msgstr "Nenhum pacote encontrado"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:45
+msgid "No Items Found in Trash"
+msgstr "Nenhum Item Encontrado na Lixeira"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:86
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:263
+#: includes/post-types/class-wpsight-dashboard-post-type-transaction.php:108
+#: includes/post-types/class-wpsight-dashboard-post-type-transaction.php:173
+#: templates/payment-transactions.php:21
+msgid "Price"
+msgstr "Preço"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:89
+#, php-format
+msgid "In %s."
+msgstr "Em %s."
+
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:101
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:264
+msgid "Duration"
+msgstr "Duração"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:108
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:265
+msgid "Max Listings"
+msgstr "Máximo de anúncios"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:110
+msgid "Use -1 for unlimited amount of listings."
+msgstr "Use -1 para uma quantidade ilimitada de anúncios."
+
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:127
+#: includes/post-types/class-wpsight-dashboard-post-type-transaction.php:141
+msgid "General"
+msgstr "Geral"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:160
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:267
+msgid "Private"
+msgstr "Privado"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:162
+msgid "Private package"
+msgstr "Pacote privado"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:163
+msgid "If checked, package won't be visible in pricing options."
+msgstr "Se marcada, o pacote não será visível nas opções de precificação."
+
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:195
+msgid "Images"
+msgstr "Imagens"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:196
+msgid "If checked, users can add an image gallery to their listings."
+msgstr ""
+"Se marcada, os usuários podem adicionar uma galeria de imagens para seus "
+"anúncios."
+
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:201
+msgid "Max Images"
+msgstr "Máximo de Imagens"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:208
+msgid "Enter the maximum of images displayed on listing pages."
+msgstr ""
+"Informe o número máximo de imagens que podem ser adicionados a um anúncio."
+
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:221
+msgid "If checked, users can add a map to their listings."
+msgstr "Se marcada, os usuários podem adicionar um mapa para seus anúncios."
+
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:233
+msgid "Permissions"
+msgstr "Permissões"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:268
+#: includes/post-types/class-wpsight-dashboard-post-type-transaction.php:177
+#: templates/payment-transactions.php:25
+msgid "Date"
+msgstr "Data"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:327
+msgid "Yes"
+msgstr "Sim"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:332
+msgctxt "package type"
+msgid "Free"
+msgstr "Gratuito"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:334
+msgctxt "package type"
+msgid "Regular"
+msgstr "Regular"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:336
+msgctxt "package type"
+msgid "Simple (one-time)"
+msgstr "Simples (uma vez)"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-package.php:338
+msgctxt "package type"
+msgid "Trial"
+msgstr "Teste"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-transaction.php:33
+#: includes/post-types/class-wpsight-dashboard-post-type-transaction.php:39
+#: includes/post-types/class-wpsight-dashboard-post-type-transaction.php:45
+msgid "Transactions"
+msgstr "Transações"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-transaction.php:34
+msgid "Transaction"
+msgstr "Transação"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-transaction.php:36
+msgid "Add New Transaction"
+msgstr "Adicionar Nova Transação"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-transaction.php:37
+msgid "Edit Transaction"
+msgstr "Editar Transação"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-transaction.php:38
+msgid "New Transaction"
+msgstr "Nova Transação"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-transaction.php:40
+msgid "View Transaction"
+msgstr "Ver Transação"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-transaction.php:41
+msgid "Search Transaction"
+msgstr "Pesquisar Transação"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-transaction.php:42
+msgid "No Transactions found"
+msgstr "Nenhuma Transação encontrada"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-transaction.php:43
+msgid "No Transactions Found in Trash"
+msgstr "Nenhuma Transação encontrada na Lixeira"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-transaction.php:84
+#: includes/post-types/class-wpsight-dashboard-post-type-transaction.php:171
+msgid "Payment type"
+msgstr "Tipo de pagamento"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-transaction.php:90
+#: includes/post-types/class-wpsight-dashboard-post-type-transaction.php:172
+#: templates/payment-transactions.php:22
+msgid "Gateway"
+msgstr "Gateway"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-transaction.php:96
+msgid "Object ID"
+msgstr "ID do objeto"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-transaction.php:102
+#: includes/post-types/class-wpsight-dashboard-post-type-transaction.php:170
+msgid "Payment ID"
+msgstr "ID de Pagamento"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-transaction.php:114
+msgid "Currency"
+msgstr "Moeda"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-transaction.php:120
+#: includes/post-types/class-wpsight-dashboard-post-type-transaction.php:121
+#: includes/post-types/class-wpsight-dashboard-post-type-transaction.php:175
+msgid "Success"
+msgstr "Sucesso"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-transaction.php:122
+msgid "Transaction was successful"
+msgstr "Transação foi bem sucedida"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-transaction.php:128
+msgid "Data"
+msgstr "Dados"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-transaction.php:174
+msgid "Object"
+msgstr "Objeto"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-transaction.php:176
+msgid "User"
+msgstr "Usuário"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-user.php:55
+msgid "Agent Information"
+msgstr "Informação do Corretor"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-user.php:56
+msgid ""
+"Apart from the default WordPress profile information above you can add "
+"additional agent details here."
+msgstr ""
+"Além das informações do perfil padrão do WordPress acima, você pode "
+"adicionar detalhes adicionais do corretor aqui."
+
+#: includes/post-types/class-wpsight-dashboard-post-type-user.php:63
+#: templates/account-login.php:12 templates/account-register.php:14
+msgid "Username"
+msgstr "Nome de usuário"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-user.php:75
+#: templates/paypal-credit-card.php:7
+msgid "First Name"
+msgstr "Primeiro nome"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-user.php:82
+#: templates/paypal-credit-card.php:12
+msgid "Last Name"
+msgstr "Sobrenome"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-user.php:89
+msgid "Display Name"
+msgstr "Nome de Exibição"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-user.php:103
+#: templates/account-register.php:19
+msgid "E-mail"
+msgstr "E-mail"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-user.php:110
+msgid "Website"
+msgstr "Website"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-user.php:124
+msgid "Agent"
+msgstr "Corretor"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-user.php:160
+msgid "Package Information"
+msgstr "Informações do Pacote"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-user.php:175
+msgid "Valid Until"
+msgstr "Válido Até"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-user.php:183
+msgid "Listings Left"
+msgstr "Anúncios Restantes"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-user.php:260
+msgid ""
+"<strong>Please note!</strong> This date means that the value is -1 "
+"(unlimited). Do not change unless you want to set an expiry date."
+msgstr ""
+"<strong>Nota!</strong> Esta data significa que o valor é -1 (ilimitado). Não "
+"altere a menos que você deseja definir uma data de expiração."
+
+#: includes/post-types/class-wpsight-dashboard-post-type-user.php:396
+msgid "Profile has been successfully updated."
+msgstr "O perfil foi atualizado com sucesso."
+
+#: includes/post-types/class-wpsight-dashboard-post-type-user.php:424
+msgid "All fields are required."
+msgstr "Todos os campos obrigatórios."
+
+#: includes/post-types/class-wpsight-dashboard-post-type-user.php:431
+msgid "Your old password is not correct."
+msgstr "Sua senha antiga não está correta."
+
+#: includes/post-types/class-wpsight-dashboard-post-type-user.php:436
+msgid "New and retyped password are not same."
+msgstr "A nova senha não confere com a senha digitada."
+
+#: includes/post-types/class-wpsight-dashboard-post-type-user.php:441
+msgid "Your password has been successfully changed."
+msgstr "Sua senha foi alterada com sucesso."
+
+#: includes/post-types/class-wpsight-dashboard-post-type-user.php:478
+msgid "Login and password are required."
+msgstr "Login e senha são obrigatórios."
+
+#: includes/post-types/class-wpsight-dashboard-post-type-user.php:487
+#: includes/post-types/class-wpsight-dashboard-post-type-user.php:619
+msgid "The captcha input was incorrect."
+msgstr "O Captcha esta incorreto"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-user.php:506
+msgid "You have been successfully logged in."
+msgstr "Você entrou com sucesso."
+
+#: includes/post-types/class-wpsight-dashboard-post-type-user.php:547
+msgid "There was an error with the password reset."
+msgstr "Houve um erro com a redefinição de senha."
+
+#: includes/post-types/class-wpsight-dashboard-post-type-user.php:549
+msgid "Please check inbox for more information."
+msgstr "Por favor ative esta caixa para mais informações."
+
+#: includes/post-types/class-wpsight-dashboard-post-type-user.php:574
+msgid "Username and e-mail are required."
+msgstr "Nome de usuário e e-mail são obrigatórios."
+
+#: includes/post-types/class-wpsight-dashboard-post-type-user.php:582
+msgid "Username already exists."
+msgstr "Este usuário já existe."
+
+#: includes/post-types/class-wpsight-dashboard-post-type-user.php:591
+msgid "Email already exists."
+msgstr "E-mail já existente."
+
+#: includes/post-types/class-wpsight-dashboard-post-type-user.php:598
+msgid "Passwords must be same."
+msgstr "As senhas devem ser iguais."
+
+#: includes/post-types/class-wpsight-dashboard-post-type-user.php:608
+msgid "Please agree to our terms &amp; conditions."
+msgstr "Por favor, concorde com os termos e condições"
+
+#: includes/post-types/class-wpsight-dashboard-post-type-user.php:650
+msgid "You have been successfully registered."
+msgstr "Parabéns, você se cadastrou com sucesso."
+
+#: templates/access-no.php:9
+msgid "Please log into your account to see this page."
+msgstr "Efetue login na sua conta para ver esta página."
+
+#: templates/access-no.php:11
+msgid "Sorry, but you are currently not allowed to access this page."
+msgstr "Desculpe, você tem permissão para acessar esta página."
+
+#: templates/account-login.php:17 templates/account-register.php:24
+msgid "Password"
+msgstr "Senha"
+
+#: templates/account-login.php:30
+msgid "Log In"
+msgstr "Entrar"
+
+#: templates/account-login.php:38
+msgid "Need an account? Register now."
+msgstr "Precisa de uma conta? Crie agora."
+
+#: templates/account-login.php:46 templates/account-register.php:71
+#: templates/password-reset.php:22
+msgid "You are already logged in."
+msgstr "Você já está logado."
+
+#: templates/account-register.php:29
+msgid "Retype Password"
+msgstr "Redigite a senha"
+
+#: templates/account-register.php:40
+#, php-format
+msgid "I have read and agree to <a href=\"%s\" target=\"_blank\">%s</a>"
+msgstr "Li e concordo com os <a href=\"%s\" target=\"_blank\">%s</a>"
+
+#: templates/account-register.php:55
+msgid "Sign Up"
+msgstr "Cria Conta"
+
+#: templates/account-register.php:63
+msgid "Already a member? Log in now."
+msgstr "Já é um membro? Faça Login Aqui."
+
+#: templates/account-register.php:79
+msgid "Registrations are not allowed at the moment."
+msgstr "Novos registros não são permitidos no momento."
+
+#: templates/package-info.php:15
+msgid "Please upgrade your package to post a listing."
+msgstr "Por favor, atualize seu pacote para postar um anúncio."
+
+#: templates/package-info.php:25
+#, php-format
+msgid "Current package: <strong>%s</strong>"
+msgstr "Pacote atual: <strong>%s</strong>"
+
+#: templates/package-info.php:29 templates/submission-create-link.php:11
+msgid "New listing"
+msgstr "Novo Anúncio"
+
+#: templates/package-info.php:39
+#, php-format
+msgid "Your subscription is valid until <strong>%s</strong>."
+msgstr "Sua assinatura é válida até <strong>%s</strong>."
+
+#: templates/package-info.php:46
+msgid "You can add an <strong>unlimited</strong> amount of items"
+msgstr "Você pode adicionar uma quantidade <strong>ilimitada</strong> de itens"
+
+#: templates/package-info.php:48
+#, php-format
+msgid ""
+"At the moment you cannot add new listings because there are no credits left. "
+"You may need another package. The first <strong>%s</strong> listings have "
+"been unpublished."
+msgstr ""
+"No momento não é possível adicionar novos anúncios porque não há mais "
+"créditos restantes. Você pode precisar de outro pacote. Os primeiros <strong>"
+"%s</strong> anúncios foram despublicados."
+
+#: templates/package-info.php:50
+#, php-format
+msgid "You can add <strong>%s</strong> listings more."
+msgstr "Você pode adicionar mais <strong>%s</strong> anúncios."
+
+#: templates/package-info.php:56
+#, php-format
+msgid "Your subscription has expired on <strong>%s</strong>."
+msgstr "Sua assinatura expirou-se em <strong>%s</strong>."
+
+#: templates/package-info.php:58
+#, php-format
+msgid ""
+"Your listings have been unpublished on <strong>%s</strong>. To relist them "
+"please update your subscription."
+msgstr ""
+"Seus anúncios forma despublicados em <strong>%s</strong>. Para publica-los "
+"novamente por favor atualizar sua assinatura."
+
+#: templates/package-info.php:71
+msgid "Payment page has not been set."
+msgstr "Página de pagamento ainda não foi definida."
+
+#: templates/package-info.php:81
+msgid "Select a package"
+msgstr "Selecione um pacote"
+
+#: templates/package-info.php:92
+msgid "Change Package"
+msgstr "Alterar Plano"
+
+#: templates/password-change.php:10
+msgid "Old password"
+msgstr "Senha Antiga"
+
+#: templates/password-change.php:15
+msgid "New password"
+msgstr "Nova Senha"
+
+#: templates/password-change.php:20
+msgid "Retype password"
+msgstr "Redigite a senha"
+
+#: templates/password-change.php:24
+msgid "Change Password"
+msgstr "Alterar Senha"
+
+#: templates/password-reset.php:11
+msgid "Username or email:"
+msgstr "Nome de usuário ou e-mail:"
+
+#: templates/password-reset.php:15
+msgid "Reset Password"
+msgstr "Resetar Senha"
+
+#: templates/payment-form-before.php:10
+msgid "The trial package is currently not available."
+msgstr "O pacote de teste não está disponível no momento."
+
+#: templates/payment-form-before.php:15
+#, php-format
+msgid "You selected the package <strong>%s</strong>."
+msgstr "Você selecionou o plano <strong>%s</strong>."
+
+#: templates/payment-form-before.php:20
+#, php-format
+msgid ""
+"You are going to pay <strong>%s</strong> for package <strong>%s</strong>."
+msgstr "Você vai pagar <strong>%s</strong> pelo pacote <strong>%s</strong> ."
+
+#: templates/payment-form-before.php:27
+msgid "The package is missing."
+msgstr "O pacote está faltando."
+
+#: templates/payment-form-fields.php:8
+msgid "Confirm"
+msgstr "Confirmar"
+
+#: templates/payment-form.php:14
+msgid "The payment type is missing. Please do not link this page directly."
+msgstr ""
+"O tipo de pagamento está faltando. Por favor não link nesta página "
+"diretamente."
+
+#: templates/payment-form.php:20
+msgid "The payment type does not seem to be valid."
+msgstr "O tipo de pagamento não parece ser válido."
+
+#: templates/payment-form.php:26
+msgid "The payment object is missing."
+msgstr "O objeto do pagamento está faltando."
+
+#: templates/payment-form.php:52
+msgid "Billing details"
+msgstr "Dados para faturamento"
+
+#: templates/payment-form.php:57
+msgid "Payment Gateway"
+msgstr "Gateway de Pagamento"
+
+#: templates/payment-form.php:111
+#, php-format
+msgid "I've read and agree to <a href=\"%s\" target=\"_blank\">%s</a>"
+msgstr "Eu li e concordo com <a href=\"%s\" target=\"_blank\">%s</a>"
+
+#: templates/payment-form.php:119
+msgid "Process Payment"
+msgstr "Processar Pagamento"
+
+#: templates/payment-form.php:126
+msgid "No payment gateways found."
+msgstr "Nenhum gateway de pagamento encontrado."
+
+#: templates/payment-form.php:135 templates/submission-form-remove.php:24
+msgid "Back to"
+msgstr "Voltar para"
+
+#: templates/payment-transactions.php:20
+msgid "ID"
+msgstr "ID"
+
+#: templates/payment-transactions.php:24
+msgid "Status"
+msgstr "Status"
+
+#: templates/payment-transactions.php:74
+msgid "You don't have any transactions yet."
+msgstr "Você ainda não tem nenhuma transação."
+
+#: templates/paypal-credit-card.php:17
+msgid "Credit Card Number"
+msgstr "Número do Cartão de Crédito"
+
+#: templates/paypal-credit-card.php:22
+msgid "CVV"
+msgstr "Código de Segurança (CVV)"
+
+#: templates/paypal-credit-card.php:28
+msgid "Expires"
+msgstr "Expira"
+
+#: templates/paypal-credit-card.php:31
+msgid "Month"
+msgstr "Mês"
+
+#: templates/paypal-credit-card.php:39
+msgid "Year"
+msgstr "Ano"
+
+#: templates/submission-form-remove.php:4
+msgid "The listing to remove is not specified."
+msgstr "O anúncio para remover não foi especificado."
+
+#: templates/submission-form-remove.php:9
+#, php-format
+msgid "Do you really want to delete <strong>%s</strong>?"
+msgstr "Você realmente deseja excluir <strong>%s</strong>?"
+
+#: templates/submission-form-remove.php:19
+msgid "Delete Listing"
+msgstr "Excluir Anúncio"
+
+#: templates/submission-list.php:62
+msgid "Marked unavailable"
+msgstr "Marcado como indisponível"
+
+#: templates/submission-list.php:85
+msgid "Mark unavailable"
+msgstr "Marcar como indisponível"
+
+#: templates/submission-list.php:89
+msgid "Mark available"
+msgstr "Marcar como disponível"
+
+#: templates/submission-list.php:112
+msgid "Permalink"
+msgstr "Permalink"
+
+#: templates/submission-list.php:117
+msgid "Edit"
+msgstr "Editar"
+
+#: templates/submission-list.php:123
+msgid "Remove"
+msgstr "Remover"
+
+#: templates/submission-list.php:142
+msgid "You don't have any listings yet."
+msgstr "Você não tem nenhum anúncio ainda."
+
+#: templates/submission-list.php:145
+msgid "Create one."
+msgstr "Criar um."
+
+#: templates/submission-listing-edit.php:9
+msgid "You are the author of this listing."
+msgstr "Você é o autor deste anúncio."
+
+#: templates/submission-listing-edit.php:15
+msgid "Edit listing"
+msgstr "Editar anúncio"
+
+#: templates/submission-listing-no.php:9
+msgid "Object does not exist."
+msgstr "O objeto não existe."
+
+#: templates/submission-steps.php:45
+msgid "No steps to show."
+msgstr "Não há passos para mostrar."
+
+#. Plugin Name of the plugin/theme
+msgid "WPCasa Dashboard"
+msgstr "WPCasa Dashboard"
+
+#. Plugin URI of the plugin/theme
+msgid "https://wpcasa.com/downloads/wpcasa-dashboard"
+msgstr "https://wpcasa.com/downloads/wpcasa-dashboard"
+
+#. Description of the plugin/theme
+msgid ""
+"Let agents add and manage properties in a login area on the front end. "
+"Optionally charge users before they can submit listings."
+msgstr ""
+"Deixe corretores adicionar e gerenciar propriedades em uma área de login no "
+"front-end. Opcionalmente, cobre dos usuários antes que eles possam postar "
+"anúncios."
+
+#. Author of the plugin/theme
+msgid "WPSight"
+msgstr "WPSight"
+
+#. Author URI of the plugin/theme
+msgid "http://wpsight.com"
+msgstr "http://wpsight.com"

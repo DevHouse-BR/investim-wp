@@ -35,7 +35,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php if( $registration && get_option( 'users_can_register' ) ) : ?>
 		<p class="register-link">
 			<a href="<?php echo get_permalink( $registration ); ?>">
-				<?php _e( 'Need an account? Register now.', 'wpsight-dashboard' ); ?>
+				<?php _e( 'Need an account? Register now.', 'wpcasa-dashboard' ); ?>
 			</a>
 		</p>
 	<?php endif; ?>

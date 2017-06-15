@@ -141,7 +141,7 @@ $dashboard_listings = wpsight_get_listings( $args ); ?>
 	<?php $create_page_id = wpsight_get_option( 'dashboard_submit' ); ?>
 
 	<p class="no-listings-yet">
-		<?php _e( 'You don\'t have any listings yet.' )?>
+		<?php _e( 'You don\'t have any listings yet.', 'wpcasa-dashboard' )?>
 		<?php if ( ! empty( $create_page_id ) && WPSight_Dashboard_Submission::is_user_allowed_to_add_submission( get_current_user_id() ) ) : ?>
 		<a href="<?php echo get_permalink( $create_page_id ); ?>">
 			<span><?php _e( 'Create one.', 'wpcasa-dashboard' ); ?></span>

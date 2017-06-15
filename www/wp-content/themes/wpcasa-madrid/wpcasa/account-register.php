@@ -60,7 +60,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php if( $login ) : ?>
 			<p class="login-link">
 				<a href="<?php echo get_permalink( $login ); ?>">
-					<?php _e( 'Already a member? Log in now.', 'wpsight-dashboard' ); ?>
+					<?php _e( 'Already a member? Log in now.', 'wpcasa-dashboard' ); ?>
 				</a>
 			</p>
 		<?php endif; ?>
