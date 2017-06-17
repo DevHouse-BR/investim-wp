@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div class="wpsight-alert alert alert-info">
     
-    <?php _e( 'You are the author of this listing.' )?>
+    <?php _e( 'You are the author of this listing.', 'wpcasa-dashboard' )?>
     
     <?php $edit_page_id = wpsight_get_option( 'dashboard_edit' ); ?>
 	

@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div class="wpsight-alert alert alert-info alert-dismissible" role="alert">
 	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
     
-    <?php _e( 'You are the author of this listing.' )?>
+    <?php _e( 'You are the author of this listing.', 'wpcasa-dashboard' )?>
     
     <?php $edit_page_id = wpsight_get_option( 'dashboard_edit' ); ?>
 	

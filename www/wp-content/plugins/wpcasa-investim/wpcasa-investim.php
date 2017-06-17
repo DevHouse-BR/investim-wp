@@ -523,3 +523,226 @@ function wpsight_meta_boxes_custom( $meta_boxes ) {
 	return $meta_boxes;
 
 }
+
+// add_action( 'wp_enqueue_scripts', function() {
+// 	wp_enqueue_script( 'jquery-ui-autocomplete' );
+// 	wp_register_style('jquery-ui', 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css');
+//   wp_enqueue_style( 'jquery-ui' ); 
+// } );
+
+add_action('cmb2_render_autocomplete', 'autocomplete_cmb2_render_autocomplete', 10, 5);
+function autocomplete_cmb2_render_autocomplete($field_object, $escaped_value, $object_id, $object_type, $field_type_object) {
+
+	// Store the value in a hidden field.
+	echo $field_type_object->hidden();
+
+	if (isset($field_object->args['repeatable_class'])) {
+		$repeatable_class = $field_object->args['repeatable_class'];
+	}
+
+	$options = $field_object->options();
+
+	// Set up the options or source PHP variables.
+	if (empty($options)) {
+		$source = $field_object->args['source'];
+		//$value = $field_object->args['mapping_function']($field_object->escaped_value);
+	} else {
+
+		// Set the value.
+		if (empty($field_object->escaped_value)) {
+			$value = '';
+		} else {
+			foreach ($options as $option) {
+				if ($option['value'] == $field_object->escaped_value) {
+					$value = $option['name'];
+					break;
+				}
+			}
+		}
+	}
+
+	// Set up the autocomplete field.  Replace the '_' with '-' to not interfere with the ID from CMB2.
+	$id = str_replace('_', '-', $field_object->args['id']);
+
+	// Don't use the ID on repeatable elements as it won't change; use the class instead.
+	echo '<input size="50"'.(empty($repeatable_class) ? ' id="'.$id.'"' : '') . ' value="'.htmlspecialchars($value).'"'.
+		(!empty($repeatable_class) ? ' class="'.$repeatable_class.'"' : '').'/>';
+
+	if (!$field_object->args['repeatable'] && isset($field_object->args['desc'])) {
+		echo '<p class="cmb2-metabox-description">'.$field_object->args['desc'].'</p>';
+	}
+
+	// Now, set up the script.
+	?>
+	<script>
+		jQuery(document).ready(function($) {
+			var options = [];
+			var nameToValue = [];
+			var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
+
+			<?php
+
+			if (!empty($options)) {
+				foreach ($options as $option) {
+					echo "options.push('".addcslashes($option['name'], "'")."');\r\n";
+					echo "nameToValue['".addcslashes($option['name'], "'")."'] = '".$option['value']."';\r\n";
+				}
+			}
+
+			if (!empty($repeatable_class)) { ?>
+			$('.<?php echo $repeatable_class; ?>').each(function(i, el) {
+				if (typeof $(this).data('ui-autocomplete') === 'undefined') {
+						$(this).autocomplete({
+			<?php } else { ?>
+			$('#<?php echo $id; ?>').autocomplete({
+			<?php } ?>
+				source: <?php if (empty($options)) { ?>
+					function(request, response) {
+						$.ajax(
+							{url: ajaxurl,
+							 data: {
+								action: '<?php echo $source; ?>',
+								q: request.term
+							 },
+							 dataType: "json",
+							 success: function(data) {
+
+							 	//console.log(data);
+
+								// Set up options and name to value for this returned set.
+								//var values = $.parseJSON(data);
+								//options = [];
+								//nameToValue = [];
+
+								//for (optionI in values) {
+								//	var option = values[optionI];
+								//	options.push(option.name);
+								//	nameToValue[option.name] = option.value;
+								//}
+
+								response(data);
+							}
+						 });
+						} <?php } else {
+							echo 'options';
+						} ?>
+			});
+
+			// Also set up a blur function to update the ID.
+			$(<?php echo empty($repeatable_class) ? "'#".$id."'" : 'this'; ?>).blur(function(e) {
+				$(this).prev('input').val(nameToValue[$(this).val()]);
+			});
+
+			<?php
+
+			if (!empty($repeatable_class)) { ?>
+					}
+				});
+			<?php
+			}
+			?>
+		});
+	</script>
+	<?php
+}
+
+/**
+ * Gets the post title from the ID for mapping purposes in autocompletes.
+ *
+ * @param int $id
+ * @return string
+ */
+function autocomplete_cmb2_get_post_title_from_id($id) {
+	// if (empty($id)) {
+	// 	return '';
+	// }
+
+	// $post = get_post($id);
+
+
+
+// 	echo get_the_term_list( 2391, 'location', 'People: ', ', ' );
+
+
+// var_dump(get_terms( array(
+//     'taxonomy' => 'location',
+//     //'hide_empty' => false,
+//     //'hierarchical' => false
+//     'parent' => 0,
+// ) ) );
+
+
+
+
+
+
+	return 'leonardooooooo';
+}
+
+
+add_action( 'wp_ajax_investim_countries', function ( $a) {
+	//var_dump(sanitize_text_field($_GET['q']));
+
+	$terms = get_terms( array(
+		'taxonomy' => 'location',
+		//'hide_empty' => false,
+		//'hierarchical' => false
+		'parent' => 0,
+		'name__like' => sanitize_text_field($_GET['q'])
+	) );
+
+	$return = array();
+
+	foreach ($terms as $key => $value) {
+		$return[] = array(
+			'id' => $value->term_id,
+			'label' => $value->name,
+			'value' => $value->name,
+			//'value' => $value->slug
+		);
+	}
+
+	echo json_encode($return);
+	
+	wp_die();
+
+} );
+
+add_filter( 'wpsight_meta_box_listing_general_fields', 'wpsight_meta_box_listing_general_fields_custom' );
+function wpsight_meta_box_listing_general_fields_custom( $fields ) {
+
+	wp_enqueue_script( 'jquery-ui-autocomplete' );
+	wp_register_style('jquery-ui', 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css');
+ 	wp_enqueue_style( 'jquery-ui' ); 
+
+	unset($fields['taxonomy_location']);
+	unset($fields['taxonomy_type']);
+	unset($fields['taxonomy_feature']);
+
+	$fields['country'] = array(
+		'name' => 'País',
+		'desc' => 'Digite um valor, caso já exista, selecione na lista',
+		'id' => '_location_country',
+		'repeatable' => false,
+		'type' => 'autocomplete',
+		'source' => 'investim_countries',
+		'repeatable_class' => 'countries',
+		'priority'		=> 40
+		//'mapping_function' => 'autocomplete_cmb2_get_post_title_from_id'
+	);
+
+	$fields['state'] = array(
+		'name' => 'Estado',
+		'desc' => 'Digite um valor, caso já exista, selecione na lista',
+		'id' => '_location_state',
+		'repeatable' => false,
+		'type' => 'autocomplete',
+		'source' => 'investim_countries',
+		'repeatable_class' => 'countries',
+		'priority'		=> 50
+		//'mapping_function' => 'autocomplete_cmb2_get_post_title_from_id'
+	);
+
+	return $fields;
+
+}

@@ -1,4 +1,4 @@
-<header class="entry-header page-header"><h1 class="entry-title">Cadastre sua Empresa para Venda</h1></header>
+<!--header class="entry-header page-header"><h1 class="entry-title">Cadastre sua Empresa para Venda</h1></header-->
 
 <p class="listings-panel-title">Cadastre sua empresa para venda. Tratamos com extremo sigilo as informações. Não revelamos a identidade da sua empresa enquanto não houver o momento oportuno, avaliado através de nosso procedimento de venda.</p>
 
