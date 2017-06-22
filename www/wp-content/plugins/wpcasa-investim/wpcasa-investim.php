@@ -524,172 +524,83 @@ function wpsight_meta_boxes_custom( $meta_boxes ) {
 
 }
 
-// add_action( 'wp_enqueue_scripts', function() {
-// 	wp_enqueue_script( 'jquery-ui-autocomplete' );
-// 	wp_register_style('jquery-ui', 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css');
-//   wp_enqueue_style( 'jquery-ui' ); 
-// } );
+add_action( 'wp_enqueue_scripts', function() {
+
+	$post = get_post();
+
+	if ($post->post_name == "nova-empresa"){
+		wp_enqueue_script( 'jquery-ui-autocomplete' );
+		wp_register_style( 'jquery-ui', 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css' );
+	 	wp_enqueue_style( 'jquery-ui' ); 
+	 	wp_register_script( 'location-autocomplete',  plugins_url( '/location-autocomplete.js', __FILE__ ) );
+	 	wp_enqueue_script( 'location-autocomplete' );
+	}
+
+} );
+
 
 add_action('cmb2_render_autocomplete', 'autocomplete_cmb2_render_autocomplete', 10, 5);
 function autocomplete_cmb2_render_autocomplete($field_object, $escaped_value, $object_id, $object_type, $field_type_object) {
 
-	// Store the value in a hidden field.
-	echo $field_type_object->hidden();
+	$value = '';
 
-	if (isset($field_object->args['repeatable_class'])) {
-		$repeatable_class = $field_object->args['repeatable_class'];
-	}
+	if ( $escaped_value != null){
+		list( $locationType, $location ) = explode ( '|', $escaped_value );
 
-	$options = $field_object->options();
-
-	// Set up the options or source PHP variables.
-	if (empty($options)) {
-		$source = $field_object->args['source'];
-		//$value = $field_object->args['mapping_function']($field_object->escaped_value);
-	} else {
-
-		// Set the value.
-		if (empty($field_object->escaped_value)) {
-			$value = '';
+		if($locationType == 'id'){
+			$value = get_term($location);
+			$value = $value->name;
 		} else {
-			foreach ($options as $option) {
-				if ($option['value'] == $field_object->escaped_value) {
-					$value = $option['name'];
-					break;
-				}
-			}
+			$value = $location;
 		}
 	}
 
+	echo $field_type_object->hidden();
+
+	$parent = $field_object->args['location-parent'];
+
 	// Set up the autocomplete field.  Replace the '_' with '-' to not interfere with the ID from CMB2.
 	$id = str_replace('_', '-', $field_object->args['id']);
+	
+	?>
 
-	// Don't use the ID on repeatable elements as it won't change; use the class instead.
-	echo '<input size="50"'.(empty($repeatable_class) ? ' id="'.$id.'"' : '') . ' value="'.htmlspecialchars($value).'"'.
-		(!empty($repeatable_class) ? ' class="'.$repeatable_class.'"' : '').'/>';
-
-	if (!$field_object->args['repeatable'] && isset($field_object->args['desc'])) {
+	<div class="input-group">
+		<input type="text" aria-label="..." class="form-control location-autocomplete" data-parent="<?php echo $parent ?>" size="50" id="<?php echo $id ?>" value="<?php echo htmlspecialchars($value) ?>" />
+		<div class="input-group-btn">
+			<button type="button" class="btn btn-default dropdown-toggle"> <span class="caret"></span></button>
+		</div>
+	</div>
+	
+	<?php
+	if (isset($field_object->args['desc'])) {
 		echo '<p class="cmb2-metabox-description">'.$field_object->args['desc'].'</p>';
 	}
 
-	// Now, set up the script.
-	?>
-	<script>
-		jQuery(document).ready(function($) {
-			var options = [];
-			var nameToValue = [];
-			var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
-
-			<?php
-
-			if (!empty($options)) {
-				foreach ($options as $option) {
-					echo "options.push('".addcslashes($option['name'], "'")."');\r\n";
-					echo "nameToValue['".addcslashes($option['name'], "'")."'] = '".$option['value']."';\r\n";
-				}
-			}
-
-			if (!empty($repeatable_class)) { ?>
-			$('.<?php echo $repeatable_class; ?>').each(function(i, el) {
-				if (typeof $(this).data('ui-autocomplete') === 'undefined') {
-						$(this).autocomplete({
-			<?php } else { ?>
-			$('#<?php echo $id; ?>').autocomplete({
-			<?php } ?>
-				source: <?php if (empty($options)) { ?>
-					function(request, response) {
-						$.ajax(
-							{url: ajaxurl,
-							 data: {
-								action: '<?php echo $source; ?>',
-								q: request.term
-							 },
-							 dataType: "json",
-							 success: function(data) {
-
-							 	//console.log(data);
-
-								// Set up options and name to value for this returned set.
-								//var values = $.parseJSON(data);
-								//options = [];
-								//nameToValue = [];
-
-								//for (optionI in values) {
-								//	var option = values[optionI];
-								//	options.push(option.name);
-								//	nameToValue[option.name] = option.value;
-								//}
-
-								response(data);
-							}
-						 });
-						} <?php } else {
-							echo 'options';
-						} ?>
-			});
-
-			// Also set up a blur function to update the ID.
-			$(<?php echo empty($repeatable_class) ? "'#".$id."'" : 'this'; ?>).blur(function(e) {
-				$(this).prev('input').val(nameToValue[$(this).val()]);
-			});
-
-			<?php
-
-			if (!empty($repeatable_class)) { ?>
-					}
-				});
-			<?php
-			}
-			?>
-		});
-	</script>
-	<?php
-}
-
-/**
- * Gets the post title from the ID for mapping purposes in autocompletes.
- *
- * @param int $id
- * @return string
- */
-function autocomplete_cmb2_get_post_title_from_id($id) {
-	// if (empty($id)) {
-	// 	return '';
-	// }
-
-	// $post = get_post($id);
-
-
-
-// 	echo get_the_term_list( 2391, 'location', 'People: ', ', ' );
-
-
-// var_dump(get_terms( array(
-//     'taxonomy' => 'location',
-//     //'hide_empty' => false,
-//     //'hierarchical' => false
-//     'parent' => 0,
-// ) ) );
-
-
-
-
-
-
-	return 'leonardooooooo';
 }
 
 
-add_action( 'wp_ajax_investim_countries', function ( $a) {
-	//var_dump(sanitize_text_field($_GET['q']));
+add_action( 'wp_ajax_investim_locations', function ( $a) {
 
-	$terms = get_terms( array(
-		'taxonomy' => 'location',
-		//'hide_empty' => false,
-		//'hierarchical' => false
-		'parent' => 0,
-		'name__like' => sanitize_text_field($_GET['q'])
-	) );
+	$parent = sanitize_text_field ( $_GET['parent'] );
+
+	if( $parent == "0" ) {
+		$parentLocationType = 'id';
+		$parentLocation = 0;
+	} else {
+		list( $parentLocationType, $parentLocation ) = explode ( '|', $parent );
+	}
+
+	if ( $parentLocationType == 'id' ) {
+		$terms = get_terms( array(
+			'taxonomy' => 'location',
+			'hide_empty' => false,
+			//'hierarchical' => false
+			'parent' => $parentLocation,
+			'name__like' => sanitize_text_field($_GET['q'])
+		) );
+	} else {
+		$terms = array();
+	}
 
 	$return = array();
 
@@ -708,41 +619,135 @@ add_action( 'wp_ajax_investim_countries', function ( $a) {
 
 } );
 
+
 add_filter( 'wpsight_meta_box_listing_general_fields', 'wpsight_meta_box_listing_general_fields_custom' );
 function wpsight_meta_box_listing_general_fields_custom( $fields ) {
 
-	wp_enqueue_script( 'jquery-ui-autocomplete' );
-	wp_register_style('jquery-ui', 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css');
- 	wp_enqueue_style( 'jquery-ui' ); 
+	?>
+	<script>
+		var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
+	</script>
+	<?php
 
 	unset($fields['taxonomy_location']);
 	unset($fields['taxonomy_type']);
 	unset($fields['taxonomy_feature']);
 
 	$fields['country'] = array(
-		'name' => 'País',
-		'desc' => 'Digite um valor, caso já exista, selecione na lista',
-		'id' => '_location_country',
-		'repeatable' => false,
-		'type' => 'autocomplete',
-		'source' => 'investim_countries',
-		'repeatable_class' => 'countries',
-		'priority'		=> 40
-		//'mapping_function' => 'autocomplete_cmb2_get_post_title_from_id'
+		'name' 				=> 'País',
+		'desc' 				=> 'Digite um valor, caso já exista, selecione na lista',
+		'id' 				=> '_location_country',
+		'type' 				=> 'autocomplete',
+		'priority'			=> 40
 	);
 
 	$fields['state'] = array(
-		'name' => 'Estado',
-		'desc' => 'Digite um valor, caso já exista, selecione na lista',
-		'id' => '_location_state',
-		'repeatable' => false,
-		'type' => 'autocomplete',
-		'source' => 'investim_countries',
-		'repeatable_class' => 'countries',
-		'priority'		=> 50
-		//'mapping_function' => 'autocomplete_cmb2_get_post_title_from_id'
+		'name' 				=> 'Estado',
+		'desc' 				=> 'Digite um valor, caso já exista, selecione na lista',
+		'id' 				=> '_location_state',
+		'type' 				=> 'autocomplete',
+		'location-parent' 	=> '_location_country',
+		'priority'			=> 50
+	);
+
+	$fields['city'] = array(
+		'name' 				=> 'Cidade',
+		'desc' 				=> 'Digite um valor, caso já exista, selecione na lista',
+		'id' 				=> '_location_city',
+		'type' 				=> 'autocomplete',
+		'location-parent'	=> '_location_state',
+		'priority'			=> 60
+	);
+
+	$fields['district'] = array(
+		'name' 				=> 'Bairro',
+		'desc' 				=> 'Digite um valor, caso já exista, selecione na lista',
+		'id' 				=> '_location_district',
+		'type' 				=> 'autocomplete',
+		'location-parent' 	=> '_location_city',
+		'priority'			=> 70
 	);
 
 	return $fields;
 
+}
+
+
+add_action( 'wp_insert_post', 'investim_set_listing_location', 10, 3 );
+function investim_set_listing_location( $post_id, $post, $update ) {
+
+	if ( $post->post_type != "listing" )
+	 	return;
+
+	if ( ! array_key_exists("submission", $_SESSION ) )
+		return;
+
+	if ( ! array_key_exists("listing_general", $_SESSION["submission"] ) )
+		return;
+
+	if ( ! array_key_exists("_location_country", $_SESSION["submission"]["listing_general"] ) )
+		return;
+
+
+	$listing_general_data = $_SESSION["submission"]["listing_general"];
+
+	// types can be id or name. id represents terms already in the database and name a new term to be added.
+	list($countryType, $country) = explode('|', sanitize_text_field($listing_general_data["_location_country"]));
+	list($stateType, $state) = explode('|', sanitize_text_field($listing_general_data["_location_state"]));
+	list($cityType, $city) = explode('|', sanitize_text_field($listing_general_data["_location_city"]));
+	list($districtType, $district) = explode('|', sanitize_text_field($listing_general_data["_location_district"]));
+
+	if ($countryType == "name") {
+		$term_exist = term_exists( $country, 'location');
+		if ($term_exist) {
+			$country = $term_exist["term_id"];
+		} else {
+			$country = add_location_term( $country )['term_id'];
+		}
+	}
+
+	if ($stateType == "name") {
+		$term_exist = term_exists( $state, 'location', $country );
+		if ($term_exist) {
+			$state = $term_exist["term_id"];
+		} else {
+			$state = add_location_term( $state, $country )['term_id'];
+		}
+	}
+
+	if ($cityType == "name") {
+		$term_exist = term_exists( $city, 'location', $state );
+		if ($term_exist) {
+			$city = $term_exist["term_id"];
+		} else {
+			$city = add_location_term( $city, $state )['term_id'];
+		}
+	}
+
+	if ($districtType == "name") {
+		$term_exist = term_exists( $district, 'location', $city );
+		if ($term_exist) {
+			$district = $term_exist["term_id"];
+		} else {
+			$district = add_location_term( $district, $city )['term_id'];
+		}
+	}
+
+	wp_set_object_terms( $post_id, array($country, $state, $city, $district), 'location', true );
+
+	unset($_SESSION["submission"]["listing_general"]["_location_country"]);
+	unset($_SESSION["submission"]["listing_general"]["_location_state"]);
+	unset($_SESSION["submission"]["listing_general"]["_location_city"]);
+	unset($_SESSION["submission"]["listing_general"]["_location_district"]);
+
+}
+
+function add_location_term($name, $parent_id = NULL) {
+	return wp_insert_term(
+		$name, 		// the term 
+		'location',	// the taxonomy
+		array(
+			'parent'=> $parent_id
+		)
+	);
 }
