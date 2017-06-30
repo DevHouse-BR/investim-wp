@@ -27,6 +27,11 @@ class thfo_mail_alert {
 		include_once plugin_dir_path( __FILE__ ) . '/inc/class/thfo_mailalert_admin_menu.php';
 		include_once plugin_dir_path( __FILE__ ) . '/inc/class/thfo_mailalert_unsubscribe.php';
 
+		if(!class_exists('WP_List_Table')){
+			include_once( ABSPATH . 'wp-admin/includes/class-wp-list-table.php' );
+		}
+		include_once plugin_dir_path( __FILE__ ) . '/inc/class/thfo_investidores_table.php';
+
 		new thfo_mailalert();
 		new thfo_mailalert_widget();
 		new thfo_mailalert_admin_menu();

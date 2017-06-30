@@ -1,7 +1,7 @@
 .thfo_subscriber td,
 .thfo_subscriber th {
     border-bottom: solid 1px black;
-    text-align: center;
+    /*text-align: center;*/
 }
 
 .thfo_subscriber a {
@@ -11,9 +11,26 @@
 }
 
 .wpcasama-promo {
-    font-size: 2rem;
+    /*font-size: 2rem;
     background: white;
     width: 60%;
     padding: 1%;
-    margin-top: 10px;
+    margin-top: 10px;*/
+    display: none;
+}
+
+.hiddenRow {
+    padding: 0 !important;
+}
+
+table.investidores th.column-max_price {
+    width: 124px;
+}
+
+table.investidores td.column-max_price {
+    color: green;
+}
+
+table.investidores td.column-min_price {
+    color: red;
 }

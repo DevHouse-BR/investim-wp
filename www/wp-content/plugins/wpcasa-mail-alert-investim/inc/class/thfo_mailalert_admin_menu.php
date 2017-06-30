@@ -8,14 +8,24 @@
  */
 class thfo_mailalert_admin_menu {
 	function __construct() {
-
+		add_filter('set-screen-option', array($this, 'investidor_table_set_option'), 10, 3);
 		add_action('admin_menu', array($this, 'thfo_admin_menu'));
 		add_action('admin_menu', array($this, 'thfo_delete_subscriber'));
 		add_action('admin_init', array($this, 'register_settings'));
 	}
 
 	public function thfo_admin_menu(){
-		add_menu_page(__('Mail Alert', 'wpcasa-mail-alert'),__('Mail Alert', 'wpcasa-mail-alert'),'manage_options','wpcasa-mail-alert', array($this, 'thfo_menu_html'),WPCASAMA_PLUGIN_PATH . '/assets/img/icon.png');
+		$hook = add_menu_page(
+			__('Mail Alert', 'wpcasa-mail-alert'),
+			__('Mail Alert', 'wpcasa-mail-alert'),
+			'manage_options',
+			'wpcasa-mail-alert', 
+			array($this, 'thfo_menu_html'),
+			WPCASAMA_PLUGIN_PATH . '/assets/img/icon.png'
+		);
+		add_action( "load-$hook", array($this, 'add_options') );
+		
+
 		add_submenu_page('wpcasa-mail-alert',__('Mail Settings', 'wpcasa-mail-alert'),__('Mail Settings', 'wpcasa-mail-alert'),'manage_options', 'thfo-mailalert-mail-settings', array($this,'menu_html'));
 		add_submenu_page('wpcasa-mail-alert',__('General Options', 'wpcasa-mail-alert'),__('General Options', 'wpcasa-mail-alert'),'manage_options', 'thfo_mailalert_options', array($this,'general_html'));
 	}
@@ -220,19 +230,63 @@ class thfo_mailalert_admin_menu {
 
 	}
 
+	public function add_options() {
+		global $wp_list_table;
+
+		$option = 'per_page';
+		$args = array(
+			'label' => 'Número de itens por página',
+			'default' => 20,
+			'option' => 'investidores_per_page'
+		);
+		add_screen_option( $option, $args );
+
+		$wp_list_table = new Investidores_List_Table();
+	}
+
+	public function investidor_table_set_option($status, $option, $value) {
+		return $value;
+	}
+
 	public function  thfo_menu_html(){
+		global $wp_list_table;
+
+		echo '<div class="wrap"><h1 class="wp-heading-inline">' . get_admin_page_title() . '</h1>';
+		echo '<form id="investidores-filter" method="get">';
+		echo '<input type="hidden" name="page" value="wpcasa-mail-alert" />';
+
+		//$wp_list_table = new Investidores_List_Table();
+		$wp_list_table->prepare_items();
+		$wp_list_table->search_box('Pesquisar Investidores', 'search_id');
+		$wp_list_table->display();
+
+		echo '</form></div>';
+
+		return;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 		global $wpdb;
 		$subscribers = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}wpcasama_mailalert ");
 		$count = count($subscribers);
 
-		if (defined('WPCASAMA_PRO_VERSION')){
-			echo '<h1>' . get_admin_page_title() . ' ' . WPCASAMA_PRO_VERSION ;
-			echo ' Pro</h1>';
-		} else {
-			echo '<h1>' . get_admin_page_title() . ' ' . PLUGIN_VERSION;
-			echo '</h1>';
-		}
+		echo '<h1>' . get_admin_page_title() . '</h1>';
 
 		echo '<p>';
 		if ( $count === 0 ){
@@ -246,34 +300,39 @@ class thfo_mailalert_admin_menu {
 		echo '</p>';
 
 		?>
-
-		<table class="thfo_subscriber" >
-			<tr>
-				<th><?php _e('Date', 'wpcasa-mail-alert') ?></th>
-				<th><?php _e('Name', 'wpcasa-mail-alert') ?></th>
-				<th><?php _e('Email', 'wpcasa-mail-alert') ?></th>
-				<th><?php _e('Phone', 'wpcasa-mail-alert') ?></th>
-				<th><?php _e('City Searched', 'wpcasa-mail-alert') ?></th>
-				<th><?php _e('Minimum price', 'wpcasa-mail-alert') ?></th>
-				<th><?php _e('Maximum price', 'wpcasa-mail-alert') ?></th>
-				<?php do_action('thfo_after_header_subscriber_table', 10,1); ?>
-				<th><?php _e('Delete', 'wpcasa-mail-alert') ?></th>
-
-			</tr>
-			<?php
-			foreach ($subscribers as $subscriber){
-				$id = $subscriber->id;
-				$date = mysql2date('G', $subscriber->subscription, true) ?>
+		<script type="text/javascript">
+			// $('.accordian-body').on('show.bs.collapse', function () {
+			// 	$(this).closest("table")
+			// 		.find(".collapse.in")
+			// 		.not(this)
+			// 		.collapse('toggle');
+			// });
+		</script>
+		<table class="table table-condensed thfo_subscriber">
+			<thead>
 				<tr>
+					<th><?php _e('Date', 'wpcasa-mail-alert') ?></th>
+					<th><?php _e('Name', 'wpcasa-mail-alert') ?></th>
+					<th><?php _e('Email', 'wpcasa-mail-alert') ?></th>
+					<th><?php _e('Phone', 'wpcasa-mail-alert') ?></th>
+					<th><?php _e('City Searched', 'wpcasa-mail-alert') ?></th>
+					<th><?php _e('Minimum price', 'wpcasa-mail-alert') ?></th>
+					<th><?php _e('Maximum price', 'wpcasa-mail-alert') ?></th>
+					<th><?php _e('Delete', 'wpcasa-mail-alert') ?></th>
+				</tr>
+			</thead>
+			<tbody>
+			<?php foreach ($subscribers as $subscriber) :
+					$id = $subscriber->id;
+					$date = mysql2date('G', $subscriber->subscription, true) ?>
+				<tr data-toggle="collapse" data-target="#moreinfo_<?php echo $id ?>" class="accordion-toggle">
 					<td><?php echo date_i18n('d/m/Y', $date ); ?></td>
 					<td><?php echo $subscriber->name ?></td>
 					<td><?php echo $subscriber->email ?></td>
 					<td><?php echo $subscriber->tel ?></td>
 					<td><?php echo $subscriber->city ?></td>
-					<td><?php echo $subscriber->min_price ?>€</td>
-					<td><?php echo $subscriber->max_price ?>€</td>
-					<?php do_action('thfo_after_tr_subscriber_table'); ?>
-
+					<td class="text-error">R$ <?php echo number_format( (double) $subscriber->min_price, 2, ',', '.' ) ?></td>
+					<td class="text-success">R$ <?php echo number_format( (double) $subscriber->max_price, 2, ',', '.' ) ?></td>
 					<td>
 						<?php
 
@@ -285,10 +344,11 @@ class thfo_mailalert_admin_menu {
                     </td>
 
 				</tr>
-
-			<?php }
-
-			?>
+				 <tr >
+					<td colspan="8" class="hiddenRow"><div class="accordian-body collapse" id="moreinfo_<?php echo $id ?>"> Demo1 </div> </td>
+				</tr>
+			<?php endforeach; ?>
+			</tbody>
 		</table>
 
 	<?php }
