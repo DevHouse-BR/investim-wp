@@ -255,109 +255,33 @@ class thfo_mailalert_admin_menu {
 		echo '<form id="investidores-filter" method="get">';
 		echo '<input type="hidden" name="page" value="wpcasa-mail-alert" />';
 
-		//$wp_list_table = new Investidores_List_Table();
 		$wp_list_table->prepare_items();
 		$wp_list_table->search_box('Pesquisar Investidores', 'search_id');
 		$wp_list_table->display();
 
 		echo '</form></div>';
-
-		return;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		global $wpdb;
-		$subscribers = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}wpcasama_mailalert ");
-		$count = count($subscribers);
-
-		echo '<h1>' . get_admin_page_title() . '</h1>';
-
-		echo '<p>';
-		if ( $count === 0 ){
-		    _e('0 subscriber' , 'wpcasa-mail-alert');
-        } else {
-			printf( _n( '%s subscriber:', '%s subscribers:', $count, 'wpcasa-mail-alert' ), number_format_i18n( $count ) );
-		}
-
-		//printf( _n( '%s subscriber:', '%s subscribers:', $count, 'wpcasa-mail-alert' ), number_format_i18n( $count ) );
-
-		echo '</p>';
-
 		?>
 		<script type="text/javascript">
-			// $('.accordian-body').on('show.bs.collapse', function () {
-			// 	$(this).closest("table")
-			// 		.find(".collapse.in")
-			// 		.not(this)
-			// 		.collapse('toggle');
-			// });
+			jQuery('a.delete-investidor').click(function(event){
+				if(!confirm("Deseja excluir este investidor?")){
+					event.preventDefault();
+				}
+			});
 		</script>
-		<table class="table table-condensed thfo_subscriber">
-			<thead>
-				<tr>
-					<th><?php _e('Date', 'wpcasa-mail-alert') ?></th>
-					<th><?php _e('Name', 'wpcasa-mail-alert') ?></th>
-					<th><?php _e('Email', 'wpcasa-mail-alert') ?></th>
-					<th><?php _e('Phone', 'wpcasa-mail-alert') ?></th>
-					<th><?php _e('City Searched', 'wpcasa-mail-alert') ?></th>
-					<th><?php _e('Minimum price', 'wpcasa-mail-alert') ?></th>
-					<th><?php _e('Maximum price', 'wpcasa-mail-alert') ?></th>
-					<th><?php _e('Delete', 'wpcasa-mail-alert') ?></th>
-				</tr>
-			</thead>
-			<tbody>
-			<?php foreach ($subscribers as $subscriber) :
-					$id = $subscriber->id;
-					$date = mysql2date('G', $subscriber->subscription, true) ?>
-				<tr data-toggle="collapse" data-target="#moreinfo_<?php echo $id ?>" class="accordion-toggle">
-					<td><?php echo date_i18n('d/m/Y', $date ); ?></td>
-					<td><?php echo $subscriber->name ?></td>
-					<td><?php echo $subscriber->email ?></td>
-					<td><?php echo $subscriber->tel ?></td>
-					<td><?php echo $subscriber->city ?></td>
-					<td class="text-error">R$ <?php echo number_format( (double) $subscriber->min_price, 2, ',', '.' ) ?></td>
-					<td class="text-success">R$ <?php echo number_format( (double) $subscriber->max_price, 2, ',', '.' ) ?></td>
-					<td>
-						<?php
-
-						$url = admin_url( 'admin.php?page=' );
-						$url .= basename(dirname( __DIR__));
-						$url .= '&id='. $id .'&delete=yes';
-						?>
-						<a href="<?php echo esc_url($url); ?>" title="<?php _e('Delete', 'wpcasa-mail-alert') ?>"><span class="dashicons dashicons-trash"></span> </a>
-                    </td>
-
-				</tr>
-				 <tr >
-					<td colspan="8" class="hiddenRow"><div class="accordian-body collapse" id="moreinfo_<?php echo $id ?>"> Demo1 </div> </td>
-				</tr>
-			<?php endforeach; ?>
-			</tbody>
-		</table>
-
-	<?php }
+		<?php
+	}
 
 	public function thfo_delete_subscriber(){
-		if (isset($_GET['delete']) && $_GET['delete'] == 'yes'){
-			$id = $_GET['id'];
+		if (isset($_GET['action']) && $_GET['action'] == 'delete'){
 			global $wpdb;
-			$wpdb->delete("{$wpdb->prefix}wpcasama_mailalert",array('id' => $id));
+			$investidor = $_GET['investidor'];
+			
+			if(is_array($investidor)){
+				$investidor = implode( ',', array_map( 'absint', $investidor ) );
+				$wpdb->query( "DELETE FROM {$wpdb->prefix}wpcasama_mailalert WHERE ID IN($investidor)" );
+			} else {
+				$wpdb->delete("{$wpdb->prefix}wpcasama_mailalert", array('id' => $investidor));
+			}
 		}
 	}
 

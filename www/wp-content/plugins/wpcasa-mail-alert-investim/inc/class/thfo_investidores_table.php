@@ -53,6 +53,8 @@ class Investidores_List_Table extends WP_List_Table {
 				return "R$ " . number_format( $item->min_price, 2, ',', '.' );
 			case "max_price": 
 				return "R$ " . number_format( $item->max_price, 2, ',', '.' );
+			case "third_party_capital": 
+				return $item->third_party_capital ? 'Sim' : 'Não';
 			default:
 				return $item->$column_name;
 		}
@@ -66,23 +68,13 @@ class Investidores_List_Table extends WP_List_Table {
 
 	function column_name($item) {
 		$actions = array(
-			'edit'		=> sprintf( '<a href="?page=%s&action=%s&investidor=%s">Edit</a>',$_REQUEST['page'],'edit', $item->id ),
-			'delete'	=> sprintf( '<a href="?page=%s&action=%s&investidor=%s">Delete</a>',$_REQUEST['page'],'delete', $item->id ),
+			//'edit'		=> sprintf( '<a href="?page=%s&action=%s&investidor=%s">Edit</a>',$_REQUEST['page'],'edit', $item->id ),
+			'delete'		=> sprintf( '<a class="delete-investidor" href="?page=%s&action=%s&investidor=%s">Delete</a>',$_REQUEST['page'],'delete', $item->id ),
+			//'delete'	=> sprintf( '<a  href="?page=%s&delete=yes&id=%s">Delete</a>',$_REQUEST['page'], $item->id ),
 		);
 
 		return sprintf('%1$s %2$s', $item->name, $this->row_actions($actions) );
 	}
-
-	// public function column_name($item){
-	// 	$actions = array(
-	// 		'delete' => sprintf('Delete it',$_REQUEST['page'],'delete',$item->id),
-	// 		'view' => sprintf('View',get_permalink($item->id))
-	// 	);
-	// 	return $item->name . ' ' . $this->row_actions($actions);
-
-	// 	//return $item->name . '<button type="button" class="toggle-row"><span class="screen-reader-text">' . __( 'Show more details' ) . '</span></button>';
-
-	// }
 
 	function get_bulk_actions() {
 		$actions = array(
@@ -90,7 +82,6 @@ class Investidores_List_Table extends WP_List_Table {
 		);
 		return $actions;
 	}
-
 
 	public function prepare_items() {
 		global $wpdb;
