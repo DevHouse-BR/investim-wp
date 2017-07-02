@@ -528,7 +528,7 @@ add_action( 'wp_enqueue_scripts', function() {
 
 	$post = get_post();
 
-	if ($post->post_name == "nova-empresa"){
+	if (($post->post_name == "nova-empresa") || ($post->post_name == "venda-sua-empresa")) {
 		wp_enqueue_script( 'jquery-ui-autocomplete' );
 		wp_register_style( 'jquery-ui', 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css' );
 	 	wp_enqueue_style( 'jquery-ui' ); 
