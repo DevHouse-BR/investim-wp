@@ -10,8 +10,7 @@ class thfo_mailalert_widget extends WP_Widget {
 
 	function __construct() {
 		parent::__construct( 'thfo_mailalert', __('Mail Alert','wpcasa-mail-alert'), array( 'description' => __('Form to add a property search mail alert','wpcasa-mail-alert') ) );
-
-		add_action( 'cmb2_init', array($this, 'investim_investidores_form_register'));
+		add_action( 'cmb2_init', array($this, 'investim_investidores_form_register'), 0, 0);
 		add_shortcode('pagina_investidores', array($this, 'investim_pagina_investidores'));
 	}
 
@@ -160,125 +159,192 @@ class thfo_mailalert_widget extends WP_Widget {
 		$fields = array(
 			'name' => array(
 				'name'      => 'Responsável',
-				'id'        => 'name',
+				'id'        => 'investidor_name',
 				'type'      => 'text',
 				'desc'      => false,
 				'default'   => '',
+				'attributes'  => array(
+					'maxlength'	=> 255,
+					'required'	=> 'required',
+				),
 				'priority'  => 10
 			),
 			'company' => array(
 				'name'      => 'Nome da Empresa',
-				'id'        => 'company',
+				'id'        => 'investidor_company',
 				'type'      => 'text',
 				'desc'      => false,
 				'default'   => '',
+				'attributes'  => array(
+					'maxlength'	=> 255,
+					'required'	=> 'required',
+				),
 				'priority'  => 20
 			),
 			'email' => array(
 				'name'      => 'E-mail',
-				'id'        => 'email',
+				'id'        => 'investidor_email',
 				'type'      => 'text_email',
 				'desc'      => false,
 				'default'   => '',
+				'attributes'  => array(
+					'maxlength'	=> 255,
+					'required'	=> 'required',
+				),
 				'priority'  => 30
 			),
 			'tel' => array(
 				'name'      => 'Telefone',
-				'id'        => 'tel',
+				'id'        => 'investidor_tel',
 				'type'      => 'text',
 				'desc'      => false,
 				'default'   => '',
+				'attributes'  => array(
+					'maxlength'	=> 20,
+					'required'	=> 'required',
+				),
 				'priority'  => 40
 			),
 			'mobile' => array(
 				'name'      => 'Celular',
-				'id'        => 'mobile',
+				'id'        => 'investidor_mobile',
 				'type'      => 'text',
 				'desc'      => false,
 				'default'   => '',
+				'attributes'  => array(
+					'maxlength'	=> 20,
+					'required'	=> 'required',
+				),
 				'priority'  => 50
 			),
 			'skype' => array(
 				'name'      => 'Skype',
-				'id'        => 'skype',
+				'id'        => 'investidor_skype',
 				'type'      => 'text',
 				'desc'      => false,
 				'default'   => '',
+				'attributes'  => array(
+					'maxlength'	=> 255,
+				),
 				'priority'  => 60
 			),
 			'country' => array(
 				'name' 		=> 'País',
 				'desc' 		=> 'Digite um valor, caso já exista, selecione na lista',
-				'id' 		=> 'country',
+				'id' 		=> 'investidor_country',
 				'type' 		=> 'autocomplete',
 				'default'   => '',
+				'attributes'  => array(
+					'maxlength'	=> 255,
+					'required'	=> 'required',
+				),
 				'priority'	=> 70
 			),
 			'state' => array(
 				'name' 		=> 'Estado',
 				'desc' 		=> 'Digite um valor, caso já exista, selecione na lista',
-				'id' 		=> 'state',
+				'id' 		=> 'investidor_state',
 				'type' 		=> 'autocomplete',
 				'location-parent' 	=> 'country',
 				'default'   => '',
+				'attributes'  => array(
+					'maxlength'	=> 255,
+					'required'	=> 'required',
+				),
 				'priority'	=> 80
 			),
 			'city' => array(
 				'name' 		=> 'Cidade',
 				'desc' 		=> 'Digite um valor, caso já exista, selecione na lista',
-				'id' 		=> 'city',
+				'id' 		=> 'investidor_city',
 				'type' 		=> 'autocomplete',
 				'location-parent'	=> 'state',
 				'default'   => '',
+				'attributes'  => array(
+					'maxlength'	=> 255,
+					'required'	=> 'required',
+				),
 				'priority'	=> 90
 			),
 			'min_price' => array(
 				'name'      => 'Preço Mínimo (R$)',
-				'id'        => 'min_price',
+				'id'        => 'investidor_min_price',
 				'type'      => 'text',
 				'desc'      => __( 'No currency symbols or thousands separators', 'wpcasa' ),
 				'default'   => '',
-				'priority'  => 100
+				'before_field' => 'R$',
+				'attributes'  => array(
+					'type' 		=> 'number',
+					'min'		=> '1',
+					'max'		=> '9999999999',
+					'maxlength'	=> 10,
+					'required'	=> 'required',
+				),
+				'sanitization_cb'	=> 'absint',
+        		'escape_cb'			=> 'absint',
+				'priority'  		=> 100
 			),
 			'max_price' => array(
 				'name'      => 'Preço Máximo (R$)',
-				'id'        => 'max_price',
+				'id'        => 'investidor_max_price',
 				'type'      => 'text',
 				'desc'      => __( 'No currency symbols or thousands separators', 'wpcasa' ),
 				'default'   => '',
-				'priority'  => 110
+				'before_field' => 'R$',
+				'attributes'  => array(
+					'type' 		=> 'number',
+					'min'		=> '1',
+					'max'		=> '9999999999',
+					'maxlength'	=> 10,
+					'required'	=> 'required',
+				),
+				'sanitization_cb'	=> 'absint',
+        		'escape_cb'			=> 'absint',
+				'priority' 			=> 110
 			),
 			'third_party_capital' => array(
 				'name'      => 'Você está contando com capital de terceiros?',
-				'id'        => 'third_party_capital',
+				'id'        => 'investidor_third_party_capital',
 				'type'      => 'radio',
 				'options'   => array('1' => 'Sim', '0' => 'Não'),
 				'default'   => '0',
-				'dashboard' => true,
+				'dashboard' => true,'attributes'  => array(
+					'required'	=> 'required',
+				),
 				'priority'  => 120
 			),
 			'prefered_city' => array(
 				'name'      => 'Cidade Preferencial',
-				'id'        => 'prefered_city',
+				'id'        => 'investidor_prefered_city',
 				'type'      => 'text',
 				'desc'      => false,
 				'default'   => '',
+				'attributes'  => array(
+					'maxlength'	=> 255,
+					'required'	=> 'required',
+				),
 				'priority'  => 130
 			),
 			'sector' => array(
 				'name'      => 'Setor de Atividade do seu interesse',
-				'id'        => 'sector',
+				'id'        => 'investidor_sector',
 				'type'      => 'text',
 				'desc'      => false,
 				'default'   => '',
+				'attributes'  => array(
+					'maxlength'	=> 255,
+				),
 				'priority'  => 140
 			),
 			'description' => array(
 				'name'      => __( 'Description', 'wpcasa' ),
-				'id'        => 'description',
+				'id'        => 'investidor_description',
 				'type'      => 'textarea',
 				'desc'      => false,
 				'default'   => '',
+				'attributes'  => array(
+					'maxlength'	=> 16383,
+				),
 				'priority'  => 150
 			),
 		);
@@ -286,7 +352,7 @@ class thfo_mailalert_widget extends WP_Widget {
 		$meta_box = array(
 			'id'           => 'investidor',
 			'title'        => 'Investidor',
-			'object_types' => array( wpsight_post_type() ),
+			'object_types' => array( 'investidor' ),
 			'context'      => 'normal',
 			'priority'     => 'high',
 			'hookup'       => false,
@@ -333,24 +399,22 @@ class thfo_mailalert_widget extends WP_Widget {
 			if ( is_wp_error( $new_id ) ) {
 
 				// If there was an error with the submission, add it to our ouput.
-				$output .= '<h3>' . sprintf( __( 'There was an error in the submission: %s', 'wds-post-submit' ), '<strong>'. $new_id->get_error_message() .'</strong>' ) . '</h3>';
+				$output .= '<h3>' . sprintf( __( 'Erro ao gravar informações: %s', 'wds-post-submit' ), '<strong>'. $new_id->get_error_message() .'</strong>' ) . '</h3>';
 
 			} else {
 
-				// Get submitter's name
-				$name = isset( $_POST['submitted_author_name'] ) && $_POST['submitted_author_name']
-				? ' '. $_POST['submitted_author_name']
-				: '';
-
 				// Add notice of submission
-				$output .= '<h3>' . sprintf( __( 'Thank you %s, your new post has been submitted and is pending review by a site administrator.', 'wds-post-submit' ), esc_html( $name ) ) . '</h3>';
+				$output .= '<div class="bs-callout bs-callout-info"><h3>' . sprintf( __( 'Obrigado <em>%s</em>, sua solicitação será analisada pelos nossos atendentes e em breve entraremos em contato!', 'wds-post-submit' ), esc_html( $new_id ) ) . '</h3></div>';
+				return $output;
 			}
 
 		}
 
+		$action = get_permalink() . '?type=investidor';
+
 		// Get our form
 		$output .= cmb2_get_metabox_form( $cmb, $object_id, array( 
-			'form_format' => '<form class="cmb-form wpsight-dashboard-form" method="post" id="%1$s" enctype="multipart/form-data" encoding="multipart/form-data"><input type="hidden" name="object_id" value="%2$s">%3$s<input type="submit" name="submit-submission" value="%4$s" class="button"></form>',
+			'form_format' => '<form action="' . $action . '" class="cmb-form wpsight-dashboard-form" method="post" id="%1$s" enctype="multipart/form-data" encoding="multipart/form-data"><input type="hidden" name="object_id" value="%2$s">%3$s<input type="submit" name="submit-submission" value="%4$s" class="button"></form>',
 			'save_button' => 'Enviar'
 		) );
 
@@ -359,6 +423,7 @@ class thfo_mailalert_widget extends WP_Widget {
 
 
 	public function investim_save_investidores( $cmb, $post_data = array() ) {
+		global $wpdb;
 
 		// If no form submission, bail
 		if ( empty( $_POST ) ) {
@@ -367,36 +432,30 @@ class thfo_mailalert_widget extends WP_Widget {
 
 		// check required $_POST variables and security nonce
 		if (
-			! isset( $_POST['submit-cmb'], $_POST['object_id'], $_POST[ $cmb->nonce() ] )
+			! isset( $_POST['object_id'], $_POST[ $cmb->nonce() ] )
 			|| ! wp_verify_nonce( $_POST[ $cmb->nonce() ], $cmb->nonce() )
 		) {
 			return new WP_Error( 'security_fail', __( 'Verificação de segurança falhou.' ) );
 		}
 
-		if ( empty( $_POST['submitted_post_title'] ) ) {
-			return new WP_Error( 'post_data_missing', __( 'New post requires a title.' ) );
-		}
-
 		// Fetch sanitized values
 		$sanitized_values = $cmb->get_sanitized_values( $_POST );
 
-		// Set our post data arguments
-		$post_data['post_title']   = $sanitized_values['submitted_post_title'];
-		unset( $sanitized_values['submitted_post_title'] );
-		$post_data['post_content'] = $sanitized_values['submitted_post_content'];
-		unset( $sanitized_values['submitted_post_content'] );
+		$values = array();
 
-		// Create the new post
-		$new_submission_id = wp_insert_post( $post_data, true );
-
-		// If we hit a snag, update the user
-		if ( is_wp_error( $new_submission_id ) ) {
-			return $new_submission_id;
+		foreach ($sanitized_values as $key => $value) {
+			$values[str_replace('investidor_', '', $key)] = $value;
 		}
+		
+		$success = $wpdb->insert("{$wpdb->prefix}wpcasama_mailalert", $values);
 
-
-
-		return $new_submission_id;
+		//If we hit a snag, update the user
+		if ( is_wp_error( $success ) ) {
+			return $new_submission_id;
+		} else {
+			return $values['name'];
+		}
+		
 	}
 
 }

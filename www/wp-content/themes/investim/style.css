@@ -46,3 +46,158 @@
 	margin: 0;
 	padding: 5px 10px;
 }
+
+#home-search {
+    /*padding: 80px 0 120px;*/
+    padding: 10px 0 40px;
+    background-color: transparent;
+    /*margin-top: -556px;*/
+}
+
+#home-search .container {
+    margin-left: auto;
+    margin-right: auto;
+    -moz-transition: width .1s ease-in-out;
+    -webkit-transition: width .1s ease-in-out;
+    -ms-transition: width .1s ease-in-out;
+    transition: width .1s ease-in-out;
+    width: 65em;
+}
+
+#home-search .wpsight-listings-search {
+    background-color: rgba(61,71,84,.6) !important;
+    padding: 40px 40px 10px;
+}
+
+#home-search .listings-search-reset, #home-search .listings-search-advanced-toggle {
+    background-color: rgba(61,71,84,.6) !important;
+    bottom: -30px;
+}
+
+.header-tagline {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 28px;
+    height: 350px;
+    position: relative;
+    text-align: left;
+    text-transform: none;
+    -webkit-transition: height .1s ease-in-out;
+    -moz-transition: height .1s ease-in-out;
+    -ms-transition: height .1s ease-in-out;
+    -o-transition: height .1s ease-in-out;
+    transition: height .1s ease-in-out;
+}
+
+@media only screen and (min-width: 992px) {
+	.header-tagline {
+	    font-size: 36px;
+	    height: 100px;
+	}
+}
+
+.header-tagline {
+	text-align: left;
+}
+
+.header-tagline #tagline {
+    color: #fff;
+    left: auto;
+    position: relative;
+    top: auto;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.25);
+    transform: none;
+
+
+    margin-left: auto;
+    margin-right: auto;
+    -moz-transition: width .1s ease-in-out;
+    -webkit-transition: width .1s ease-in-out;
+    -ms-transition: width .1s ease-in-out;
+    transition: width .1s ease-in-out;
+    width: 65em;
+}
+
+@media only screen and (min-width: 992px) {
+	.header-tagline #tagline {
+	    padding: 0;
+	}
+}
+
+@media (min-width: 1200px){
+	.header-tagline .container {
+	    width: 977px;
+	    line-height: 100px;
+	}
+}
+
+.header-tagline span {
+	padding: 10px;
+    background-color: rgba(61,71,84,.6);
+}
+
+.header-tagline span em {
+	color: red;
+}
+
+#home-servicos {
+    padding-bottom: 60px;
+}
+
+@media only screen and (min-width: 768px){
+	#home-servicos {
+	    padding-bottom: 40px;
+	}
+}
+
+.header-menu {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fb070b+0,c0000d+100 */
+	background: #fb070b; /* Old browsers */
+	background: -moz-linear-gradient(top,  #fb070b 0%, #c0000d 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #fb070b 0%,#c0000d 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #fb070b 0%,#c0000d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb070b', endColorstr='#c0000d',GradientType=0 ); /* IE6-9 */
+}
+
+.section-title-align-center {
+    font-weight: bold;
+}
+
+.cabec-video-container {
+	position: absolute;
+    width: 1300px;
+    margin-top: -126px;
+}
+
+#cabec-video {
+	width: 100%;
+	/*height: 100%;*/
+	display: block;
+	position: relative;
+	margin-top: -100px;
+}
+
+#cabec-video-overlay {
+	/* width: 100%; */
+    /* height: 100%; */
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.site-header-tagline {
+	/*height: 360px;*/
+	position: relative;
+	overflow: hidden;
+	box-shadow: 1px 11px 20px 4px rgba(0,0,0,.1);
+}
+
+.site-main {
+	/*background-image: url(https://www.investim.com.br/wp-content/uploads/2017/06/letreiro-investim-02.jpg);*/
+}
+
+#home-listings {
+	background: white;
+}

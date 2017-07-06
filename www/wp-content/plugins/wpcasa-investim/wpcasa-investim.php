@@ -528,7 +528,7 @@ add_action( 'wp_enqueue_scripts', function() {
 
 	$post = get_post();
 
-	if (($post->post_name == "nova-empresa") || ($post->post_name == "venda-sua-empresa")) {
+	if (($post->post_name == "nova-empresa") || ($post->post_name == "compre-uma-empresa")) {
 		wp_enqueue_script( 'jquery-ui-autocomplete' );
 		wp_register_style( 'jquery-ui', 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css' );
 	 	wp_enqueue_style( 'jquery-ui' ); 
@@ -672,6 +672,40 @@ function wpsight_meta_box_listing_general_fields_custom( $fields ) {
 
 }
 
+add_filter( 'wpsight_madrid_meta_boxes_home_search', 'wpsight_madrid_meta_boxes_home_search_custom' );
+function wpsight_madrid_meta_boxes_home_search_custom( $metabox ) {
+
+	$metabox['fields']['display_on_header'] = array(
+		'name'      => '',
+		'id'        => '_search_display_on_header',
+		'type'      => 'checkbox',
+		'label_cb'  => __( 'Exibir no cabeçalho', 'wpcasa-madrid' ),
+		'desc'      => __( 'Exibir a busca dentro do cabeçalho', 'wpcasa-madrid' ),
+		'priority'  => 11
+	);
+
+	$metabox['fields'] = wpsight_sort_array_by_priority( $metabox['fields'] );
+
+	return $metabox;
+}
+
+add_filter( 'wpsight_madrid_meta_boxes_header_general_fields', 'wpsight_madrid_meta_boxes_header_general_fields_custom' );
+function wpsight_madrid_meta_boxes_header_general_fields_custom( $fields ) {
+
+	$fields['tagline_video_bg'] = array(
+		'name'      => 'Video de Fundo',
+		'id'        => '_tagline_video_bg',
+		'type'      => 'file',
+		'desc'      => 'Selecione um video a ser exibido no cabeçalho',
+		'attributes' => array(
+			'data-conditional-id' 		=> '_header_display',
+			'data-conditional-value'	=> 'tagline',
+		),
+		'priority'  => 21
+	);
+
+	return $fields;
+}
 
 add_action( 'wp_insert_post', 'investim_set_listing_location', 10, 3 );
 function investim_set_listing_location( $post_id, $post, $update ) {
