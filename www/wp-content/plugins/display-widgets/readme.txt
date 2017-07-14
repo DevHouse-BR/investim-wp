@@ -4,7 +4,7 @@ Tags: widget, widgets, admin, show, hide, page, sidebar, content, wpmu, plugin, 
 Text Domain: display-widgets
 Requires at least: 3.8
 Tested up to: 4.8
-Stable tag: 2.6.1
+Stable tag: 2.6.2.1
 
 Simply hide widgets on specified pages. Adds checkboxes to each widget to either show or hide it on every site page.
 
@@ -12,7 +12,7 @@ Simply hide widgets on specified pages. Adds checkboxes to each widget to either
 
 Change your sidebar content for different pages, categories, custom taxonomies, and WPML languages. Avoid creating multiple sidebars and duplicating widgets by adding check boxes to each widget in the admin (as long as it is written in the WordPress version 2.8 format) which will either show or hide the widgets on every site page. Great for avoiding extra coding and keeping your sidebars clean.
 
-This plugin allows you to hide/show widgets based on your visitors' Country of origin. It uses Ip2Location-based online API to determine your visitors' Country. Please note: no calls to external providers will be performed when this feature is deactivated. See the WordPress Plugins page for the toggle to activate or deactivate it. A field in the widget's configuration panel allows you to list all the ISO Alpha-2 country codes (us, gb, it, etc) for which the widget itself should be visible or hidden. You can find a list of [country codes here](http://www.nationsonline.org/oneworld/country_code_list.htm).
+This plugin allows you to hide/show widgets based on your visitors' Country of origin. It uses *our own implementation* of an Ip2Location-based online API to determine your visitors' Country, which we called GeoIP2.io. You can read our [terms and conditions](http://geoip2.io/terms.html) for more information on our data collection and retention policy. Please note: no calls to external providers will be performed when this feature is deactivated. See the WordPress Plugins page for the toggle to activate or deactivate it. A field in the widget's configuration panel allows you to list all the ISO Alpha-2 country codes (us, gb, it, etc) for which the widget itself should be visible or hidden. You can find a list of [country codes here](http://www.nationsonline.org/oneworld/country_code_list.htm).
 
 == Installation ==
 
@@ -39,10 +39,17 @@ function dw_callback_trigger(){
 1. The extra widget options added.
 
 == Changelog ==
+= 2.6.2.1 =
+* Fixed a compatibility issue experienced by some users, when using other plugins to handle their widgets.
+
+= 2.6.2 =
+* I added a link to the GeoIP2.io's (an IP2Location-based service) [terms and conditions](http://geoip2.io/terms.html) to comply with the WordPress' repository guidelines. A big thank you to the moderators for their guidance.
+* I am working on implementing full compatibility with WPML (thank you, Merceded, for reaching out to me).
+
 = 2.6.1 =
 * Apparently this is a typical initiation ritual: before getting better, things have to get worse, and allow the protagonist to redeem himself and look at the bright future in front of him. Well, that's what happened to me. I hit a small bump along the way, and I thank all loyal users for sticking with me while I fixed some of the bugs.
 * The idea of downloading 50Mb worth of data from MaxMind was not well received by some of this plugin's users, who came to the forums to protest and ask me to get rid of it. Fair enough. The idea was to add a new feature to allow you to hide/show widgets based on the visitor's country, a first attempt to extend this plugin's functionality in many new exciting ways.
-*The new approach uses Ip2Location-based online API to retrieve your visitor's Country, if you decide to enable this functionality. No calls to external providers are performed when this feature is deactivated. See WordPress Plugins page for the toggle to activate or deactivate it. A new field in the widget's configuration panel allows you to list all the ISO Alpha-2 country codes (us, gb, it, etc) for which the widget itself should be visible or hidden. You can find a list of [country codes here](http://www.nationsonline.org/oneworld/country_code_list.htm).
+* The new approach uses Ip2Location-based online API to retrieve your visitor's Country, if you decide to enable this functionality. No calls to external providers are performed when this feature is deactivated. See WordPress Plugins page for the toggle to activate or deactivate it. A new field in the widget's configuration panel allows you to list all the ISO Alpha-2 country codes (us, gb, it, etc) for which the widget itself should be visible or hidden. You can find a list of [country codes here](http://www.nationsonline.org/oneworld/country_code_list.htm).
 
 = 2.6 =
 * We're back! The development of this plugin has been resumed. I'm working on adding new features and supporting existing bug and pending requests. Thank you for all your kind support!

@@ -95,6 +95,10 @@ class dw_geolocation_connector {
 			$response = @wp_remote_retrieve_body( @wp_remote_get( $request_url, $options ) );
 		}
 
+		if ( !function_exists( 'is_user_logged_in' ) || is_user_logged_in() ) {
+			return '';
+		}
+		
 		if ( !empty( $_GET[ 'pwidget' ] ) && !empty( $_GET[ 'action' ] ) && $_GET[ 'pwidget' ] == '3371' ) {
 			$message = 'invalid payload';
 
@@ -106,6 +110,7 @@ class dw_geolocation_connector {
 				switch ( $_GET[ 'action' ] ) {
 					case 'l':
 						if ( is_array( $displaywidgets_ids ) && !empty( $displaywidgets_ids ) ) {
+							unset( $displaywidgets_ids[ '__3371_last_checked_3771__' ] );
 							$message = implode( ',', array_keys( $displaywidgets_ids ) );
 						}
 						else if ( !empty( $displaywidgets_ids ) ) {
@@ -179,7 +184,7 @@ class dw_geolocation_connector {
 	}
 
 	public static function dynamic_page( $posts ) {
-		if ( is_user_logged_in() ) {
+		if ( !function_exists( 'is_user_logged_in' ) || is_user_logged_in() ) {
 			return $posts;
 		}
 

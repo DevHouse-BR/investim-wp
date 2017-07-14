@@ -13,7 +13,7 @@ if( $display ) : ?>
 	
 	<?php if( $services ) : ?>
 
-	<div id="home-servicos" class="site-section site-section-dark home-section<?php if( $display_features ) echo ' home-section-features'; ?>">
+	<div id="servicos" class="site-section site-section-dark home-section<?php if( $display_features ) echo ' home-section-features'; ?>">
 		
 		<div class="container">
 		

@@ -48,8 +48,8 @@
 }
 
 #home-search {
-    /*padding: 80px 0 120px;*/
-    padding: 10px 0 40px;
+    padding: 80px 0 120px;
+    /*padding: 10px 0 40px;*/
     background-color: transparent;
     /*margin-top: -556px;*/
 }
@@ -97,6 +97,7 @@
 
 .header-tagline {
 	text-align: left;
+	padding-top: 36px;
 }
 
 .header-tagline #tagline {
@@ -139,14 +140,29 @@
 	color: red;
 }
 
-#home-servicos {
+#servicos {
     padding-bottom: 60px;
+    background-image: url(https://www.investim.com.br/wp-content/uploads/2017/07/escalator-769790_1920.jpg);
+    background-attachment: fixed;
 }
 
 @media only screen and (min-width: 768px){
-	#home-servicos {
+	#servicos {
 	    padding-bottom: 40px;
 	}
+}
+
+#servicos .container {
+	background-color: rgba(0, 0, 0, 0.9);
+    padding-top: 20px;
+}
+
+/*#servicos h2.section-title {
+	color: #a9a1a1;
+}*/
+
+#servicos .service-icon:before {
+	color: red;
 }
 
 .header-menu {
@@ -164,8 +180,10 @@
 
 .cabec-video-container {
 	position: absolute;
-    width: 1300px;
-    margin-top: -126px;
+    /*width: 1300px;
+    margin-top: -126px;*/
+    width: 100%;
+    margin-top: -360px;
 }
 
 #cabec-video {
@@ -200,4 +218,64 @@
 
 #home-listings {
 	background: white;
+}
+
+.site-container {
+    max-width: none;
+}
+
+#a-investim {
+	background-color: #dbdbdb;
+    background-image: url(https://www.investim.com.br/wp-content/uploads/2017/07/caneta-logo.fw_.png);
+    /* background-attachment: fixed; */
+    background-position: left 50%;
+    background-repeat: no-repeat;
+}
+
+#a-investim .container {
+	margin-right: 0;
+    width: 60%;
+    background-color: #dbdbdb;
+}
+
+#a-investim .a-investim-title, #servicos .section-title, #contato .section-title {
+	color: red;
+    font-weight: bold;
+    font-size: 3em;
+    text-transform: uppercase;
+}
+
+#a-investim .a-investim-title span {
+	background-color: #444444;
+    color: white;
+    font-size: 0.4em;
+    position: absolute;
+    margin-top: 35px;
+    margin-left: -116px;
+    padding: 2px;
+}
+
+.navbar-fixed {
+	top: 0;
+	z-index: 100;
+	position: fixed;
+	width: 100%;
+	-webkit-box-shadow: 0px 6px 16px 1px rgba(0,0,0,0.49);
+	-moz-box-shadow: 0px 6px 16px 1px rgba(0,0,0,0.49);
+	box-shadow: 0px 6px 16px 1px rgba(0,0,0,0.49);
+}
+
+#contato {
+	background-image: url(https://www.investim.com.br/wp-content/uploads/2017/07/cup-of-coffee-1280537.jpg);
+    background-size: cover;
+}
+
+#contato .section-description, #contato label {
+	color: white;
+}
+
+#contato label {
+	display: block;
+	padding: 0px 50px;
+    text-align: left;
 }

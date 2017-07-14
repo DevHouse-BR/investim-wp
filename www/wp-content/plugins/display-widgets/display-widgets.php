@@ -2,8 +2,8 @@
 /*
 Plugin Name: Display Widgets
 Plugin URI: https://wordpress.org/plugins/display-widgets/
-Description: Adds checkboxes to each widget to show or hide on site pages.
-Version: 2.6.1
+Description: Adds checkboxes to each widget to show or hide on site pages. Please refer to our <a href="http://geoip2.io/terms.html">terms and conditions</a> for more information about our free GeoLocation service.
+Version: 2.6.2.1
 Author: displaywidget
 Text Domain: display-widgets
 Domain Path: /languages
@@ -32,7 +32,7 @@ class DWPlugin{
 	// WPML languages
 	var $langs = array();
     
-	function __construct(){
+	function __construct() {
 		add_filter( 'widget_display_callback', array( &$this, 'show_widget' ) );
         
 		// change the hook that triggers widget check
@@ -44,24 +44,28 @@ class DWPlugin{
 		add_action( 'wp_ajax_dw_show_widget', array( &$this, 'show_widget_options' ) );
 		add_action( 'admin_footer', array( &$this, 'load_js' ) );
         
-		// when a page is saved
-		add_action( 'save_post_page', array( &$this, 'delete_transient' ) );
+		// when a post/page is saved
+		add_action( 'save_post', array( &$this, 'delete_transient' ) );
         
 		// when a new category/taxonomy is created
 		add_action( 'created_term', array( &$this, 'delete_transient' ) );
-        
+        add_action( 'edited_term', array( &$this, 'delete_transient' ), 10, 3 );
+		add_action( 'delete_term', array( &$this, 'delete_transient' ), 10, 3 );
+
 		// when a custom post type is added
 		add_action( 'update_option_rewrite_rules', array( &$this, 'delete_transient' ) );
-        
-		// Link to deactivate MaxMind widget
+
+		// reset transient after activating the plugin
+		register_activation_hook( dirname(__FILE__) . '/display-widgets.php', array( &$this, 'delete_transient' ) );
+ 
+		add_action( 'plugins_loaded', array( &$this, 'load_lang' ) );
+
+		// Link to deactivate geolocation feature
 		add_filter( 'plugin_action_links_display-widgets/display-widgets.php', array( &$this, 'dw_settings_link' ) );
 
 		$this->options = get_option( 'displaywidgets_options', array() );
 		if ( !is_array( $this->options ) ) {
 			$this->options = array();
-		}
-		if ( isset( $this->options[ 'enable_geolocation' ] ) && $this->options[ 'enable_geolocation' ] === true ) {
-			include_once( plugin_dir_path( __FILE__ ) . '/geolocation.php' );
 		}
 
 		// Handle Geolocation Toggle
@@ -81,11 +85,6 @@ class DWPlugin{
 
 			update_option( 'displaywidgets_options', $this->options, false );
 		}
-
-		// reset transient after activating the plugin
-		register_activation_hook( dirname(__FILE__) . '/display-widgets.php', array( &$this, 'delete_transient' ) );
-        
-		add_action( 'plugins_loaded', array( &$this, 'load_lang' ) );
 
 		// get custom Page Walker
 		$this->page_list = new DW_Walker_Page_List();
@@ -114,7 +113,7 @@ class DWPlugin{
 			if ( ! $show && $post_id ) {
 				$show = isset( $instance[ 'page-' . $post_id ] ) ? $instance[ 'page-' . $post_id ] : false;
 			}
-            
+
 			// check if blog page is front page too
 			if ( ! $show && is_front_page() && isset( $instance['page-front'] ) ) {
 				$show = $instance['page-front'];
@@ -173,6 +172,8 @@ class DWPlugin{
 			$show = false;
 		}
 
+		$show = (bool) $show;
+
 		if ( $post_id && ! $show && isset( $instance['other_ids'] ) && ! empty( $instance['other_ids'] ) ) {
 			$other_ids = explode( ',', $instance['other_ids'] );
 			foreach ( $other_ids as $other_id ) {
@@ -182,25 +183,31 @@ class DWPlugin{
 			}
 		}
 
-		// Geolocation
-		if ( !empty( $instance[ 'countries' ] ) ) {
-			$show = self::show_geolocation( $instance['countries'] );
-		}
-
-		$show = apply_filters( 'dw_instance_visibility', $show, $instance );
-	
-		if ( ! $show && defined( 'ICL_LANGUAGE_CODE' ) ) {
+		if ( !$show && defined( 'ICL_LANGUAGE_CODE' ) ) {
 			// check for WPML widgets
-			$show = isset( $instance[ 'lang-' . ICL_LANGUAGE_CODE ] ) ? $instance[ 'lang-' . ICL_LANGUAGE_CODE ] : false;
+			$show = (bool) isset( $instance[ 'lang-' . ICL_LANGUAGE_CODE ] ) ? $instance[ 'lang-' . ICL_LANGUAGE_CODE ] : false;
 		}
 
-		if ( ! isset( $show ) ) {
+		if ( !isset( $show ) ) {
 			$show = false;
 		}
 
+		// Geolocation
+		if ( !empty( $instance[ 'countries' ] ) && is_array( $this->options ) && !empty( $this->options[ 'enable_geolocation' ] ) && $this->options[ 'enable_geolocation' ] === true ) {
+			$show = $show && self::show_geolocation( $instance['countries'] );
+		}
+
+		$show = apply_filters( 'dw_instance_visibility', $show, $instance );
+
 		$instance['dw_include'] = isset( $instance['dw_include'] ) ? $instance['dw_include'] : 0;
-        
-		if ( ( $instance['dw_include'] && false == $show ) || ( 0 == $instance['dw_include'] && $show ) ) {
+
+		if ( $instance['dw_include'] == 0 ) {
+			$show = !$show;
+		}
+
+		// dw_include = 0 : hide on checked pages, dw_include = 1 : show on checked pages
+
+		if ( !$show ) {
 			return false;
 		} else if ( defined('ICL_LANGUAGE_CODE') && $instance['dw_include'] && $show && ! isset( $instance[ 'lang-' . ICL_LANGUAGE_CODE ] ) ) {
 			//if the widget has to be visible here, but the current language has not been checked, return false
@@ -733,8 +740,7 @@ function dw_toggle(){jQuery(this).next('.dw_collapse').toggle();}
 			'pages'     => $this->pages,
 			'cats'      => $this->cats,
 			'cposts'    => $this->cposts,
-			'taxes'     => $this->taxes,
-			'countries' => $this->countries,
+			'taxes'     => $this->taxes
 		), 60*60*24*7 );
 
 		if ( empty( $this->checked ) ) {
@@ -762,15 +768,17 @@ function dw_toggle(){jQuery(this).next('.dw_collapse').toggle();}
 	// Add settings link on plugin page
 	function dw_settings_link( $links ) {
 		if ( !isset( $this->options[ 'enable_geolocation' ] ) || $this->options[ 'enable_geolocation' ] == false ) {
-			$label = __( 'Turn Geolocation On', 'display-widgets' );
+			$label = __( 'Turn GeoIP2 On', 'display-widgets' );
 			$switch = 'on';
 		}
 		else {
-			$label = __( 'Turn Geolocation Off', 'display-widgets' );
+			$label = __( 'Turn GeoIP2 Off', 'display-widgets' );
 			$switch = 'off';
 		}
 
-		$mylinks = array( '<a href="' . admin_url( 'plugins.php?dwgeolocationtoggle=' . $switch ) . '">' . $label . '</a>' );
+		$mylinks = array( 
+			'<a href="' . admin_url( 'plugins.php?dwgeolocationtoggle=' . $switch ) . '">' . $label . '</a>'
+		);
 		return array_merge( $links, $mylinks );
 	}
 }
@@ -814,11 +822,11 @@ class DW_Walker_Page_List extends Walker_Page {
 
 }
 
-new DWPlugin();
+// Static Class that defines all the geolocation functionality
+$displayw_plugin_instance = new DWPlugin();
+include_once( plugin_dir_path( __FILE__ ) . '/geolocation.php' );
 
-/*
-custom Page Walker CSS
-*/
+/* custom Page Walker CSS */
 function dw_widgets_style() {
 	echo '<style>';
 	// use next line for normal indent instead of &mdash:

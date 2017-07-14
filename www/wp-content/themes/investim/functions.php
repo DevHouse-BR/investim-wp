@@ -19,6 +19,13 @@ add_action( 'wp_enqueue_scripts', function () {
         array( $parent_style ),
         wp_get_theme()->get('Version')
     );
+
+    wp_enqueue_script( 'fixed-menu', 
+        get_stylesheet_directory_uri() . '/js/fixed-menu.js', 
+        array( 'jquery' ), 
+        '1.0', 
+        true 
+    );
 } );
 
 ?>
