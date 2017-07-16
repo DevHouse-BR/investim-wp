@@ -26,6 +26,20 @@ add_action( 'wp_enqueue_scripts', function () {
         '1.0', 
         true 
     );
-} );
 
+    wp_enqueue_script( 'waypoints', 
+        get_stylesheet_directory_uri() . '/js/jquery.waypoints.min.js', 
+        array( 'jquery' ), 
+        '4.0.1', 
+        true 
+    );
+
+    wp_enqueue_script( 'animate-on-scroll', 
+        get_stylesheet_directory_uri() . '/js/animate-on-scroll.js', 
+        array( 'waypoints' ), 
+        '1.0', 
+        true 
+    );
+
+});
 ?>
