@@ -351,3 +351,25 @@
     }
 
 }
+
+.wpsight-listing-summary .listing-faturamento-mensal:before {
+    content: '\f201';
+    font-family: "FontAwesome";
+}
+
+.wpsight-listing-summary .listing-margem-lucro:before {
+    content: '\f200';
+    font-family: "FontAwesome";
+}
+.wpsight-listing-summary .listing-lucro-liquido:before {
+    content: '\f080';
+    font-family: "FontAwesome";
+}
+.wpsight-listing-summary .listing-lucro-bruto:before {
+    content: '\f0d6';
+    font-family: "FontAwesome";
+}
+
+.wpsight-listing-agent-links a i {
+    margin: 13px;
+}
