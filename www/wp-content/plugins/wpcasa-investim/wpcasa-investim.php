@@ -787,11 +787,12 @@ function add_location_term($name, $parent_id = NULL) {
 }
 
 
-// add_filter( 'wpsight_get_listing_summary', 'wpsight_get_listing_summary_custom', 10, 4 );
-// function wpsight_get_listing_summary_custom( $listing_summary, $post_id, $details, $formatted ) {
+add_filter( 'wpsight_get_search_fields', 'wpsight_get_search_fields_custom', 10, 4 );
+function wpsight_get_search_fields_custom( $fields, $defaults ) {
 
-// 	die(
-// 		var_dump(func_get_args())
-// 		);
+	unset($fields["offer"]);
+	unset($fields["location"]);
+	unset($fields["listing-type"]);
 
-// }
+	return $fields;
+}
