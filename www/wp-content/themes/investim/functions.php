@@ -41,5 +41,19 @@ add_action( 'wp_enqueue_scripts', function () {
         true 
     );
 
+    wp_enqueue_script( 'jquery-masks', 
+        get_stylesheet_directory_uri() . '/js/jquery.mask.min.js', 
+        array( 'jquery' ), 
+        '1.0', 
+        true 
+    );
+
+    wp_enqueue_script( 'masks', 
+        get_stylesheet_directory_uri() . '/js/masks.js', 
+        array( 'jquery-masks' ), 
+        '1.0', 
+        true 
+    );
+
 });
 ?>

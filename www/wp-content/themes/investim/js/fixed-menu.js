@@ -22,7 +22,7 @@ jQuery(document).ready(function($) {
 				$('html,body').animate({
 					scrollTop: target.offset().top
 				}, 1000);
-				window.location.hash = this.hash;
+				window.history.pushState({}, "", this.hash);
 				return false;
 
 			}

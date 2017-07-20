@@ -245,7 +245,7 @@ class thfo_mailalert_widget extends WP_Widget {
 				'desc' 		=> 'Digite um valor, caso já exista, selecione na lista',
 				'id' 		=> 'investidor_state',
 				'type' 		=> 'autocomplete',
-				'location-parent' 	=> 'country',
+				'location-parent' 	=> 'investidor_country',
 				'default'   => '',
 				'attributes'  => array(
 					'maxlength'	=> 255,
@@ -258,7 +258,7 @@ class thfo_mailalert_widget extends WP_Widget {
 				'desc' 		=> 'Digite um valor, caso já exista, selecione na lista',
 				'id' 		=> 'investidor_city',
 				'type' 		=> 'autocomplete',
-				'location-parent'	=> 'state',
+				'location-parent'	=> 'investidor_state',
 				'default'   => '',
 				'attributes'  => array(
 					'maxlength'	=> 255,
@@ -272,7 +272,7 @@ class thfo_mailalert_widget extends WP_Widget {
 				'type'      => 'text',
 				'desc'      => __( 'No currency symbols or thousands separators', 'wpcasa' ),
 				'default'   => '',
-				'before_field' => 'R$',
+				'before_field' => '',
 				'attributes'  => array(
 					'type' 		=> 'number',
 					'min'		=> '1',
@@ -290,7 +290,7 @@ class thfo_mailalert_widget extends WP_Widget {
 				'type'      => 'text',
 				'desc'      => __( 'No currency symbols or thousands separators', 'wpcasa' ),
 				'default'   => '',
-				'before_field' => 'R$',
+				'before_field' => '',
 				'attributes'  => array(
 					'type' 		=> 'number',
 					'min'		=> '1',
@@ -347,6 +347,14 @@ class thfo_mailalert_widget extends WP_Widget {
 				),
 				'priority'  => 150
 			),
+			'enable' => array(
+				'name'      => 'Ativo',
+				'id'        => 'investidor_enable',
+				'type'      => 'hidden',
+				'desc'      => false,
+				'default'   => '1',
+				'priority'  => 160
+			),
 		);
 
 		$meta_box = array(
@@ -399,13 +407,15 @@ class thfo_mailalert_widget extends WP_Widget {
 			if ( is_wp_error( $new_id ) ) {
 
 				// If there was an error with the submission, add it to our ouput.
-				$output .= '<h3>' . sprintf( __( 'Erro ao gravar informações: %s', 'wds-post-submit' ), '<strong>'. $new_id->get_error_message() .'</strong>' ) . '</h3>';
+				$output .= '<div class="bs-callout bs-callout-danger"><h3>' . sprintf( __( 'Erro ao gravar informações: <em>%s</em>', 'wds-post-submit' ), esc_html( $new_id->get_error_message() ) ) . '</h3></div>';
+				return $output;
 
 			} else {
 
 				// Add notice of submission
 				$output .= '<div class="bs-callout bs-callout-info"><h3>' . sprintf( __( 'Obrigado <em>%s</em>, sua solicitação será analisada pelos nossos atendentes e em breve entraremos em contato!', 'wds-post-submit' ), esc_html( $new_id ) ) . '</h3></div>';
 				return $output;
+
 			}
 
 		}
@@ -446,16 +456,110 @@ class thfo_mailalert_widget extends WP_Widget {
 		foreach ($sanitized_values as $key => $value) {
 			$values[str_replace('investidor_', '', $key)] = $value;
 		}
+
+		list( $values["country"], $values["state"], $values["city"]  ) = $this->investim_get_location_name_or_keep_name(
+			sanitize_text_field( $values["country"] ),
+			sanitize_text_field( $values["state"] ),
+			sanitize_text_field( $values["city"] )
+		);
 		
 		$success = $wpdb->insert("{$wpdb->prefix}wpcasama_mailalert", $values);
 
 		//If we hit a snag, update the user
-		if ( is_wp_error( $success ) ) {
-			return $new_submission_id;
+		if ( $wpdb->last_error !== '' ) {
+			return new WP_Error( 'broke', $wpdb->last_error );
 		} else {
+			$this->investidor_send_mail($values);
 			return $values['name'];
 		}
 		
+	}
+
+	public function investim_get_location_name_or_keep_name( $country, $state, $city ) {
+
+		// types can be id or name. id represents terms already in the database and name a new term to be added.
+		list( $countryType, $country ) = explode( '|', $country );
+		list( $stateType, $state ) = explode( '|', $state );
+		list( $cityType, $city ) = explode( '|', $city );
+
+		if ($countryType == "id") {
+			$term_exist = get_term( $country, 'location');
+			if ($term_exist) {
+				$country = $term_exist->name;
+			} else {
+				$country = "";
+			}
+		}
+
+		if ($stateType == "id") {
+			$term_exist = get_term( $state, 'location');
+			if ($term_exist) {
+				$state = $term_exist->name;
+			} else {
+				$state = "";
+			}
+		}
+
+		if ($cityType == "id") {
+			$term_exist = get_term( $city, 'location');
+			if ($term_exist) {
+				$city = $term_exist->name;
+			} else {
+				$city = "";
+			}
+		}
+
+		return  array( $country, $state, $city );
+
+	}
+
+	public function investidor_send_mail( $values ){
+
+		$admins = get_users(array("role" => "administrator"));
+
+		$recipient = "";
+		foreach ($admins as $key => $user) {
+			$recipient .= $user->data->user_email . ",";
+		}
+
+		$sender_mail = get_option('thfo_newsletter_sender_mail');
+		if ( empty($sender_mail)){
+			$sender_mail = get_option('admin_email');
+		}
+
+		$sender = get_option('thfo_newsletter_sender');
+		$subject = get_option('thfo_newsletter_object');
+		
+		$content = "";
+		$img= get_option('empathy-setting-logo');
+		if ($img) {
+			$content .= '<img src="' . $img . '" alt="logo" /><br />';
+		}
+		$content .= get_option('thfo_newsletter_content');
+		
+		$content .= 'Nome: ' . $values['name'] . '<br />';
+		$content .= 'Empresa: ' . $values['company'] . '<br />';
+		$content .= 'Email: ' . $values['email'] . '<br />';
+		$content .= 'Tel: ' . $values['tel'] . '<br />';
+		$content .= 'Cel: ' . $values['mobile'] . '<br />';
+		$content .= 'Skype: ' . $values['skype'] . '<br />';
+		$content .= 'País: ' . $values['country'] . '<br />';
+		$content .= 'Estado: ' . $values['state'] . '<br />';
+		$content .= 'Cidade: ' . $values['city'] . '<br />';
+		$content .= 'Preço Mínimo: ' . $values['min_price'] . '<br />';
+		$content .= 'Preço Máximo: ' . $values['max_price'] . '<br />';
+		$content .= 'Capital Terceiros: ' . $values['third_party_capital'] . '<br />';
+		$content .= 'Cidade Preferencial: ' . $values['prefered_city'] . '<br />';
+		$content .= 'Setor: ' . $values['sector'] . '<br />';
+		$content .= 'Descrição: ' . $values['description'] . '<br />';
+
+		$content .= get_option('thfo_newsletter_footer');
+
+		$headers[] = 'Content-Type: text/html; charset=UTF-8';
+		$headers[] = 'From:'.$sender.'<'.$sender_mail.'>';
+
+		$result = wp_mail($recipient, $subject, $content, $headers);
+
 	}
 
 }

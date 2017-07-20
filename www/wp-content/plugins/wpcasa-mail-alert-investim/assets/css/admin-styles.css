@@ -27,10 +27,11 @@ table.investidores th.column-max_price {
     width: 124px;
 }
 
-table.investidores td.column-max_price {
+table.investidores td.column-max_price, table.investidores .dashicons-yes {
     color: green;
 }
 
-table.investidores td.column-min_price {
+table.investidores td.column-min_price, table.investidores .dashicons-no {
     color: red;
 }
+

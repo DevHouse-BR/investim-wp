@@ -75,7 +75,7 @@ class thfo_mailalert_admin_menu {
 		add_settings_field('empathy-setting-logo', __('Header picture','wpcasa-mail-alert'), array($this, 'media_html'), 'thfo_newsletter_settings', 'thfo_newsletter_section');
 		add_settings_field('thfo_newsletter_footer', __('footer','wpcasa-mail-alert'), array($this, 'footer_html'), 'thfo_newsletter_settings', 'thfo_newsletter_section');
 		add_settings_field('thfo_newsletter_sender_mail', __('email','wpcasa-mail-alert'), array($this, 'sender_mail_html'), 'thfo_newsletter_settings', 'thfo_newsletter_section');
-		add_settings_field('thfo_newsletter_object', __('Object','wpcasa-mail-alert'), array($this, 'object_html'), 'thfo_newsletter_settings', 'thfo_newsletter_section');
+		add_settings_field('thfo_newsletter_object', __('Assunto','wpcasa-mail-alert'), array($this, 'object_html'), 'thfo_newsletter_settings', 'thfo_newsletter_section');
 		add_settings_field('thfo_newsletter_content', __('Content','wpcasa-mail-alert'), array($this, 'content_html'), 'thfo_newsletter_settings', 'thfo_newsletter_section');
 
 		/* General options*/

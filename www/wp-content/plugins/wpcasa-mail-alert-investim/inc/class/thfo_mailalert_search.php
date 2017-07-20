@@ -1,6 +1,6 @@
 <?php
 
-add_action( 'post_submitbox_misc_actions', 'thfo_search_subscriber' );
+//add_action( 'post_submitbox_misc_actions', 'thfo_search_subscriber' );
 
 function thfo_search_subscriber() {
 	global $post;

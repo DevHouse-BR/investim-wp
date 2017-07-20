@@ -31,6 +31,7 @@ class Investidores_List_Table extends WP_List_Table {
 			'prefered_city'			=> 'Cidade Preferida',
 			'sector'				=> 'Setor',
 			'description'			=> 'Descrição',
+			'enable'				=> 'Ativo',
 		);
 	}
 
@@ -60,13 +61,13 @@ class Investidores_List_Table extends WP_List_Table {
 		}
 	}
 
-	protected function column_cb( $item ) {
+	public function column_cb( $item ) {
 		return sprintf(
         	'<input type="checkbox" name="investidor[]" value="%s" />', $item->id
         );
 	}
 
-	function column_name($item) {
+	public function column_name($item) {
 		$actions = array(
 			//'edit'		=> sprintf( '<a href="?page=%s&action=%s&investidor=%s">Edit</a>',$_REQUEST['page'],'edit', $item->id ),
 			'delete'		=> sprintf( '<a class="delete-investidor" href="?page=%s&action=%s&investidor=%s">Delete</a>',$_REQUEST['page'],'delete', $item->id ),
@@ -76,7 +77,13 @@ class Investidores_List_Table extends WP_List_Table {
 		return sprintf('%1$s %2$s', $item->name, $this->row_actions($actions) );
 	}
 
-	function get_bulk_actions() {
+	public function column_enable( $item ) {
+		return sprintf(
+        	'<span class="dashicons dashicons-%s"></span>', ($item->enable ? 'yes' : 'no')
+        );
+	}
+
+	public function get_bulk_actions() {
 		$actions = array(
 			'delete'    => 'Delete'
 		);

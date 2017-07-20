@@ -722,50 +722,14 @@ function investim_set_listing_location( $post_id, $post, $update ) {
 	if ( ! array_key_exists("_location_country", $_SESSION["submission"]["listing_general"] ) )
 		return;
 
-
 	$listing_general_data = $_SESSION["submission"]["listing_general"];
 
-	// types can be id or name. id represents terms already in the database and name a new term to be added.
-	list($countryType, $country) = explode('|', sanitize_text_field($listing_general_data["_location_country"]));
-	list($stateType, $state) = explode('|', sanitize_text_field($listing_general_data["_location_state"]));
-	list($cityType, $city) = explode('|', sanitize_text_field($listing_general_data["_location_city"]));
-	list($districtType, $district) = explode('|', sanitize_text_field($listing_general_data["_location_district"]));
-
-	if ($countryType == "name") {
-		$term_exist = term_exists( $country, 'location');
-		if ($term_exist) {
-			$country = $term_exist["term_id"];
-		} else {
-			$country = add_location_term( $country )['term_id'];
-		}
-	}
-
-	if ($stateType == "name") {
-		$term_exist = term_exists( $state, 'location', $country );
-		if ($term_exist) {
-			$state = $term_exist["term_id"];
-		} else {
-			$state = add_location_term( $state, $country )['term_id'];
-		}
-	}
-
-	if ($cityType == "name") {
-		$term_exist = term_exists( $city, 'location', $state );
-		if ($term_exist) {
-			$city = $term_exist["term_id"];
-		} else {
-			$city = add_location_term( $city, $state )['term_id'];
-		}
-	}
-
-	if ($districtType == "name") {
-		$term_exist = term_exists( $district, 'location', $city );
-		if ($term_exist) {
-			$district = $term_exist["term_id"];
-		} else {
-			$district = add_location_term( $district, $city )['term_id'];
-		}
-	}
+	list( $country, $state, $city, $district ) = investim_get_or_add_term(
+		sanitize_text_field($listing_general_data["_location_country"]),
+		sanitize_text_field($listing_general_data["_location_state"]), 
+		sanitize_text_field($listing_general_data["_location_city"]),
+		sanitize_text_field($listing_general_data["_location_district"])
+	);
 
 	wp_set_object_terms( $post_id, array($country, $state, $city, $district), 'location', true );
 
@@ -776,7 +740,55 @@ function investim_set_listing_location( $post_id, $post, $update ) {
 
 }
 
-function add_location_term($name, $parent_id = NULL) {
+function investim_get_or_add_term( $country, $state, $city, $district ) {
+
+	// types can be id or name. id represents terms already in the database and name a new term to be added.
+	list( $countryType, $country ) = explode( '|', $country );
+	list( $stateType, $state ) = explode( '|', $state );
+	list( $cityType, $city ) = explode( '|', $city );
+	list( $districtType, $district ) = explode( '|', $district );
+
+	if ( $countryType == "name" ) {
+		$term_exist = term_exists( $country, 'location');
+		if ( $term_exist ) {
+			$country = $term_exist["term_id"];
+		} else {
+			$country = investim_add_location_term( $country )['term_id'];
+		}
+	}
+
+	if ( $stateType == "name" ) {
+		$term_exist = term_exists( $state, 'location', $country );
+		if ( $term_exist ) {
+			$state = $term_exist["term_id"];
+		} else {
+			$state = investim_add_location_term( $state, $country )['term_id'];
+		}
+	}
+
+	if ( $cityType == "name" ) {
+		$term_exist = term_exists( $city, 'location', $state );
+		if ($term_exist) {
+			$city = $term_exist["term_id"];
+		} else {
+			$city = investim_add_location_term( $city, $state )['term_id'];
+		}
+	}
+
+	if ( $districtType == "name" ) {
+		$term_exist = term_exists( $district, 'location', $city );
+		if ( $term_exist ) {
+			$district = $term_exist["term_id"];
+		} else {
+			$district = investim_add_location_term( $district, $city )['term_id'];
+		}
+	}
+
+	return  array( $country, $state, $city, $district );
+
+}
+
+function investim_add_location_term($name, $parent_id = NULL) {
 	return wp_insert_term(
 		$name, 		// the term 
 		'location',	// the taxonomy
@@ -785,7 +797,6 @@ function add_location_term($name, $parent_id = NULL) {
 		)
 	);
 }
-
 
 add_filter( 'wpsight_get_search_fields', 'wpsight_get_search_fields_custom', 10, 4 );
 function wpsight_get_search_fields_custom( $fields, $defaults ) {

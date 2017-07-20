@@ -85,7 +85,7 @@ class thfo_mail_alert {
 
 	function wpcasama_pro_deactivation() {
 		global $wpdb;
-		$wpdb->query( "DROP TABLE IF EXISTS {$wpdb->prefix}wpcasama_mailalert;" );
+		//$wpdb->query( "DROP TABLE IF EXISTS {$wpdb->prefix}wpcasama_mailalert;" );
 		do_action( 'wpcasama_pro_deactivation' );
 	}
 
