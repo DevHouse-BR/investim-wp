@@ -143,7 +143,7 @@
 
 #servicos {
     padding-bottom: 60px;
-    background-image: url(https://www.investim.com.br/wp-content/uploads/2017/07/escalator-769790_1920.jpg);
+    background-image: url(../../uploads/2017/07/escalator-769790_1920.jpg);
     background-attachment: fixed;
 }
 
@@ -248,7 +248,7 @@
     }
 
     .a-investim-background {
-        background-image: url(https://www.investim.com.br/wp-content/uploads/2017/07/caneta-logo.fw_.png);
+        background-image: url(../../uploads/2017/07/caneta-logo.fw_.png);
         background-position: left 50%;
         background-repeat: no-repeat;
         animation: animatedBackgroundAInvestim 0.5s linear;
@@ -293,7 +293,7 @@
 }
 
 #contato {
-	background-image: url(https://www.investim.com.br/wp-content/uploads/2017/07/cup-of-coffee-1280537.jpg);
+	background-image: url(../../uploads/2017/07/cup-of-coffee-1280537.jpg);
     background-size: cover;
 }
 
