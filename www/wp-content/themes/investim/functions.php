@@ -56,4 +56,21 @@ add_action( 'wp_enqueue_scripts', function () {
     );
 
 });
+
+
+    /**
+     * Bypass Force Login to allow for exceptions.
+     *
+     * @return bool Whether to disable Force Login. Default false.
+     */
+    function my_forcelogin_bypass( $bypass ) {
+        $post = get_post();
+        if ( $post->post_type != "listing" ) {
+            $bypass = true;
+        }
+        return $bypass;
+    }
+    add_filter('v_forcelogin_bypass', 'my_forcelogin_bypass', 10, 1);
+
+
 ?>
