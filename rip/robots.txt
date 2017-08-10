@@ -1,0 +1,9 @@
+	<script>
+		var ajaxurl = "https://www.investim.com.br/wp-admin/admin-ajax.php";
+	</script>
+		<script>
+		var ajaxurl = "https://www.investim.com.br/wp-admin/admin-ajax.php";
+	</script>
+	User-agent: *
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php

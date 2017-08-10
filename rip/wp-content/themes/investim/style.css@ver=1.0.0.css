@@ -1,0 +1,375 @@
+/*
+ Theme Name:   Investim - WPCasa Madrid Child
+ Theme URI:    https://www.devhouse.com.br
+ Description:  Tema criado para o site Investim.com.br derivado do tema WPCasa Madrid
+ Author:       Leonardo Lima de Vasconcellos
+ Author URI:   https://www.devhouse.com.br/sobre
+ Template:     wpcasa-madrid
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         wpcasa, investim
+ Text Domain:  investim
+*/
+
+@media only screen and (min-width: 768px){
+	.single-listing .wpsight-listing-details .listing-details-detail {
+	    float: none;
+	    display: inline-grid;
+	    margin-right: 3%
+	}
+}
+
+.wpsight-listings .wpsight-listing-summary .listing-details-detail .listing-details-label {
+	min-height: 3em;
+}
+
+.wpsight-listings .wpsight-listing-summary .listing-details-detail .listing-details-value {}
+
+
+.cmb2-id--price-offer, .cmb2-id--price-period, .cmb2-id--listing-id {
+	display: none;
+}
+
+.custom-combobox {
+	position: relative;
+	display: inline-block;
+}
+.custom-combobox-toggle {
+	/*position: absolute;
+	top: 0;
+	bottom: 0;
+	margin-left: -1px;
+	padding: 0;*/
+}
+.custom-combobox-input {
+	margin: 0;
+	padding: 5px 10px;
+}
+
+#home-search {
+    padding: 80px 0 120px;
+    /*padding: 10px 0 40px;*/
+    background-color: transparent;
+    /*margin-top: -556px;*/
+}
+
+#home-search .container {
+    margin-left: auto;
+    margin-right: auto;
+    -moz-transition: width .1s ease-in-out;
+    -webkit-transition: width .1s ease-in-out;
+    -ms-transition: width .1s ease-in-out;
+    transition: width .1s ease-in-out;
+    /*width: 65em;*/
+}
+
+#home-search .wpsight-listings-search {
+    background-color: rgba(61,71,84,.6) !important;
+    padding: 40px 40px 10px;
+}
+
+#home-search .listings-search-reset, #home-search .listings-search-advanced-toggle {
+    background-color: rgba(61,71,84,.6) !important;
+    bottom: -30px;
+}
+
+.header-tagline {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 28px;
+    /*height: 350px;*/
+    height: auto;
+    position: relative;
+    text-align: left;
+    text-transform: none;
+    -webkit-transition: height .1s ease-in-out;
+    -moz-transition: height .1s ease-in-out;
+    -ms-transition: height .1s ease-in-out;
+    -o-transition: height .1s ease-in-out;
+    transition: height .1s ease-in-out;
+}
+
+@media only screen and (min-width: 992px) {
+	.header-tagline {
+	    font-size: 36px;
+	    height: 100px;
+	}
+}
+
+.header-tagline {
+	text-align: left;
+	padding-top: 36px;
+}
+
+.header-tagline #tagline {
+    color: #fff;
+    left: auto;
+    position: relative;
+    top: auto;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.25);
+    transform: none;
+    line-height: 56px;
+
+    margin-left: auto;
+    margin-right: auto;
+    -moz-transition: width .1s ease-in-out;
+    -webkit-transition: width .1s ease-in-out;
+    -ms-transition: width .1s ease-in-out;
+    transition: width .1s ease-in-out;
+    /*width: 65em;*/
+}
+
+@media only screen and (min-width: 992px) {
+	.header-tagline #tagline {
+	    padding: 0;
+	}
+}
+
+@media (min-width: 1200px){
+	.header-tagline .container {
+	    width: 977px;
+	    line-height: 100px;
+	}
+}
+
+.header-tagline span {
+	padding: 10px;
+    background-color: rgba(61,71,84,.6);
+}
+
+.header-tagline span em {
+	color: red;
+}
+
+#servicos {
+    padding-bottom: 60px;
+    background-image: url(../../uploads/2017/07/escalator-769790_1920.jpg);
+    background-attachment: fixed;
+}
+
+@media only screen and (min-width: 768px){
+	#servicos {
+	    padding-bottom: 40px;
+	}
+}
+
+#servicos .container {
+	background-color: rgba(0, 0, 0, 0.9);
+    padding-top: 20px;
+}
+
+/*#servicos h2.section-title {
+	color: #a9a1a1;
+}*/
+
+#servicos .service-icon:before {
+	color: red;
+}
+
+.header-menu {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fb070b+0,c0000d+100 */
+	background: #fb070b; /* Old browsers */
+	background: -moz-linear-gradient(top,  #fb070b 0%, #c0000d 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #fb070b 0%,#c0000d 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #fb070b 0%,#c0000d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb070b', endColorstr='#c0000d',GradientType=0 ); /* IE6-9 */
+}
+
+.section-title-align-center {
+    font-weight: bold;
+}
+
+.cabec-video-container {
+    width: 100%;
+}
+
+#cabec-video {
+	width: 100%;
+	display: block;
+	position: absolute;
+    bottom: 0;
+}
+
+#cabec-video-overlay {
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.site-header-tagline {
+	position: relative;
+	overflow: hidden;
+	box-shadow: 1px 11px 20px 4px rgba(0,0,0,.1);
+    background-position: 0px bottom;
+}
+
+/*@media only screen and (min-width: 992px) and (max-width: 1082px) {
+    .site-header-tagline {
+        background-position: 0px -460px;
+    }
+    .cabec-video-container {
+        margin-top: -360px;
+    }
+}
+
+@media only screen and (min-width: 1724px) {
+    .site-header-tagline {
+        background-position: 0px -460px;
+    }
+    .cabec-video-container {
+        margin-top: -360px;
+    }
+}*/
+
+.site-main {
+	/*background-image: url(https://www.investim.com.br/wp-content/uploads/2017/06/letreiro-investim-02.jpg);*/
+}
+
+#home-listings {
+	background: white;
+}
+
+#a-investim {
+	background-color: #dbdbdb;
+}
+
+@keyframes animatedBackgroundAInvestim {
+    from { background-position: -700px 50%; }
+    to { background-position: left 50%; }
+}
+
+@media only screen and (min-width: 992px) {
+    .site-container {
+        margin-bottom: 0px;
+        max-width: none;
+    }
+
+    .a-investim-background {
+        background-image: url(../../uploads/2017/07/caneta-logo.fw_.png);
+        background-position: left 50%;
+        background-repeat: no-repeat;
+        animation: animatedBackgroundAInvestim 0.5s linear;
+    }
+
+    #a-investim .container {
+        margin-right: 0;
+        width: 60%;
+        background-color: rgba(219, 219, 219, 0.6);
+    }
+}
+
+#a-investim .a-investim-title, #servicos .section-title, #contato .section-title {
+	color: red;
+    font-weight: bold;
+    font-size: 3em;
+    text-transform: uppercase;
+}
+
+#a-investim .a-investim-title span {
+	background-color: #444444;
+    color: white;
+    font-size: 0.4em;
+    position: absolute;
+    margin-top: 35px;
+    margin-left: -116px;
+    padding: 2px;
+}
+
+.navbar-fixed {
+	top: 0;
+	z-index: 100;
+	position: fixed;
+	width: 100%;
+	-webkit-box-shadow: 0px 6px 16px 1px rgba(0,0,0,0.49);
+	-moz-box-shadow: 0px 6px 16px 1px rgba(0,0,0,0.49);
+	box-shadow: 0px 6px 16px 1px rgba(0,0,0,0.49);
+}
+
+.fa-navicon {
+    line-height: 60px;
+}
+
+#contato {
+	background-image: url(../../uploads/2017/07/cup-of-coffee-1280537.jpg);
+    background-size: cover;
+}
+
+#contato .section-description, #contato label {
+	color: white;
+}
+
+#contato label {
+	display: block;
+	padding: 0px 50px;
+    text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+    .wpsight-cta-inner {
+        padding: 0;
+    }
+
+    #contato .container {
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #home-search {
+        padding: 10px 0 40px;
+    }
+
+    #cabec-video {
+        display: none;
+    }
+
+    .header-tagline {
+        padding-top: 10px;
+    }
+
+    #cabec-video-overlay {
+        background-color: rgba(0, 0, 0, 0.31);
+    }
+}
+
+@media only screen and (max-width: 413px) {
+    #home-search .listings-search-reset, #home-search .listings-search-advanced-toggle {
+        padding: 10px;
+        margin-bottom: 10px;
+        display: block;
+        position: initial;
+        text-align: center;
+        background-color: #8e9eab !important;
+    }
+
+    .listings-search-reset:before, .listings-search-advanced-toggle:before {
+        position: initial;
+        margin-right: 16px;
+    }
+
+}
+
+.wpsight-listing-summary .listing-faturamento-mensal:before {
+    content: '\f201';
+    font-family: "FontAwesome";
+}
+
+.wpsight-listing-summary .listing-margem-lucro:before {
+    content: '\f200';
+    font-family: "FontAwesome";
+}
+.wpsight-listing-summary .listing-lucro-liquido:before {
+    content: '\f080';
+    font-family: "FontAwesome";
+}
+.wpsight-listing-summary .listing-lucro-bruto:before {
+    content: '\f0d6';
+    font-family: "FontAwesome";
+}
+
+.wpsight-listing-agent-links a i {
+    margin: 13px;
+}
