@@ -57,6 +57,7 @@ class thfo_mail_alert {
 
 		$sql = "CREATE TABLE $table_name (
 			id mediumint(9) NOT NULL AUTO_INCREMENT,
+			usuario VARCHAR (255) NOT NULL,
 			name VARCHAR (255),
 			company VARCHAR (255),
 			email VARCHAR (255) NOT NULL,

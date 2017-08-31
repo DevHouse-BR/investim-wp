@@ -150,7 +150,7 @@ class thfo_mailalert_admin_menu {
 		<script>
 			var uploader;
 			function upload_image(id) {
-				console.log(id);
+				//console.log(id);
 
 				//Extend the wp.media object
 				uploader = wp.media.frames.file_frame = wp.media({

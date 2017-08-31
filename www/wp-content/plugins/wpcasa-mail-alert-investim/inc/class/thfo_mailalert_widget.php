@@ -358,7 +358,7 @@ class thfo_mailalert_widget extends WP_Widget {
 		);
 
 		$meta_box = array(
-			'id'           => 'investidor',
+			'id'           => 'investidor_OLD',
 			'title'        => 'Investidor',
 			'object_types' => array( 'investidor' ),
 			'context'      => 'normal',

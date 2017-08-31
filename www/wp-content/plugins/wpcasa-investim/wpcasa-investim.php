@@ -50,6 +50,9 @@ if ( !function_exists( 'add_action' ) ) {
  */
 load_plugin_textdomain( 'wpcasa-investim', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
+require('wpcasa-investim-investidores.php');
+
+register_activation_hook( __FILE__, 'init_investidor_roles' );
 
 /**
  * Detalhes de anúncio customizados para a Investim

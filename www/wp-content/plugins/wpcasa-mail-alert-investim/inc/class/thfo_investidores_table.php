@@ -18,6 +18,7 @@ class Investidores_List_Table extends WP_List_Table {
 		return array(
 			'cb'					=> '<input type="checkbox" />',
 			'name'					=> 'Name',
+			'usuario'				=> 'Usuário',
 			'email'					=> 'Email',
 			'tel'					=> 'Telefone',
 			'mobile'				=> 'Celular',
@@ -75,6 +76,12 @@ class Investidores_List_Table extends WP_List_Table {
 		);
 
 		return sprintf('%1$s %2$s', $item->name, $this->row_actions($actions) );
+	}
+
+	public function column_usuario( $item ) {
+		return sprintf(
+        	'<a href="%s">%s</a>', get_admin_url(null, "user-edit.php?user_id=" . $item->usuario), get_userdata($item->usuario)->user_login 
+        );
 	}
 
 	public function column_enable( $item ) {
