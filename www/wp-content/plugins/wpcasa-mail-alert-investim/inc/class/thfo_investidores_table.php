@@ -17,8 +17,9 @@ class Investidores_List_Table extends WP_List_Table {
 	public function get_columns() {
 		return array(
 			'cb'					=> '<input type="checkbox" />',
+			'id'					=> 'ID',
 			'name'					=> 'Name',
-			'usuario'				=> 'Usuário',
+			'user'					=> 'Usuário',
 			'email'					=> 'Email',
 			'tel'					=> 'Telefone',
 			'mobile'				=> 'Celular',
@@ -44,6 +45,7 @@ class Investidores_List_Table extends WP_List_Table {
 
 	public function get_sortable_columns() {
 		return $sortable = array(
+			'id'		=> array('id', true),
 			'name'		=> array('name', false),
 			'max_price'	=> array('max_price', false)
 		);
@@ -78,7 +80,7 @@ class Investidores_List_Table extends WP_List_Table {
 		return sprintf('%1$s %2$s', $item->name, $this->row_actions($actions) );
 	}
 
-	public function column_usuario( $item ) {
+	public function column_user( $item ) {
 		return sprintf(
         	'<a href="%s">%s</a>', get_admin_url(null, "user-edit.php?user_id=" . $item->usuario), get_userdata($item->usuario)->user_login 
         );

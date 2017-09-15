@@ -1,5 +1,7 @@
 <?php 
 
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 function init_investidor_roles() {
 	global $wp_roles;
 
@@ -68,9 +70,9 @@ add_action( 'cmb2_init', 'investim_novo_investidor_form_register' );
 function investim_novo_investidor_form_register() {
 
 	$fields = array(
-		'email' => array(
+		'user' => array(
 			'name'      => 'Usuário',
-			'id'        => 'investidor_usuario',
+			'id'        => 'investidor_user',
 			'type'      => 'hidden',
 			'desc'      => false,
 			'default'   => get_current_user_id(),
@@ -279,7 +281,6 @@ function investim_novo_investidor_form_register() {
 
 }
 
-
 add_shortcode( 'investim_pagina_investidores', 'investim_pagina_investidores' );
 function investim_pagina_investidores() {
 
@@ -293,32 +294,38 @@ function investim_pagina_investidores() {
 	// Current user
 	$user_id = get_current_user_id();
 
-	// Use ID of metabox in wds_frontend_form_register
-	$metabox_id = 'investidor';
+	$fields = array(
+		'user' => get_current_user_id(),
+		'name' => "",
+		'company' => "",
+		'tel' => "",
+		'mobile' => "",
+		'skype' => "",
+		'country' => "",
+		'state' => "",
+		'city' => "",
+		'min_price' => "0",
+		'max_price' => "0",
+		'third_party_capital' => "0",
+		'prefered_city' => "",
+		'sector' => "",
+		'description' => "",
+		'enable' => "",
+	);
 
-	// since post ID will not exist yet, just need to pass it something
-	$object_id  = 'fake-oject-id';
+	$investidor = already_investidor( $user_id );
 
-	// Get CMB2 metabox object
-	$cmb = cmb2_get_metabox( $metabox_id, $object_id );
-
-	// Get $cmb object_types
-	$post_types = $cmb->prop( 'object_types' );
-
-	// Parse attributes. These shortcode attributes can be optionally overridden.
-	$atts = shortcode_atts( array(
-		'post_author' => $user_id ? $user_id : 1, // Current user, or admin
-		'post_status' => 'pending',
-		'post_type'   => reset( $post_types ), // Only use first object_type in array
-	), $atts, 'cmb-frontend-form' );
-
-	// Initiate our output variable
-	$output = '';
+	if ( $investidor ) {
+		$fields = $investidor;
+	}
 
 	// Handle form saving (if form has been submitted)
-	$new_id = investim_save_investidores( $cmb, $atts );
+	$new_id = investim_save_investidores( $investidor );
 
 	if ( $new_id ) {
+
+		// Initiate our output variable
+		$output = '';
 
 		if ( is_wp_error( $new_id ) ) {
 
@@ -329,28 +336,176 @@ function investim_pagina_investidores() {
 		} else {
 
 			// Add notice of submission
-			$output .= '<div class="bs-callout bs-callout-info"><h3>' . sprintf( __( 'Obrigado <em>%s</em>, sua solicitação será analisada pelos nossos atendentes e em breve entraremos em contato!', 'wds-post-submit' ), esc_html( $new_id ) ) . '</h3></div>';
+			$output .= '<div class="bs-callout bs-callout-info"><h3>' . sprintf( __( 'Obrigado <em>%s</em>, você receberá notificações sobre novas empresas a venda dentro do seu perfil!', 'wds-post-submit' ), esc_html( $new_id ) ) . '</h3></div>';
 			return $output;
 
 		}
 
 	}
 
-	$action = get_permalink() . '?type=investidor';
+	echo '
+	<form action="https://www.investim.com.br/painel-de-controle/compre-uma-empresa/?type=investidor" class="cmb-form wpsight-dashboard-form" method="post" id="investidor" enctype="multipart/form-data" encoding="multipart/form-data">
+	';
+	wp_nonce_field( 'form_investidor', 'investidor_check' );
 
-	// Get our form
-	$output .= cmb2_get_metabox_form( $cmb, $object_id, array( 
-		'form_format' => '<form action="' . $action . '" class="cmb-form wpsight-dashboard-form" method="post" id="%1$s" enctype="multipart/form-data" encoding="multipart/form-data"><input type="hidden" name="object_id" value="%2$s">%3$s<input type="submit" name="submit-submission" value="%4$s" class="button"></form>',
-		'save_button' => 'Enviar'
-	) );
+	echo '<!-- Begin CMB2 Fields -->
+	<div class="cmb2-wrap form-table"><div id="cmb2-metabox-investidor" class="cmb2-metabox cmb-field-list"><div class="cmb-row cmb-type-text cmb2-id-investidor-name table-layout">
+	<div class="cmb-th">
+	<label for="investidor_name">Responsável</label>
+	</div>
+		<div class="cmb-td">
+	<input type="text" class="form-control" name="investidor_name" id="investidor_name" value="' . $fields["name"] . '" maxlength="255" required="required"/>
+		</div>
+	</div><div class="cmb-row cmb-type-text cmb2-id-investidor-company table-layout">
+	<div class="cmb-th">
+	<label for="investidor_company">Nome da Empresa</label>
+	</div>
+		<div class="cmb-td">
+	<input type="text" class="form-control" name="investidor_company" id="investidor_company" value="' . $fields["company"] . '" maxlength="255" required="required"/>
+		</div>
+	</div><div class="cmb-row cmb-type-text cmb2-id-investidor-tel table-layout">
+	<div class="cmb-th">
+	<label for="investidor_tel">Telefone</label>
+	</div>
+		<div class="cmb-td">
+	<input type="text" class="form-control" name="investidor_tel" id="investidor_tel" value="' . $fields["tel"] . '" maxlength="20" required="required"/>
+		</div>
+	</div><div class="cmb-row cmb-type-text cmb2-id-investidor-mobile table-layout">
+	<div class="cmb-th">
+	<label for="investidor_mobile">Celular</label>
+	</div>
+		<div class="cmb-td">
+	<input type="text" class="form-control" name="investidor_mobile" id="investidor_mobile" value="' . $fields["mobile"] . '" maxlength="20" required="required"/>
+		</div>
+	</div><div class="cmb-row cmb-type-text cmb2-id-investidor-skype table-layout">
+	<div class="cmb-th">
+	<label for="investidor_skype">Skype</label>
+	</div>
+		<div class="cmb-td">
+	<input type="text" class="form-control" name="investidor_skype" id="investidor_skype" value="' . $fields["skype"] . '" maxlength="255"/>
+		</div>
+	</div><div class="cmb-row cmb-type-autocomplete cmb2-id-investidor-country">
+	<div class="cmb-th">
+	<label for="investidor_country">País</label>
+	</div>
+		<div class="cmb-td">
+	<input type="hidden" class=" form-control" name="investidor_country" id="investidor_country" value="' . $fields["country"] . '" maxlength="255" required="required"/>
+		<div class="input-group">
+			<input type="text" aria-label="..." class="form-control location-autocomplete" data-parent="" size="50" id="investidor-country" value="' . $fields["country"] . '" />
+			<div class="input-group-btn">
+				<button type="button" class="btn btn-default dropdown-toggle"> <span class="caret"></span></button>
+			</div>
+		</div>
+		
+		<p class="cmb2-metabox-description">Digite um valor, caso já exista, selecione na lista</p>
+		</div>
+	</div><div class="cmb-row cmb-type-autocomplete cmb2-id-investidor-state">
+	<div class="cmb-th">
+	<label for="investidor_state">Estado</label>
+	</div>
+		<div class="cmb-td">
+	<input type="hidden" class=" form-control" name="investidor_state" id="investidor_state" value="' . $fields["state"] . '" maxlength="255" required="required"/>
+		<div class="input-group">
+			<input type="text" aria-label="..." class="form-control location-autocomplete" data-parent="investidor_country" size="50" id="investidor-state" value="' . $fields["state"] . '" />
+			<div class="input-group-btn">
+				<button type="button" class="btn btn-default dropdown-toggle"> <span class="caret"></span></button>
+			</div>
+		</div>
+		
+		<p class="cmb2-metabox-description">Digite um valor, caso já exista, selecione na lista</p>
+		</div>
+	</div><div class="cmb-row cmb-type-autocomplete cmb2-id-investidor-city">
+	<div class="cmb-th">
+	<label for="investidor_city">Cidade</label>
+	</div>
+		<div class="cmb-td">
+	<input type="hidden" class=" form-control" name="investidor_city" id="investidor_city" value="' . $fields["city"] . '" maxlength="255" required="required"/>
+		<div class="input-group">
+			<input type="text" aria-label="..." class="form-control location-autocomplete" data-parent="investidor_state" size="50" id="investidor-city" value="' . $fields["city"] . '" />
+			<div class="input-group-btn">
+				<button type="button" class="btn btn-default dropdown-toggle"> <span class="caret"></span></button>
+			</div>
+		</div>
+		
+		<p class="cmb2-metabox-description">Digite um valor, caso já exista, selecione na lista</p>
+		</div>
+	</div><div class="cmb-row cmb-type-text cmb2-id-investidor-min-price table-layout">
+	<div class="cmb-th">
+	<label for="investidor_min_price">Preço Mínimo (R$)</label>
+	</div>
+		<div class="cmb-td">
+	<input type="number" class="form-control" name="investidor_min_price" id="investidor_min_price" value="' . $fields["min_price"] . '" min="1" max="9999999999" maxlength="10" required="required"/>
+	<p class="cmb2-metabox-description">Sem símbolos de moeda ou separadores de milhares</p>
 
-	return $output;
+		</div>
+	</div><div class="cmb-row cmb-type-text cmb2-id-investidor-max-price table-layout">
+	<div class="cmb-th">
+	<label for="investidor_max_price">Preço Máximo (R$)</label>
+	</div>
+		<div class="cmb-td">
+	<input type="number" class="form-control" name="investidor_max_price" id="investidor_max_price" value="' . $fields["max_price"] . '" min="1" max="9999999999" maxlength="10" required="required"/>
+	<p class="cmb2-metabox-description">Sem símbolos de moeda ou separadores de milhares</p>
+
+		</div>
+	</div><div class="cmb-row cmb-type-radio cmb2-id-investidor-third-party-capital">
+	<div class="cmb-th">
+	<label for="investidor_third_party_capital">Você está contando com capital de terceiros?</label>
+	</div>
+		<div class="cmb-td">
+	<ul class="radio radio-primary">
+		<li>
+			<input type="radio" class="cmb2-option" name="investidor_third_party_capital" id="investidor_third_party_capital1" value="1" required="required" ' . ($fields["third_party_capital"] ? 'checked="checked"' : '') . ' />
+			<label for="investidor_third_party_capital1">Sim</label>
+		</li>
+		<li>
+			<input type="radio" class="cmb2-option" name="investidor_third_party_capital" id="investidor_third_party_capital2" value="0"  required="required" ' . ($fields["third_party_capital"] ? '' : 'checked="checked"') . ' />
+			<label for="investidor_third_party_capital2">Não</label>
+		</li>
+	</ul>
+		</div>
+	</div><div class="cmb-row cmb-type-text cmb2-id-investidor-prefered-city table-layout">
+	<div class="cmb-th">
+	<label for="investidor_prefered_city">Cidade Preferencial</label>
+	</div>
+		<div class="cmb-td">
+	<input type="text" class="form-control" name="investidor_prefered_city" id="investidor_prefered_city" value="' . $fields["prefered_city"] . '" maxlength="255" required="required"/>
+		</div>
+	</div><div class="cmb-row cmb-type-text cmb2-id-investidor-sector table-layout">
+	<div class="cmb-th">
+	<label for="investidor_sector">Setor de Atividade do seu interesse</label>
+	</div>
+		<div class="cmb-td">
+	<input type="text" class="form-control" name="investidor_sector" id="investidor_sector" value="' . $fields["sector"] . '" maxlength="255"/>
+		</div>
+	</div><div class="cmb-row cmb-type-textarea cmb2-id-investidor-description">
+	<div class="cmb-th">
+	<label for="investidor_description">Descrição</label>
+	</div>
+		<div class="cmb-td">
+	<textarea class="form-control" name="investidor_description" id="investidor_description" cols="60" rows="10" maxlength="16383">' . $fields["description"] . '</textarea>
+		</div>
+	</div></div></div>
+	<input type="hidden" class=" form-control" name="investidor_user" id="investidor_user" value="' . $fields["user"] . '"/>
+	<input type="hidden" class=" form-control" name="investidor_enable" id="investidor_enable" value="1"/>
+	<!-- End CMB2 Fields -->
+	<input type="submit" name="submit-submission" value="Enviar" class="button btn btn-primary btn-lg"></form>
+	';
 
 }
 
-
-function investim_save_investidores( $cmb, $post_data = array() ) {
+function already_investidor( $userID ) {
 	global $wpdb;
+	$investidor = $wpdb->get_row( "SELECT * FROM {$wpdb->prefix}wpcasama_mailalert WHERE user = $userID", ARRAY_A );
+
+	return $investidor;
+}
+
+
+function investim_save_investidores( $update = false ) {
+	global $wpdb;
+
+	// Get CMB2 metabox object
+	$cmb = cmb2_get_metabox( 'investidor', 'fake-object-id' );
 
 	// If no form submission, bail
 	if ( empty( $_POST ) ) {
@@ -358,10 +513,7 @@ function investim_save_investidores( $cmb, $post_data = array() ) {
 	}
 
 	// check required $_POST variables and security nonce
-	if (
-		! isset( $_POST['object_id'], $_POST[ $cmb->nonce() ] )
-		|| ! wp_verify_nonce( $_POST[ $cmb->nonce() ], $cmb->nonce() )
-	) {
+	if ( ! wp_verify_nonce( $_POST[ 'investidor_check' ], 'form_investidor' ) ) {
 		return new WP_Error( 'security_fail', __( 'Verificação de segurança falhou.' ) );
 	}
 
@@ -380,7 +532,11 @@ function investim_save_investidores( $cmb, $post_data = array() ) {
 		sanitize_text_field( $values["city"] )
 	);
 	
-	$success = $wpdb->insert("{$wpdb->prefix}wpcasama_mailalert", $values);
+	if ( $update ) {
+		$success = $wpdb->update("{$wpdb->prefix}wpcasama_mailalert", $values, array( 'user' => $update['user'] ));
+	} else {
+		$success = $wpdb->insert("{$wpdb->prefix}wpcasama_mailalert", $values);
+	}
 
 	//If we hit a snag, update the user
 	if ( $wpdb->last_error !== '' ) {

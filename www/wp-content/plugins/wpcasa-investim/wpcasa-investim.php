@@ -801,6 +801,7 @@ function investim_add_location_term($name, $parent_id = NULL) {
 	);
 }
 
+
 add_filter( 'wpsight_get_search_fields', 'wpsight_get_search_fields_custom', 10, 4 );
 function wpsight_get_search_fields_custom( $fields, $defaults ) {
 
@@ -809,4 +810,48 @@ function wpsight_get_search_fields_custom( $fields, $defaults ) {
 	unset($fields["listing-type"]);
 
 	return $fields;
+}
+
+
+add_filter( 'wp_insert_post_data', 'investim_check_listing_value', '99', 2 );
+function investim_check_listing_value( $data , $postarr ){ 
+
+	if ( ($data["post_type"] != "listing") || ($data["post_status"] == "trash") ) return $data;
+
+	$max_value = intval(wpsight_get_option( 'investim_max_autopublish_value' ));
+
+	$_price = 0;
+	if ( ! empty( $_SESSION['submission'] ) && ! empty( $_SESSION['submission']['listing_price'] ) && ! empty( $_SESSION['submission']['listing_price']['_price'] ) ){
+		$_price = $_SESSION['submission']['listing_price']['_price'];
+	} elseif (1) {
+		$post_id = ! empty( $_GET['id'] ) ? $_GET['id'] : false;
+		$post_meta = get_post_meta($post_id);
+		$_price = $post_meta["_price"][0];
+	}
+	$_price = intval($_price);
+
+	if ( $max_value > 0 &&  $_price > 0 ) {
+		if ( $_price >= $max_value ) {
+			$data["post_status"] = "pending";
+		} else {
+			$data["post_status"] = "publish";
+		}
+	}
+
+	return $data;
+
+}
+
+
+add_filter( 'wpsight_options_dashboard', 'wpsight_options_dashboard_custom' );
+function wpsight_options_dashboard_custom( $options_dashboard ){ 
+
+	$new_value = array('investim_max_autopublish_value' => array(
+		'id'			=> 'investim_max_autopublish_value',
+		'name'			=> 'Valor Máximo Publicação Automática',
+		'desc'			=> 'Qualquer anúncio com valor abaixo do especificado será publicado automaticamente. (Sem símbolos de moeda ou separadores de milhares).',
+	));
+
+	return $new_value + $options_dashboard;
+
 }

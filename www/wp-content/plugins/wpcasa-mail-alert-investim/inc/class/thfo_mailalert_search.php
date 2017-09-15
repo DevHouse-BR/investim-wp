@@ -1,9 +1,8 @@
 <?php
 
-//add_action( 'post_submitbox_misc_actions', 'thfo_search_subscriber' );
+add_action( 'save_post', 'thfo_search_subscriber', 10, 3 );
 
-function thfo_search_subscriber() {
-	global $post;
+function thfo_search_subscriber( $post_id, $post, $update ) {
 
 	if ( $post->post_type === 'listing' ) {
 		global $wpdb;
@@ -52,7 +51,7 @@ function thfo_search_subscriber() {
 		 */
 
 		if ( ! empty( $city ) ) {
-			$subscribers = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}wpcasama_mailalert WHERE city = '$city' " );
+			$subscribers = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}wpcasama_mailalert WHERE min_price <= $price AND max_price >= $price AND enable = 1" );
 
 			/**
 			 * @since 1.4.0
@@ -72,20 +71,15 @@ function thfo_search_subscriber() {
 
 
 			foreach ( $subscribers as $subscriber ) {
-
-				if ( $price <= $subscriber->max_price && $price >= $subscriber->min_price ) {
-
-					if ($nb_bath >= $subscriber->bath) {
-
-						if ($type[0] == $subscriber->type) {
-
-
-							$mail = $subscriber->email;
-
-							thfo_send_mail( $mail );
-						}
-					}
+				$email = null;
+				if ( $subscriber->email ) {
+					$email = $subscriber->email;
+				} elseif ( $subscriber->user ) {
+					$user = get_userdata( $subscriber->user );
+				} else {
+					continue;
 				}
+				thfo_send_mail( $email );
 			}
 		}
 	}
@@ -104,7 +98,7 @@ function thfo_send_mail($mail){
 	$sender = get_option('thfo_newsletter_sender');
 	$content = "";
 	$object = get_option('thfo_newsletter_object');
-	$img= get_option('empathy-setting-logo');
+	$img = get_option('empathy-setting-logo');
 	$content .= '<img src="' . $img . '" alt="logo" /><br />';
 	$content .= get_option('thfo_newsletter_content');
 	$content .= '<br /><a href="'.get_permalink().'"></a><br />';
