@@ -82,7 +82,7 @@ class Investidores_List_Table extends WP_List_Table {
 
 	public function column_user( $item ) {
 		return sprintf(
-        	'<a href="%s">%s</a>', get_admin_url(null, "user-edit.php?user_id=" . $item->usuario), get_userdata($item->usuario)->user_login 
+        	'<a href="%s">%s</a>', get_admin_url(null, "user-edit.php?user_id=" . $item->user), get_userdata($item->user)->user_login 
         );
 	}
 
