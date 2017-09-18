@@ -855,3 +855,172 @@ function wpsight_options_dashboard_custom( $options_dashboard ){
 	return $new_value + $options_dashboard;
 
 }
+
+add_action( 'wpsight_listing_single_title_after', function( $listing_id ) {
+	global $listing;
+
+	$post_meta = get_post_meta( $listing->ID );
+	$price = intval($post_meta["_price"][0]);
+	$max_value = intval(wpsight_get_option( 'investim_max_autopublish_value' ));
+	
+	if ( $price >= $max_value ) {
+		echo '<div class="wpsight-alert alert alert-danger alert-dismissible" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+    				Este é um anúncio sigiloso e por isso nem todas as informações da empresa são exibidas nesta página. Caso houver interesse em maiores informações, favor entrar em contato conosco no formulário abaixo que iremos atendê-lo o mais breve possível.
+    		</div>';
+	}
+} ); 
+
+add_filter( 'wpsight_get_listing_thumbnail', 'wpsight_get_listing_thumbnail_custom', 10, 6 );
+function wpsight_get_listing_thumbnail_custom( $thumb, $post_id, $size, $attr, $default, $formatted ){ 
+
+	$post_meta = get_post_meta( $post_id );
+	$price = intval($post_meta["_price"][0]);
+	$max_value = intval(wpsight_get_option( 'investim_max_autopublish_value' ));
+	
+	if ( $price >= $max_value ) {
+		return '<div class="wpsight-listing-thumbnail animated pulse"><img width="1140" height="855" src="https://www.investim.com.br/wp-content/uploads/2017/06/sacolas-investim-1440x1080.jpg" class="attachment-large size-large wp-post-image" alt="Empresa a venda Investim" title="Empresa a venda Investim" srcset="https://www.investim.com.br/wp-content/uploads/2017/06/sacolas-investim-1440x1080.jpg 1440w, https://www.investim.com.br/wp-content/uploads/2017/06/sacolas-investim-960x720.jpg 960w, https://www.investim.com.br/wp-content/uploads/2017/06/sacolas-investim-768x576.jpg 768w" sizes="(max-width: 1140px) 100vw, 1140px"></div>';
+	} else {
+		return $thumb;
+	}
+
+}
+
+add_filter( 'wpsight_madrid_get_image_gallery', 'wpsight_madrid_get_image_gallery_custom', 10, 4 );
+function wpsight_madrid_get_image_gallery_custom( $gallery, $post_id, $args, $gallery_id ){ 
+
+	$post_meta = get_post_meta( $post_id );
+	$price = intval($post_meta["_price"][0]);
+	$max_value = intval(wpsight_get_option( 'investim_max_autopublish_value' ));
+	
+	if ( $price >= $max_value ) {
+		return '';
+	} else {
+		return $gallery;
+	}
+
+}
+
+add_filter( 'wpsight_listing_agent_image', 'wpsight_listing_agent_image_custom', 10, 3 );
+function wpsight_listing_agent_image_custom( $agent_image, $post, $size ){ 
+
+	$post_meta = get_post_meta( $post->ID );
+	$price = intval($post_meta["_price"][0]);
+	$max_value = intval(wpsight_get_option( 'investim_max_autopublish_value' ));
+	
+	if ( $price >= $max_value ) {
+		return '<img src="https://www.investim.com.br/wp-content/uploads/2017/05/logo.png" width="330" height="49" alt="Mauricio C. de Oliveira">';
+	} else {
+		return $agent_image;
+	}
+
+}
+
+add_filter( 'wpsight_listing_agent_name', 'wpsight_listing_agent_name_custom', 10, 2 );
+function wpsight_listing_agent_name_custom( $agent_name, $post ){ 
+
+	$post_meta = get_post_meta( $post->ID );
+	$price = intval($post_meta["_price"][0]);
+	$max_value = intval(wpsight_get_option( 'investim_max_autopublish_value' ));
+	
+	if ( $price >= $max_value ) {
+		return 'Mauricio C. de Oliveira';
+	} else {
+		return $agent_name;
+	}
+
+}
+
+add_filter( 'wpsight_listing_agent_company', 'wpsight_listing_agent_company_custom', 10, 2 );
+function wpsight_listing_agent_company_custom( $agent_company, $post ){ 
+
+	$post_meta = get_post_meta( $post->ID );
+	$price = intval($post_meta["_price"][0]);
+	$max_value = intval(wpsight_get_option( 'investim_max_autopublish_value' ));
+	
+	if ( $price >= $max_value ) {
+		return 'Investim';
+	} else {
+		return $agent_company;
+	}
+
+}
+
+add_filter( 'wpsight_listing_agent_description', 'wpsight_listing_agent_description_custom', 10, 2 );
+function wpsight_listing_agent_description_custom( $agent_description, $post ){ 
+
+	$post_meta = get_post_meta( $post->ID );
+	$price = intval($post_meta["_price"][0]);
+	$max_value = intval(wpsight_get_option( 'investim_max_autopublish_value' ));
+	
+	if ( $price >= $max_value ) {
+		return 'Com mais de 14 anos de experiência voltada exclusivamente à compra e venda de empresas. Através de um trabalho dedicado e confidencial, temos a certeza de estarmos preparados a intermediar negócios de pequeno, médio e grande porte atendendo empresas e investidores nacionais e internacionais.';
+	} else {
+		return $agent_description;
+	}
+
+}
+
+add_filter( 'wpsight_listing_agent_website', 'wpsight_listing_agent_website_custom', 10, 2 );
+function wpsight_listing_agent_website_custom( $agent_website, $post ){ 
+
+	$post_meta = get_post_meta( $post->ID );
+	$price = intval($post_meta["_price"][0]);
+	$max_value = intval(wpsight_get_option( 'investim_max_autopublish_value' ));
+	
+	if ( $price >= $max_value ) {
+		return 'https://www.investim.com.br';
+	} else {
+		return $agent_website;
+	}
+
+}
+
+add_filter( 'wpsight_listing_agent_phone', 'wpsight_listing_agent_phone_custom', 10, 2 );
+function wpsight_listing_agent_phone_custom( $agent_website, $post ){ 
+
+	$post_meta = get_post_meta( $post->ID );
+	$price = intval($post_meta["_price"][0]);
+	$max_value = intval(wpsight_get_option( 'investim_max_autopublish_value' ));
+	
+	if ( $price >= $max_value ) {
+		return '(47) 3461-3173 / (47) 8825-7874';
+	} else {
+		return $agent_website;
+	}
+
+}
+
+add_filter( 'wpsight_listing_agent_facebook', 'wpsight_listing_agent_info_to_blank', 10, 2 );
+add_filter( 'wpsight_listing_agent_twitter', 'wpsight_listing_agent_info_to_blank', 10, 2 );
+function wpsight_listing_agent_info_to_blank( $agent_info, $post ){ 
+
+	$post_meta = get_post_meta( $post->ID );
+	$price = intval($post_meta["_price"][0]);
+	$max_value = intval(wpsight_get_option( 'investim_max_autopublish_value' ));
+	
+	if ( $price >= $max_value ) {
+		return '';
+	} else {
+		return $agent_info;
+	}
+
+}
+
+// add_filter( 'wpcf7_mail_components', 'wpcf7_mail_components_custom', 10, 3 );
+// function wpcf7_mail_components_custom( $components, $form, $contact_form_7 ){ 
+// 	global $listing;
+// 	global $post;
+
+// 	// $post_meta = get_post_meta( $post->ID );
+// 	// $price = intval($post_meta["_price"][0]);
+// 	// $max_value = intval(wpsight_get_option( 'investim_max_autopublish_value' ));
+	
+// 	// if ( $price >= $max_value ) {
+// 	// 	return '';
+// 	// } else {
+// 	// 	return $agent_info;
+// 	// }
+
+// }
+
