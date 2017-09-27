@@ -17,6 +17,12 @@ $background_image	= false;
 $display_search 			= false;
 $display_search_on_header 	= false;
 
+?>
+<script>
+	var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
+</script>
+<?php
+
 if( is_singular() ) {
 	
 	$header_display = get_post_meta( get_the_id(), '_header_display', true );

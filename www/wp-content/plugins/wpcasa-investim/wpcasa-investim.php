@@ -626,12 +626,6 @@ add_action( 'wp_ajax_investim_locations', function ( $a) {
 add_filter( 'wpsight_meta_box_listing_general_fields', 'wpsight_meta_box_listing_general_fields_custom' );
 function wpsight_meta_box_listing_general_fields_custom( $fields ) {
 
-	?>
-	<script>
-		var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
-	</script>
-	<?php
-
 	unset($fields['taxonomy_location']);
 	unset($fields['taxonomy_type']);
 	unset($fields['taxonomy_feature']);
