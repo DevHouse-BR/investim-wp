@@ -27,7 +27,7 @@ define('DB_NAME', 'investim_wp');
 define('DB_USER', 'investim_wp');
 
 /** Senha do banco de dados MySQL */
-define('DB_PASSWORD', 'D*zTQ@6#58[zdF');
+define('DB_PASSWORD', '');
 
 /** Nome do host do MySQL */
 define('DB_HOST', '179.188.16.79');
